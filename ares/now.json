@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "name": "jfx-ares",
+    "alias": ["ares.jfx.cz"],
+    "builds": [
+        { "src": "lambda/basic.js", "use": "@now/node"}
+    ],
+    "routes": [
+        { "src": "/basic/", "dest": "/lambda/basic.js" }
+    ]
+}

@@ -1,6 +1,6 @@
 {
   "name": "juicyfx-chromium",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Take screenshot of a website",
   "private": true,
   "license": "MIT",

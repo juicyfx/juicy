@@ -1,5 +1,7 @@
 {
     "version": 2,
+    "name": "jfx-chromium",
+    "alias": ["chromium.jfx.cz"],
     "builds": [
         { "src": "lambda/screenshot.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } },
         { "src": "lambda/pdf.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }

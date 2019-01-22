@@ -1,0 +1,14 @@
+{
+  "name": "juicyfx-ares",
+  "version": "0.0.1",
+  "description": "Useful JSON ARES API",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.3.0",
+    "xml-js": "^1.6.9"
+  },
+  "scripts": {
+    "dev": "node dev.js"
+  }
+}
