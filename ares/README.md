@@ -1,5 +1,9 @@
-# JuicyFx (Chromium)
+# JuicyFx (ARES)
 
 ## Usage
 
-- https://chromium.jfx.cz/
+- https://ares.jfx.cz/
+
+## Endpoints
+
+- `basic?ico=N`

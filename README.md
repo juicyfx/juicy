@@ -5,11 +5,5 @@ Sidebar goal is to help others trully understand the lambda ecosystem.
 
 # Projects
 
-## Chromium
-
-## ARES
-
-Domain: ares.jfx.cz
-
-Endpoints:
-- `ares.jfx.cz/basic/?ico=N`
+- [**Chromium**](chromium) lambda(s) generates PDF from URL or given source, takes a screenshot of the page.
+- [**ARES**](ares) lamba(s) transforms XML to JSON from ARES database.
