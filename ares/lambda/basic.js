@@ -3,6 +3,9 @@ const convert = require('xml-js');
 const fetch = require('node-fetch');
 
 module.exports = async function (req, res) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+
     const { query = {} } = parse(req.url, true);
 
     if (!query.ico) {
