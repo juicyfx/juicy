@@ -7,3 +7,4 @@ Sidebar goal is to help others trully understand the lambda ecosystem.
 
 - [**Chromium**](chromium) lambda(s) generates PDF from URL or given source, takes a screenshot of the page.
 - [**ARES**](ares) lamba(s) transforms XML to JSON from ARES database.
+- [**meta**](meta) lamba(s) generates image for OG meta tags.

@@ -1,0 +1,23 @@
+{
+  "name": "juicyfx-meta",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node dist/card.js",
+    "build": "tsc",
+    "now-build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "author": "styfle",
+  "repository": "github:styfle/og-image",
+  "license": "MIT",
+  "dependencies": {
+    "chrome-aws-lambda": "1.11.1",
+    "marked": "^0.6.0",
+    "puppeteer-core": "1.11.0"
+  },
+  "devDependencies": {
+    "@types/marked": "^0.6.0",
+    "@types/puppeteer-core": "^1.9.0",
+    "typescript": "^3.2.4"
+  }
+}
