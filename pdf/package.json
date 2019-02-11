@@ -1,22 +1,22 @@
 {
-  "name": "juicyfx-meta",
+  "name": "juicyfx-pdf",
   "version": "0.0.1",
-  "description": "Create cool OG:image",
+  "description": "Create PDF from URL or given source",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/card.js",
+    "start": "node dist/pdf.js",
     "build": "tsc",
     "now-build": "tsc",
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "chrome-aws-lambda": "1.11.1",
-    "marked": "^0.6.0",
-    "puppeteer-core": "1.11.0"
+    "chrome-aws-lambda": "1.11.2",
+    "puppeteer-core": "^1.11.0"
   },
   "devDependencies": {
     "@types/marked": "^0.6.0",
     "@types/puppeteer-core": "^1.9.0",
-    "typescript": "^3.2.4"
+    "typescript": "^3.2.4",
+    "puppeteer": "^1.11.0"
   }
 }

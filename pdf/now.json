@@ -1,0 +1,11 @@
+{
+    "version": 2,
+    "name": "jfx-pdf",
+    "alias": ["pdf.jfx.cz"],
+    "builds": [
+        { "src": "src/pdf.ts", "use": "@now/node@canary", "config": { "maxLambdaSize": "50mb" } }
+    ],
+    "routes": [
+        { "src": "/(.+)", "dest": "/src/pdf.ts" }
+    ]
+}

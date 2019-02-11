@@ -1,8 +1,8 @@
 const { parse } = require('url');
-const { getScreenshot } = require('./../utils/chromium');
-const { getInt, isValidUrl } = require('./../utils/validator');
+const { getScreenshot } = require('../utils/chromium');
+const { getInt, isValidUrl } = require('../utils/validator');
 
-module.exports = async function (req, res) {
+export default async function handler(req: IncomingMessage, res: ServerResponse) {
     try {
         const { query = {} } = parse(req.url, true);
         const { url, type = 'png', quality, fullPage } = query;
