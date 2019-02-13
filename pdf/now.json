@@ -1,6 +1,7 @@
 {
     "version": 2,
     "name": "jfx-pdf",
+    "public": true,
     "alias": ["pdf.jfx.cz"],
     "builds": [
         { "src": "src/pdf.ts", "use": "@now/node@canary", "config": { "maxLambdaSize": "50mb" } }

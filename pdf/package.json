@@ -4,7 +4,7 @@
   "description": "Create PDF from URL or given source",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/pdf.js",
+    "start": "micro-dev dist/pdf.js",
     "build": "tsc",
     "now-build": "tsc",
     "watch": "tsc --watch"
@@ -16,7 +16,9 @@
   "devDependencies": {
     "@types/marked": "^0.6.0",
     "@types/puppeteer-core": "^1.9.0",
-    "typescript": "^3.2.4",
-    "puppeteer": "^1.11.0"
+    "micro": "^9.3.3",
+    "micro-dev": "^3.0.0",
+    "puppeteer": "^1.11.0",
+    "typescript": "^3.2.4"
   }
 }
