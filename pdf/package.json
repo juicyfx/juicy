@@ -10,15 +10,15 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "chrome-aws-lambda": "1.11.2",
-    "puppeteer-core": "^1.11.0"
+    "chrome-aws-lambda": "^1.12.1",
+    "puppeteer-core": "^1.12.2"
   },
   "devDependencies": {
-    "@types/marked": "^0.6.0",
+    "@types/marked": "^0.6.1",
     "@types/puppeteer-core": "^1.9.0",
     "micro": "^9.3.3",
     "micro-dev": "^3.0.0",
-    "puppeteer": "^1.11.0",
-    "typescript": "^3.2.4"
+    "puppeteer": "^1.12.2",
+    "typescript": "^3.3.3333"
   }
 }
