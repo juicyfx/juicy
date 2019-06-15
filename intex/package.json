@@ -1,0 +1,6 @@
+{
+  "name": "intex",
+  "dependencies": {
+    "@zeit/integration-utils": "latest"
+  }
+}
