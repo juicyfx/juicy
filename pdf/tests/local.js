@@ -15,6 +15,7 @@ const req = http.request(options, res => {
     chunks.push(chunk);
   });
   res.on("end", () => {
+    console.log(`Writing PDF into ${__dirname + "/invoice.pdf"}`);
     fs.writeFileSync(
       __dirname + "/invoice.pdf",
       new Buffer.concat(chunks).toString("binary"),
@@ -24,9 +25,9 @@ const req = http.request(options, res => {
 });
 
 req.on("error", e => {
-  console.error(`problem with request: ${e.message}`);
+  console.log(`Problem with request: ${e.message}`);
 });
 
-req.write(fs.readFileSync(__dirname + "/fixtures/invoice/invoice.html"));
-//req.write(fs.readFileSync(__dirname + "/fixtures/simple.html"));
+req.write(fs.readFileSync(__dirname + "/fixtures/invoice.html"));
+// req.write(fs.readFileSync(__dirname + "/fixtures/simple.html"));
 req.end();

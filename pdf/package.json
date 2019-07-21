@@ -4,21 +4,19 @@
   "description": "Create PDF from URL or given source",
   "license": "MIT",
   "scripts": {
-    "start": "micro-dev dist/pdf.js",
     "build": "tsc",
     "now-build": "tsc",
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^1.12.1",
-    "puppeteer-core": "^1.12.2"
+    "chrome-aws-lambda": "^1.18.1",
+    "puppeteer-core": "^1.18.1"
   },
   "devDependencies": {
-    "@types/marked": "^0.6.1",
+    "@now/node": "^0.11.1",
+    "@types/marked": "^0.6.5",
     "@types/puppeteer-core": "^1.9.0",
-    "micro": "^9.3.3",
-    "micro-dev": "^3.0.0",
-    "puppeteer": "^1.12.2",
-    "typescript": "^3.3.3333"
+    "puppeteer": "^1.18.1",
+    "typescript": "^3.5.3"
   }
 }

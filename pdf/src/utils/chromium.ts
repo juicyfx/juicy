@@ -1,7 +1,12 @@
 import chromeAws from "chrome-aws-lambda";
 const puppeteer = chromeAws.puppeteer as any;
 
-export async function getPdf(source: PdfSource, options: object) {
+export const OPTIONS_DEFAULTS: PdfOptions = {
+  format: 'A4'
+};
+
+export async function getPdf(source: PdfSource, options: PdfOptions): Promise<string> {
+
   const browser = await puppeteer.launch({
     args: chromeAws.args,
     executablePath: await chromeAws.executablePath,
@@ -20,7 +25,7 @@ export async function getPdf(source: PdfSource, options: object) {
 
   await page.emulateMedia("screen");
   const content = await page.pdf({
-    format: "A4",
+    ...OPTIONS_DEFAULTS,
     ...options
   });
 

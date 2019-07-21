@@ -1,12 +1,13 @@
 {
     "version": 2,
     "name": "jfx-pdf",
-    "public": true,
     "alias": ["pdf.jfx.cz"],
     "builds": [
-        { "src": "src/pdf.ts", "use": "@now/node@canary", "config": { "maxLambdaSize": "50mb" } }
+        { "src": "src/*.ts", "use": "@now/node" }
     ],
     "routes": [
-        { "src": "/(.+)", "dest": "/src/pdf.ts" }
+        { "src": "/url/(.*)", "dest": "/src/url.ts" },
+        { "src": "/raw/(.*)", "dest": "/src/raw.ts" },
+        { "src": "/post/(.*)", "dest": "/src/post.ts" }
     ]
 }

@@ -1,0 +1,8 @@
+{
+    "data": "This is file post data",
+    "headerTemplate": "<div style='font-size: 30px;'>HEADER</div>",
+    "footerTemplate": "<div style='font-size: 30px;'>FOOTER</div>",
+    "displayHeaderFooter": true,
+    "marginTop": 100,
+    "marginBottom": 100
+}
