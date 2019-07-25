@@ -1,4 +1,4 @@
-# Juicy
+# JuicyFx
 
 The main goal of **Juicy Functions** is to provide easy a free API for common task. 
 Sidebar goal is to help others trully understand the lambda ecosystem.
