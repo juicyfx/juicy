@@ -1,6 +1,7 @@
-# JuicyFx (PDF)
+# JuicyFx / Podfuk
 
-> https://jfx-pdf.juicyfx1.now.sh
+> Generates PDF from many given sources (URL, raw, POST)
+> https://podfuk.juicyfx1.now.sh
 
 ## Usage
 
@@ -25,17 +26,17 @@ marginLeft?: string | number
 preferCSSPageSize?: boolean
 ```
 
-For example: https://jfx-pdf.juicyfx1.now.sh/url/?url=https://f3l1x.io&format=A3
+For example: https://podfuk.juicyfx1.now.sh/url/?url=https://f3l1x.io&format=A3
 
 ## Endpoints
 
 ### URL
 
-> https://jfx-pdf.juicyfx1.now.sh/url/?url=https://f3l1x.io&format=A3
+> https://podfuk.juicyfx1.now.sh/url/?url=https://f3l1x.io&format=A3
 
 ### RAW
 
-> https://jfx-pdf.juicyfx1.now.sh/raw/?raw=RAW_STRING&format=A3
+> https://podfuk.juicyfx1.now.sh/raw/?raw=RAW_STRING&format=A3
 
 ### POST
 
@@ -44,7 +45,7 @@ curl \
   -X POST \
   --data "This is plain data" \
   -H "Content-Type: text/plain" \
-  https://jfx-pdf-f3l1x.juicyfx1.now.sh/post/ \
+  https://podfuk.juicyfx1.now.sh/post/ \
   -o pdf-plain.pdf
 ```
 
@@ -53,7 +54,7 @@ curl \
   -X POST \
   --data '{"data":"This is post data","format":"A3"}' \
   -H "Content-Type: application/json" \
-  https://jfx-pdf-f3l1x.juicyfx1.now.sh/post/ \
+  https://podfuk.juicyfx1.now.sh/post/ \
   -o pdf-post.pdf
 ```
 
@@ -76,6 +77,6 @@ curl \
   -X POST \
   --data @body.json \
   -H "Content-Type: application/json" \
-  https://jfx-pdf-f3l1x.juicyfx1.now.sh/post/ \
+  https://podfuk.juicyfx1.now.sh/post/ \
   -o pdf-post-file.pdf
 ```

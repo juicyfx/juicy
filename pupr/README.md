@@ -1,7 +1,8 @@
-# Pupr.js
+# JuicyFx / Pupr
 
-> Puppeteer pre-renderer for SSR and bots.
+> Generates SSR via Chrome Puppeteer pre-rendering
+> https://pupr.juicyfx1.now.sh
 
 ## Usage
 
-https://pupr.jfx.cz?url=https://f3l1x.io
+https://pupr.juicyfx1.now.sh?url=https://f3l1x.io

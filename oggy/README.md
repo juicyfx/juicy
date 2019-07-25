@@ -1,8 +1,11 @@
-# JuicyFx (Meta)
+# JuicyFx / Oggy
+
+> Generates image for OG meta tags
+> https://oggy.juicyfx1.now.sh
 
 ## Demo
 
-- https://meta.jfx.cz/Brew:%20install,%20upgrade%20a%20cleanup.png?images=https://f3l1x.io/img/f3l1x.png&fontSize=75px
+- https://oggy.juicyfx1.now.sh/Brew:%20install,%20upgrade%20a%20cleanup.png?images=https://f3l1x.io/img/f3l1x.png&fontSize=75px
 
 ## Usage
 

@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "scope": "juicyfx",
+    "name": "czws",
+    "alias": ["czws.jfx.cz"],
+    "builds": [
+        { "src": "lambda/basic.js", "use": "@now/node"}
+    ],
+    "routes": [
+        { "src": "/ares/basic/", "dest": "/lambda/basic.js" }
+    ]
+}

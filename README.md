@@ -1,11 +1,16 @@
-# JuicyFx()
+# Juicy
 
 The main goal of **Juicy Functions** is to provide easy a free API for common task. 
 Sidebar goal is to help others trully understand the lambda ecosystem.
 
-# Projects
+## Juices
 
-- [**Chromium**](chromium) lambda(s) generates PDF from URL or given source, takes a screenshot of the page.
-- [**ARES**](ares) lambda(s) transforms XML to JSON from ARES database.
-- [**meta**](meta) lambda(s) generates image for OG meta tags.
-- [**Pupr.js**](pupr) lambda(s) support SSR via Chrome pre-render.
+- [**czws**](cz) - Czech Republic webservices (e.q. ARES)
+- [**oggy**](oggy) - generates image for OG meta tags
+- [**podfuk**](podfuk) - generates PDF from many given sources (URL, raw, POST)
+- [**pupr**](podfuk) - generates SSR via Chrome Puppeteer pre-rendering
+
+## Embryo
+
+- [**screenshot**](embryo/screenshot) - generates screenshot of given URL
+- [**intex**](embryo/intex) - ZEIT testing integration 

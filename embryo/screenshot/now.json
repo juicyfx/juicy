@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "scope": "juicyfx",
+    "name": "screenshot",
+    "alias": ["screenshot.embryo.jfx.cz"],
+    "builds": [
+        { "src": "dist/screenshot.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } },
+        { "src": "dist/pdf.js", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }
+    ],
+    "routes": [
+        { "src": "/screenshot/", "dest": "/lambda/screenshot.js" },
+        { "src": "/pdf/", "dest": "/lambda/pdf.js" }
+    ]
+}

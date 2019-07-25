@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "scope": "juicyfx",
+    "name": "oggy",
+    "alias": ["oggy.jfx.cz"],
+    "builds": [
+        { "src": "src/card.ts", "use": "@now/node", "config": { "maxLambdaSize": "40mb" } }
+    ],
+    "routes": [
+        { "src": "/(.+)", "dest": "/src/card.ts" }
+    ]
+}

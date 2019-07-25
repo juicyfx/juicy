@@ -1,7 +1,8 @@
 {
+    "version": 2,
     "name": "intex",
     "scope": "juicyfx",
-    "version": 2,
+    "alias": ["screenshot.embryo.jfx.cz"],
     "builds": [
         { "src": "/src/button.js", "use": "@now/node" },
         { "src": "/src/button.php", "use": "@now/php" }

@@ -1,7 +1,8 @@
 {
     "version": 2,
-    "name": "jfx-pdf",
-    "alias": ["pdf.jfx.cz"],
+    "scope": "juicyfx",
+    "name": "podfuk",
+    "alias": ["podfuk.jfx.cz"],
     "builds": [
         { "src": "src/*.ts", "use": "@now/node" }
     ],
