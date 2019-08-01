@@ -7,6 +7,18 @@ import { isValidUrl } from "./utils/validator";
 export default async function handler(req: NowRequest, res: NowResponse) {
     console.log("HTTP", req.url);
 
+    // Optimistic CORS
+    res.setHeader("Access-Control-Allow-Origin", '*');
+    res.setHeader("Access-Control-Allow-Methods", '*');
+    res.setHeader("Access-Control-Allow-Headers", '*');
+
+    // OPTIONS request
+    if (req.method === 'OPTIONS') {
+        res.statusCode = 200;
+        res.end();
+        return;
+    }
+
     if (req.query.url) {
         fromUrl(req, res);
     } else {

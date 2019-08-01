@@ -30,9 +30,9 @@ export function parseJsonRequest(req: IncomingMessage): Promise<PostRequest> {
 export function parsePdfOptions(query: QueryParams): PdfOptions {
   const options: PdfOptions = {};
 
-  if (query.path !== undefined) {
-    options.path = query.path;
-  }
+  // if (query.path !== undefined) {
+  //   options.path = query.path;
+  // }
 
   if (query.scale !== undefined) {
     options.scale = Number.parseInt(query.scale);
