@@ -5,7 +5,7 @@
         "target": "esnext",
         "moduleResolution": "node",
         "jsx": "react",
-        "sourceMap": true,
+        "sourceMap": false,
         "strict": true,
         "noFallthroughCasesInSwitch": true,
         "noImplicitReturns": true,
@@ -14,10 +14,15 @@
         "noUnusedParameters": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
     },
     "exclude": [
         "node_modules",
         "tests"
+    ],
+    "include": [
+        "./api/**/*",
+        "./web/**/*"
     ]
 }

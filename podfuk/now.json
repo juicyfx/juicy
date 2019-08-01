@@ -4,11 +4,12 @@
     "name": "podfuk",
     "alias": ["podfuk.jfx.cz"],
     "builds": [
-        { "src": "src/*.ts", "use": "@now/node" }
+        { "src": "api/*.ts", "use": "@now/node" },
+        { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "dist" } }
     ],
     "routes": [
-        { "src": "/url/(.*)", "dest": "/src/url.ts" },
-        { "src": "/raw/(.*)", "dest": "/src/raw.ts" },
-        { "src": "/post/(.*)", "dest": "/src/post.ts" }
+        { "src": "^/url/(.*)", "dest": "/api/url.ts" },
+        { "src": "^/raw/(.*)", "dest": "/api/raw.ts" },
+        { "src": "^/post/(.*)", "dest": "/api/post.ts" }
     ]
 }

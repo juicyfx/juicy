@@ -8,7 +8,6 @@
 This lambda supports all [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v1.12.2&show=api-pagepdfoptions) `page.pdf(options)` options. 
 
 ```
-path?: string
 scale?: number
 displayHeaderFooter?: boolean
 headerTemplate?: string
