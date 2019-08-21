@@ -5,7 +5,7 @@
 
 ## Usage
 
-This lambda supports all [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v1.12.2&show=api-pagepdfoptions) `page.pdf(options)` options. 
+This lambda supports all [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v1.12.2&show=api-pagepdfoptions) `page.pdf(options)` options.
 
 ```
 scale?: number
@@ -79,3 +79,30 @@ curl \
   https://podfuk.juicyfx1.now.sh/post/ \
   -o pdf-post-file.pdf
 ```
+
+## Extra
+
+### Fonts
+
+There are some fonts preinstalled.
+
+- Inter-Black.ttf
+- Inter-Bold.ttf
+- Inter-BoldItalic.ttf
+- Inter-ExtraBold.ttf
+- Inter-ExtraBoldItalic.ttf
+- Inter-ExtraLight-BETA.ttf
+- Inter-ExtraLightItalic-BETA.ttf
+- Inter-Italic.ttf
+- Inter-Light-BETA.ttf
+- Inter-LightItalic-BETA.ttf
+- Inter-Medium.ttf
+- Inter-MediumItalic.ttf
+- Inter-Regular.ttf
+- Inter-SemiBold.ttf
+- Inter-SemiBoldItalic.ttf
+- Inter-Thin-BETA.ttf into
+- Inter-ThinItalic-BETA.ttf
+- Inter-UI-BlackItalic.ttf
+- NotoColorEmoji.ttf (🔥👨🏻‍💻🚀)
+- Pacifico.ttf

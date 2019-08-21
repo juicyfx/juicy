@@ -1,10 +1,16 @@
 import { NowRequest, NowResponse } from '@now/node';
-import { getPdf } from "./utils/chromium";
-import { parsePdfOptions } from "./utils/request";
-import * as errors from "./utils/errors";
+import { getPdf } from "./_lib/utils/chromium";
+import { parsePdfOptions } from "./_lib/utils/request";
+import * as errors from "./_lib/utils/errors";
+import { installFonts } from './_lib/utils/fonts';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
     console.log("HTTP", req.url);
+
+    // Setup env HOME (e.q. for fonts)
+    if (process.env.HOME === undefined) {
+      process.env.HOME = '/tmp';
+    }
 
     // Optimistic CORS
     res.setHeader("Access-Control-Allow-Origin", '*');
@@ -17,6 +23,9 @@ export default async function handler(req: NowRequest, res: NowResponse) {
         res.end();
         return;
     }
+
+    // Install deps
+    await installFonts();
 
     if (req.method === "POST") {
         fromPost(req, res);

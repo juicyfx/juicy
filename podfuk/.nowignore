@@ -1,2 +1,4 @@
-/tests
-/.cache
+.cache
+dist
+tests
+public

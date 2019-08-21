@@ -1,28 +1,34 @@
 {
-    "compilerOptions": {
-        "outDir": "dist",
-        "module": "commonjs",
-        "target": "esnext",
-        "moduleResolution": "node",
-        "jsx": "react",
-        "sourceMap": false,
-        "strict": true,
-        "noFallthroughCasesInSwitch": true,
-        "noImplicitReturns": true,
-        "noEmitOnError": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "esModuleInterop": true,
-        "experimentalDecorators": true,
-    },
-    "exclude": [
-        "node_modules",
-        "tests"
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom"
     ],
-    "include": [
-        "./api/**/*",
-        "./web/**/*"
-    ]
+    "target": "esnext",
+    "module": "commonjs",
+    "outDir": "dist",
+    "sourceMap": false,
+    "declaration": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./api/_types"
+    ],
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noEmitOnError": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+  },
+  "include": [
+    "api/**/*",
+    "web/**/*",
+  ],
+  "exclude": [
+    "dist",
+    ".cache",
+  ]
 }

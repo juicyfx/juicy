@@ -1,15 +1,30 @@
 {
-    "version": 2,
-    "scope": "juicyfx",
-    "name": "podfuk",
-    "alias": ["podfuk.jfx.cz"],
-    "builds": [
-        { "src": "api/*.ts", "use": "@now/node" },
-        { "src": "package.json", "use": "@now/static-build", "config": { "distDir": "dist" } }
-    ],
-    "routes": [
-        { "src": "^/url/(.*)", "dest": "/api/url.ts" },
-        { "src": "^/raw/(.*)", "dest": "/api/raw.ts" },
-        { "src": "^/post/(.*)", "dest": "/api/post.ts" }
-    ]
+  "version": 2,
+  "scope": "juicyfx",
+  "name": "podfuk",
+  "alias": ["podfuk.jfx.cz"],
+  "builds": [
+    {
+      "src": "api/*.ts",
+      "use": "@now/node",
+      "config": {
+        "includeFiles": [
+          "api/_fonts/**"
+        ]
+      }
+    },
+    { "src": "package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/public/index.html" },
+    { "src": "^/url/(.*)", "dest": "/api/url.ts" },
+    { "src": "^/raw/(.*)", "dest": "/api/raw.ts" },
+    { "src": "^/post/(.*)", "dest": "/api/post.ts" },
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ],
+  "build": {
+    "env": {
+      "PODFUK_URL": "https://podfuk.jfx.cz"
+    }
+  }
 }
