@@ -86,6 +86,9 @@ curl \
 
 There are some fonts preinstalled.
 
+- fa-regular-400.ttf
+- fa-brands-400.ttf
+- fa-solid-900.ttf
 - Inter-Black.ttf
 - Inter-Bold.ttf
 - Inter-BoldItalic.ttf
