@@ -12,7 +12,7 @@
 </template>
 <script>
 import Options from "./Options";
-import {API_URL} from "./../utils/api";
+import { API_URL } from "./../utils/api";
 
 export default {
   components: {
@@ -28,14 +28,14 @@ export default {
     toPdf() {
       this.$refs.pdf.height = "0px";
       this.loading = true;
+
       const params = new URLSearchParams({
         ...this.$refs.options.$data,
-        ...{ url: this.url }
+        ...{ url: this.url, time: Math.floor(Date.now() / 1000) }
       });
       this.pdf = `${API_URL}/url/?${params.toString()}`;
     },
     loaded() {
-      console.log('X');
       this.show = true;
       this.loading = false;
       this.$refs.pdf.height = "500px";

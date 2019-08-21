@@ -2,15 +2,21 @@
   <div>
     <h2>RAW data</h2>
     <div class="flex flex-row mb-2 flex-spacing-1">
-      <textarea v-model="raw" class="input-text flex-grow" type="text"></textarea>
+      <auto-textarea v-model="raw" class="input-text flex-grow"></auto-textarea>
       <button class="btn" @click="toPdf()">To PDF</button>
     </div>
     <div v-if="loading" align="center">Loading...</div>
-    <embed @load="loaded()" :src="pdf" width="100%" ref="pdf" height="0" />
+    <embed @load="loaded()" :src="pdf" :key="pdf" width="100%" ref="pdf" height="0" />
   </div>
 </template>
 <script>
+import { API_URL } from "./../utils/api";
+import AutoTextarea from "./components/AutoTextarea";
+
 export default {
+  components: {
+    AutoTextarea,
+  },
   data: () => ({
     raw: "This is awesome! Right?",
     pdf: undefined,
@@ -19,7 +25,7 @@ export default {
   }),
   methods: {
     toPdf() {
-      this.pdf = `https://podfuk.juicyfx1.now.sh/raw/?raw=${this.raw}`;
+      this.pdf = `${API_URL}/raw/?raw=${this.raw}&_time=${Math.floor(Date.now() / 1000)}`;
       this.loading = true;
     },
     loaded() {

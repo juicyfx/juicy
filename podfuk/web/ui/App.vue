@@ -14,7 +14,8 @@
         <div class="content">
           <URL></URL>
           <Raw></Raw>
-          <Post></Post>
+          <Post ref="post"></Post>
+          <Features @showtime="onShowtime"></Features>
         </div>
       </article>
     </main>
@@ -25,12 +26,19 @@
 import URL from "./URL";
 import Raw from "./Raw";
 import Post from "./Post";
+import Features from "./Features";
 
 export default {
   components: {
     URL,
     Raw,
-    Post
+    Post,
+    Features
+  },
+  methods: {
+    onShowtime(feature) {
+      this.$refs.post.type(feature);
+    }
   }
 };
 </script>
