@@ -1,6 +1,6 @@
-# JuicyFx (PHP)
+# Juicy(fx) | PHP
 
-PHP API client for [Juicy Functions](https://github.com/juicyfx/juicy)
+PHP API client for [Juicy(fx)](https://github.com/juicyfx/juicy).
 
 ## Usage
 
@@ -17,10 +17,11 @@ composer juicyfx/juicy
 
 ## Usage
 
-### Podfuk
+### PDF(x)
 
 ```php
-$client = JuicyFx::createPodfuk();
+$client = JuicyFx::createPdf();
+$client = JuicyFx::createPdf(['base_uri' => 'your-pdfx.now.sh']);
 
 $response = $client->pdf()->url('https://f3l1x.io');
 
@@ -41,7 +42,7 @@ $response = $client->pdf()->json([
 ]);
 ```
 
-[All options](https://pptr.dev/#?product=Puppeteer&version=v1.12.2&show=api-pagepdfoptions) from puppeteer (page.pdf()) are supported.
+[All options](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagepdfoptions) from puppeteer (page.pdf()) are supported.
 
 ## Maintainers
 

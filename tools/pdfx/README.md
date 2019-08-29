@@ -1,11 +1,11 @@
-# Juicy(fx) / PDF[x]
+# Juicy(fx) | PDF[x]
 
 > Generates PDF from many given sources (URL, raw, POST)
 > https://pdfx.jfx.cz
 
 ## Usage
 
-This lambda supports all [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v1.12.2&show=api-pagepdfoptions) `page.pdf(options)` options.
+This lambda supports all [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagepdfoptions) `page.pdf(options)` options.
 
 ```
 scale?: number

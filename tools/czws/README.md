@@ -1,4 +1,4 @@
-# Juicy(fx) / CZWS
+# Juicy(fx) | CZWS
 
 > Czech Republic webservices
 > https://czws.jfx.cz

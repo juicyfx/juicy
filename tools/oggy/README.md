@@ -1,4 +1,4 @@
-# Juicy(fx) / Oggy
+# Juicy(fx) | Oggy
 
 > Generates image for OG meta tags
 > https://oggy.jfx.cz

@@ -1,4 +1,4 @@
-# Juicy(fx) / Pupr
+# Juicy(fx) | Pupr
 
 > Generates SSR via Chrome Puppeteer pre-rendering
 > https://pupr.jfx.cz
