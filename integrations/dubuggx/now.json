@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "debuggx",
+  "scope": "juicyfx",
+  "builds": [
+    { "src": "/dist/index.js", "use": "@now/node@canary" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/dist/index.js" }
+  ]
+}

@@ -1,0 +1,6 @@
+# IDE
+/.idea
+
+# Composer
+/client/php/vendor
+/composer.lock

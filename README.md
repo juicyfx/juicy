@@ -1,16 +1,49 @@
-# JuicyFx
+<h1 align=center>Juicy(fx)</h1>
 
-The main goal of **Juicy Functions** is to provide easy a free API for common task. 
-Sidebar goal is to help others trully understand the lambda ecosystem.
+<p align=center>
+Tools and integrations for <a href="https://zeit.co">ZEIT Now</a>
+</p>
 
-## Juices
+<p align=center>
+🕹 <a href="https://f3l1x.io">f3l1x.io</a> | 💻 <a href="https://github.com/f3l1x">f3l1x</a> | 🐦 <a href="https://twitter.com/xf3l1x">@xf3l1x</a>
+</p>
 
-- [**czws**](cz) - Czech Republic webservices (e.q. ARES)
-- [**oggy**](oggy) - generates image for OG meta tags
-- [**podfuk**](podfuk) - generates PDF from many given sources (URL, raw, POST)
-- [**pupr**](podfuk) - generates SSR via Chrome Puppeteer pre-rendering
+The main goal of **Juicy Functions** is to provide easy a free tools and integrations for [ZEIT Now](https://zeit.co).
+Sidebar goal is to help others trully understand how ZEIT ecosystem works and how lambd(s) works.
 
-## Embryo
+## Tools
 
-- [**screenshot**](embryo/screenshot) - generates screenshot of given URL
-- [**intex**](embryo/intex) - ZEIT testing integration 
+**Stable**
+
+- [**czws**](tools/czws) - Czech Republic webservices (e.q. ARES)
+- [**oggy**](tools/oggy) - generates image for OG meta tags
+- [**pdfx**](tools/pdfx) - generates PDF from many given sources (URL, raw, POST)
+
+**Dev**
+
+- [**pupr**](tools/pupr) - generates SSR via Chrome Puppeteer pre-rendering
+- [**screenx**](tools/screenx) - generates SSR via Chrome Puppeteer pre-rendering
+
+## Integrations
+
+**Stable**
+
+**Dev**
+
+- [**dubuggx**](integrations/dubuggx) - collection of tools useful for makers of builders/integrations
+- [**intex**](integrations/intex) - testing integration
+- [**coster**](integrations/coster) -  calculates and predicts your costs
+- [**showcase**](integrations/showcase) -  show all possible UI components for your integratins
+
+## Clients
+
+- [**Juicy(fx) PHP**](clients/php) -  PHP client for Juicy Tools
+
+## Roadmap
+
+- more tools and integrations
+
+## 📝 License
+
+Copyright © 2019 [f3l1x](https://github.com/f3l1x).
+This project is [MIT](LICENSE) licensed.

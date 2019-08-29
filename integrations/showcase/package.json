@@ -1,0 +1,23 @@
+{
+  "name": "showcase",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "dev": "micro-dev dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@zeit/integration-utils": "latest"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/node": "^10.0.0",
+    "@types/node-fetch": "^2.5.0",
+    "htm": "^2.2.1",
+    "jest": "^24.8.0",
+    "micro-dev": "^3.0.0",
+    "typescript": "^3.5.3"
+  }
+}
