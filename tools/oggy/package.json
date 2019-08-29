@@ -1,0 +1,21 @@
+{
+  "name": "oggy",
+  "version": "0.0.1",
+  "description": "Create cool OG:image",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/card.js",
+    "build": "tsc",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "chrome-aws-lambda": "^1.19.0",
+    "marked": "^0.7.0",
+    "puppeteer-core": "^1.19.0"
+  },
+  "devDependencies": {
+    "@types/marked": "^0.6.5",
+    "@types/puppeteer-core": "^1.9.0",
+    "typescript": "^3.5.3"
+  }
+}

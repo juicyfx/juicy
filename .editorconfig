@@ -8,7 +8,7 @@ end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[*.{md,html}]
+[*.{md,html,php,phpt}]
 indent_style = tab
 indent_size = tab
 tab_width = 4
@@ -17,6 +17,6 @@ tab_width = 4
 indent_style = space
 indent_size = 2
 
-[{composer.json,package.json,.travis.yml}]
+[{now.json,composer.json,package.json,.travis.yml}]
 indent_style = space
 indent_size = 2
