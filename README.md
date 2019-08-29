@@ -8,6 +8,10 @@ Tools and integrations for <a href="https://zeit.co">ZEIT Now</a>
 🕹 <a href="https://f3l1x.io">f3l1x.io</a> | 💻 <a href="https://github.com/f3l1x">f3l1x</a> | 🐦 <a href="https://twitter.com/xf3l1x">@xf3l1x</a>
 </p>
 
+<p align=center>
+    <a href="https://circleci.com/gh/juicyfx/juicy"><img src="https://img.shields.io/circleci/build/github/juicyfx/juicy?style=flat-square"></a>
+</p>
+
 The main goal of **Juicy Functions** is to provide easy a free tools and integrations for [ZEIT Now](https://zeit.co).
 Sidebar goal is to help others trully understand how ZEIT ecosystem works and how lambd(s) works.
 
@@ -37,7 +41,7 @@ Sidebar goal is to help others trully understand how ZEIT ecosystem works and ho
 
 ## Clients
 
-- [**Juicy(fx) PHP**](clients/php) -  PHP client for Juicy Tools
+- [**Juicy(fx) PHP**](client/php) -  PHP client for Juicy Tools
 
 ## Roadmap
 
