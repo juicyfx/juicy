@@ -3,10 +3,10 @@ import * as marked from 'marked';
 import { sanitizeHtml } from './sanitizer';
 
 function getCss(fontSize: string) {
-    const regular = readFileSync(`${__dirname}/../fonts/Inter-UI-Regular.woff2`).toString('base64');
-    const bold = readFileSync(`${__dirname}/../fonts/Inter-UI-Bold.woff2`).toString('base64');
+  const regular = readFileSync(`${__dirname}/../fonts/Inter-UI-Regular.woff2`).toString('base64');
+  const bold = readFileSync(`${__dirname}/../fonts/Inter-UI-Bold.woff2`).toString('base64');
 
-    return `
+  return `
     @font-face {
         font-family: 'Inter UI';
         font-style:  normal;
@@ -84,8 +84,8 @@ function getCss(fontSize: string) {
 
 
 export function getHtml(parsedReq: ParsedRequest) {
-    const { text, theme, md, fontSize, images } = parsedReq;
-    return `<!DOCTYPE html>
+  const { text, theme, md, fontSize, images } = parsedReq;
+  return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
     <title>Generated Image</title>
@@ -99,13 +99,13 @@ export function getHtml(parsedReq: ParsedRequest) {
             <div class="img-wrapper">
                 <img class="logo" src="${sanitizeHtml(images[0])}" />
                 ${images.slice(1).map(img => {
-                    return `<div class="plus">+</div><img class="logo" src="${sanitizeHtml(img)}" />`;
-                })}
+    return `<div class="plus">+</div><img class="logo" src="${sanitizeHtml(img)}" />`;
+  })}
             </div>
             <div class="spacer">
             <div class="heading">${md
-                ? marked(text)
-                : sanitizeHtml(text)}
+      ? marked(text)
+      : sanitizeHtml(text)}
             </div>
         </div>
     </body>
