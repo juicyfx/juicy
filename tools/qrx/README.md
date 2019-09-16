@@ -8,4 +8,9 @@
 
 ## Usage
 
-- ?t=<text>
+- ?t=<string>
+- ?width=<number>
+- ?scale=<number>
+- ?margin=<number>
+- ?colorDark=<string>
+- ?colorLight=<string>

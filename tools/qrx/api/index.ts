@@ -2,6 +2,7 @@ import { NowRequest, NowResponse } from '@now/node';
 import QRCode from 'qrcode';
 import * as errors from './_lib/errors';
 import { applyCors } from './_lib/http';
+import { parseOptions } from './_lib/utils';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
@@ -14,7 +15,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       // Generate QR-code from given URL params
       const url = await QRCode.toDataURL(
         Array.isArray(req.query.t) ? req.query.t.join('') : req.query.t,
-        { margin: 0, width: 512 }
+        parseOptions(req)
       );
 
       // Set image headers
