@@ -1,75 +1,62 @@
 import { NowRequest, NowResponse } from '@now/node';
-import { getPdf } from "./_lib/utils/chromium";
-import { parsePdfOptions } from "./_lib/utils/request";
-import * as errors from "./_lib/utils/errors";
-import { installFonts } from './_lib/utils/fonts';
+import { getPdf } from "./_lib/chromium";
+import { parsePdfOptions } from "./_lib/request";
+import * as errors from "./_lib/errors";
+import { installFonts } from './_lib/fonts';
+import { applyCors } from './_lib/http';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
-    console.log("HTTP", req.url);
+  console.log("HTTP", req.url);
 
-    // Setup env HOME (e.q. for fonts)
-    if (process.env.HOME === undefined) {
-      process.env.HOME = '/tmp';
-    }
+  // Apply HTTP Men-in-the-middle
+  applyCors(req, res);
 
-    // Optimistic CORS
-    res.setHeader("Access-Control-Allow-Origin", '*');
-    res.setHeader("Access-Control-Allow-Methods", '*');
-    res.setHeader("Access-Control-Allow-Headers", '*');
+  // Install deps
+  await installFonts();
 
-    // OPTIONS request
-    if (req.method === 'OPTIONS') {
-        res.statusCode = 200;
-        res.end();
-        return;
-    }
-
-    // Install deps
-    await installFonts();
-
-    if (req.method === "POST") {
-        fromPost(req, res);
-    } else {
-        res.statusCode = 500;
-        res.setHeader("Content-Type", "text/html");
-        res.end(errors.USAGE);
-    }
+  if (req.method === "POST") {
+    fromPost(req, res);
+  } else {
+    res.statusCode = 400;
+    res.setHeader("Content-Type", "text/html");
+    res.end(errors.USAGE);
+  }
 }
 
 async function fromPost(req: NowRequest, res: NowResponse) {
-    try {
-        let data: string;
-        let rest: object = {};
-        const bodyType = typeof req.body;
+  try {
+    let data: string;
+    let rest: object = {};
+    const bodyType = typeof req.body;
 
-        if (!req.body) {
-            throw Error(`No request body given. Body type ${bodyType}.`);
-        }
-
-        if (bodyType === 'string') {
-            data = req.body;
-        } else if (bodyType === 'object') {
-            ({ data, ...rest } = req.body);
-        } else if (Buffer.isBuffer(req.body)) {
-            data = Buffer.toString();
-        } else {
-            throw Error(`Unsupported request body of type ${typeof req.body}`);
-        }
-
-        const file = await getPdf(
-            { raw: data },
-            { ...parsePdfOptions({...req.query, ...rest}) }
-        );
-
-        res.statusCode = 200;
-        res.setHeader("Content-Type", `application/pdf`);
-        res.end(file);
-    } catch (e) {
-        res.statusCode = 500;
-        res.setHeader("Content-Type", "text/html");
-        res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);
-
-        console.error(e);
-        console.error(e.message);
+    if (!req.body) {
+      throw Error(`No request body given. Body type ${bodyType}.`);
     }
+
+    if (bodyType === 'string') {
+      data = req.body;
+    } else if (bodyType === 'object') {
+      ({ data, ...rest } = req.body);
+    } else if (Buffer.isBuffer(req.body)) {
+      data = Buffer.toString();
+    } else {
+      throw Error(`Unsupported request body of type ${typeof req.body}`);
+    }
+
+    const file = await getPdf(
+      { raw: data },
+      { ...parsePdfOptions({ ...req.query, ...rest }) }
+    );
+
+    res.statusCode = 200;
+    res.setHeader("Content-Type", `application/pdf`);
+    res.end(file);
+  } catch (e) {
+    res.statusCode = 500;
+    res.setHeader("Content-Type", "text/html");
+    res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);
+
+    console.error(e);
+    console.error(e.message);
+  }
 }

@@ -21,14 +21,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,
-    "preserveConstEnums": true,
+    "preserveConstEnums": true
   },
   "include": [
     "api/**/*",
-    "web/**/*",
+    "web/**/*"
   ],
   "exclude": [
     "dist",
-    ".cache",
+    ".cache"
   ]
 }

@@ -5,7 +5,8 @@
 
 ## Usage
 
-This lambda supports all [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagepdfoptions) `page.pdf(options)` options.
+This lambda supports all [Puppeteer](https://pptr.dev/#?product=Puppeteer&version=v1.19.0&show=api-pagepdfoptions) `page.pdf(options)` options,
+but someones are under different name, be careful!
 
 ```
 scale?: number
