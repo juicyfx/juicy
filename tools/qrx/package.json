@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "qrcode": "^1.4.1"
+  },
+  "devDependencies": {
+    "@now/node": "^0.12.6",
+    "@types/qrcode": "^1.3.4",
+    "typescript": "^3.5.3"
+  }
+}

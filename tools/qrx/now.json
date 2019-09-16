@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "scope": "juicyfx",
+  "name": "qrx",
+  "alias": ["qrx.jfx.cz"],
+  "builds": [
+    {
+      "src": "api/index.ts",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    { "src": ".*", "dest": "/api/index.ts" }
+  ]
+}

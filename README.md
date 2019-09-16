@@ -27,6 +27,7 @@ Sidebar goal is to help others trully understand how ZEIT ecosystem works and ho
 
 - [**pupr**](tools/pupr) - generates SSR via Chrome Puppeteer pre-rendering
 - [**screenx**](tools/screenx) - generates SSR via Chrome Puppeteer pre-rendering
+- [**qrx**](tools/qrx) - generates QR-codes
 
 ## Integrations
 
