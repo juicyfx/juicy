@@ -9,6 +9,11 @@ import { applyCors } from './_lib/http';
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
 
+  // Setup HOME dir, if it's not
+  if (process.env.HOME === undefined) {
+    process.env.HOME = '/tmp';
+  }
+
   // Apply HTTP Men-in-the-middle
   applyCors(req, res);
 

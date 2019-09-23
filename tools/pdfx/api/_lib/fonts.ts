@@ -7,7 +7,7 @@ const fileReaddir = util.promisify(fs.readdir);
 const fileMkdir = util.promisify(fs.mkdir);
 const fileCopyFile = util.promisify(fs.copyFile);
 
-const FONTS_DIR = path.resolve(__dirname, '../../_fonts');
+const FONTS_DIR = path.resolve(__dirname, '../../api/_fonts');
 const TMP_FONTS_DIR = '/tmp/.fonts';
 
 export async function installFonts(): Promise<void> {
