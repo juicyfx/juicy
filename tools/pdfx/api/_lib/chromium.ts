@@ -28,6 +28,8 @@ export async function getPdf(source: PdfSource, options: PdfOptions): Promise<st
     ...options
   });
 
+  await page.close();
   await browser.close();
+
   return content;
 }
