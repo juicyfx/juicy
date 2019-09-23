@@ -13,7 +13,7 @@ Tools and integrations for <a href="https://zeit.co">ZEIT Now</a>
 </p>
 
 The main goal of **Juicy Functions** is to provide easy a free tools and integrations for [ZEIT Now](https://zeit.co).
-Sidebar goal is to help others trully understand how ZEIT ecosystem works and how lambd(s) works.
+Secondary goal is to help others trully understand how ZEIT ecosystem works and how lambd(s) works.
 
 ## Tools
 
