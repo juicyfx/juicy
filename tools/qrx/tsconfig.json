@@ -12,8 +12,7 @@
     "sourceMap": false,
     "declaration": true,
     "typeRoots": [
-      "./node_modules/@types",
-      "./api/_types"
+      "./node_modules/@types"
     ],
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -24,8 +23,7 @@
     "preserveConstEnums": true
   },
   "include": [
-    "api/**/*",
-    "web/**/*"
+    "api/**/*"
   ],
   "exclude": [
     "dist",
