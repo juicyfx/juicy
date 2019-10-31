@@ -4,9 +4,9 @@
     "name": "czws",
     "alias": ["czws.jfx.cz"],
     "builds": [
-        { "src": "lambda/basic.js", "use": "@now/node"}
+        { "src": "api/ares/*.ts", "use": "@now/node"}
     ],
     "routes": [
-        { "src": "/ares/basic/", "dest": "/lambda/basic.js" }
+        { "src": "/ares/([a-z]+)/", "dest": "/api/ares/$1.ts" }
     ]
 }

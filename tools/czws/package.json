@@ -1,12 +1,15 @@
 {
-  "name": "juicyfx-ares",
+  "name": "czws",
   "version": "0.0.1",
-  "description": "Useful JSON ARES API",
+  "description": "Czech webservices",
   "private": true,
   "license": "MIT",
   "dependencies": {
     "node-fetch": "^2.3.0",
     "xml-js": "^1.6.9"
+  },
+  "devDependencies": {
+    "@now/node": "^0.12.6"
   },
   "scripts": {
     "dev": "node dev.js"
