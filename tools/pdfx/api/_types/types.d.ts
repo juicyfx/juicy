@@ -18,7 +18,7 @@ interface PdfOptions {
     printBackground?: boolean;
     landscape?: boolean;
     pageRanges?: string;
-    format?: string;
+    format?: import('puppeteer-core').PDFFormat;
     width?: string | number;
     height?: string | number;
     margin?: {

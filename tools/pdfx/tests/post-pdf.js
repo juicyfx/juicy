@@ -3,7 +3,7 @@ const fs = require("fs");
 
 function createRequest(options, data, output) {
   const defaults = {
-    hostname: "jfx-pdf.jfx.cz",
+    hostname: "pdfx.jfx.cz",
     path: "/post/",
     method: "POST",
     headers: {

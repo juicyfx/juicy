@@ -28,9 +28,16 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     res.end(errors.USAGE);
   }
 }
+
 async function fromUrl(req: NowRequest, res: NowResponse) {
   try {
     const url: string = Array.isArray(req.query.url) ? req.query.url.join() : req.query.url;
+
+    const options = {};
+
+    if (typeof req.body === 'object') {
+      Object.assign(options, req.body);
+    }
 
     if (!isValidUrl(url)) {
       res.statusCode = 400;
@@ -39,10 +46,13 @@ async function fromUrl(req: NowRequest, res: NowResponse) {
         `<h1>Bad Request</h1><p>The url <em>${url}</em> is not valid.</p>`
       );
     } else {
-      const file = await getPdf({ url }, parsePdfOptions(req.query));
+      const file = await getPdf(
+        { url },
+        { ...parsePdfOptions({ ...req.query, ...options }) }
+      );
       res.statusCode = 200;
       res.setHeader("Content-Type", `application/pdf`);
-      res.end(file);
+      res.end(file, 'binary');
     }
   } catch (e) {
     res.statusCode = 500;
