@@ -1,15 +1,15 @@
 import chromeAws from "chrome-aws-lambda";
-const puppeteer = chromeAws.puppeteer as any;
+import puppeteer from "puppeteer-core";
 
 export const OPTIONS_DEFAULTS: PdfOptions = {
   format: 'A4'
 };
 
-export async function getPdf(source: PdfSource, options: PdfOptions): Promise<string> {
+export async function getPdf(source: PdfSource, options: PdfOptions): Promise<Buffer> {
   const browser = await puppeteer.launch({
     args: chromeAws.args,
     executablePath: await chromeAws.executablePath,
-    headless: true
+    headless: chromeAws.headless
   });
 
   const page = await browser.newPage();
@@ -17,19 +17,17 @@ export async function getPdf(source: PdfSource, options: PdfOptions): Promise<st
   if (source.url) {
     await page.goto(source.url, { waitUntil: "networkidle0" });
   } else if (source.raw) {
-    await page.setContent(source.raw);
+    await page.setContent(source.raw, { waitUntil: "networkidle0" });
   } else {
     throw Error("Unsupported source");
   }
 
   await page.emulateMedia("screen");
+
   const content = await page.pdf({
     ...OPTIONS_DEFAULTS,
     ...options
   });
-
-  await page.close();
-  await browser.close();
 
   return content;
 }

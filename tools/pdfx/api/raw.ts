@@ -34,7 +34,7 @@ async function fromRaw(req: NowRequest, res: NowResponse) {
     const file = await getPdf({ raw }, parsePdfOptions(req.query));
     res.statusCode = 200;
     res.setHeader("Content-Type", `application/pdf`);
-    res.end(file);
+    res.end(file, 'binary');
   } catch (e) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");

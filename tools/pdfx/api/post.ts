@@ -55,7 +55,7 @@ async function fromPost(req: NowRequest, res: NowResponse) {
 
     res.statusCode = 200;
     res.setHeader("Content-Type", `application/pdf`);
-    res.end(file);
+    res.end(file, 'binary');
   } catch (e) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
@@ -65,3 +65,7 @@ async function fromPost(req: NowRequest, res: NowResponse) {
     console.error(e.message);
   }
 }
+
+process.on('unhandledRejection', (reason, p) => {
+  console.log('Unhandled Rejection at:', p, 'reason:', reason);
+});

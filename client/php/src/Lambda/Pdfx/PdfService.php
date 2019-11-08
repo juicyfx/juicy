@@ -32,6 +32,32 @@ class PdfService
 
 	/**
 	 * @param mixed[] $args
+	 * @param mixed[] $data
+	 * @param mixed[] $options
+	 */
+	public function urlWith(string $url, array $args = [], array $data = [], array $options = []): PdfResponse
+	{
+		$json = [];
+
+		if (isset($data['headerTemplate'])) {
+			$json['headerTemplate'] = $data['headerTemplate'];
+		}
+
+		if (isset($data['footerTemplate'])) {
+			$json['footerTemplate'] = $data['footerTemplate'];
+		}
+
+		return new PdfResponse(
+			$this->client->request('POST', '/url/', array_merge(
+				['json' => $json],
+				['query' => array_merge($args, ['url' => $url])],
+				$options
+			))
+		);
+	}
+
+	/**
+	 * @param mixed[] $args
 	 * @param mixed[] $options
 	 */
 	public function raw(string $raw, array $args = [], array $options = []): PdfResponse
