@@ -1,3 +1,6 @@
+declare module 'htm';
+declare module 'htmldom';
+
 interface Node {
   type: string,
   propsString: [],
@@ -9,5 +12,3 @@ interface HtmNode {
   props: { [key: string]: any },
   children: HtmNode[]
 }
-
-declare module 'htm';

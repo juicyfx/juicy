@@ -3,13 +3,14 @@
   "scripts": {
     "watch": "tsc --watch",
     "build": "tsc",
-    "dev": "micro-dev dist/index.js"
+    "dev": "micro-dev public/index.js"
   },
   "files": [
     "dist"
   ],
   "dependencies": {
-    "@zeit/integration-utils": "latest"
+    "@zeit/integration-utils": "latest",
+    "htmldom": "^4.0.11"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",

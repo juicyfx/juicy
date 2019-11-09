@@ -2,10 +2,8 @@
   "version": 2,
   "name": "showcase",
   "scope": "juicyfx",
-  "builds": [
-    { "src": "/dist/index.js", "use": "@now/node@canary" }
-  ],
+  "alias": ["showcase.jfx.cz"],
   "routes": [
-    { "src": "/(.*)", "dest": "/dist/index.js" }
+    { "src": "/(.*)", "dest": "/api/index.ts" }
   ]
 }

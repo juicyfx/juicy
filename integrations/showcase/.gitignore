@@ -5,4 +5,4 @@ node_modules
 yarn.lock
 
 # TS
-dist
+public

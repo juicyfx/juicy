@@ -1,7 +1,8 @@
-function h(type: string, props: any = [], ...children: any[]): HtmNode {
+import htm from 'htm';
+
+export function h(type: string, props: any = [], ...children: any[]): HtmNode {
   return { type, props: props || {}, children: children || [] };
 }
-import htm from 'htm';
 
 export const htmlx = htm.bind(h);
 
@@ -27,9 +28,17 @@ export function renderer(node: Node | string): string {
   return `<${type}${propsString}>${childrenStr}</${type}>`;
 }
 
-export function renderNode(node: HtmNode | string): string {
+export function renderNode(node: HtmNode[] | HtmNode | string): string {
+  // Pure string
   if (typeof node === "string") {
     return node;
+  }
+
+  // HtmNode[]
+  if (Array.isArray(node)) {
+    return node
+      .map((n: HtmNode): string => renderNode(n))
+      .join("");
   }
 
   const { type, props, children } = node;
@@ -50,5 +59,7 @@ export function renderNode(node: HtmNode | string): string {
     return `${k}="${props[k]}"`;
   });
 
-  return `<${type}${properties ? ' ' + properties : null}>${content}</${type}>`;
+  const result = `<${type}${properties ? ' ' + properties.join(" ") : null}>${content.join(" ")}</${type}>`;
+
+  return result;
 }

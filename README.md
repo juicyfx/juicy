@@ -22,12 +22,11 @@ Secondary goal is to help others trully understand how ZEIT ecosystem works and 
 - [**czws**](tools/czws) - Czech Republic webservices (e.q. ARES)
 - [**oggy**](tools/oggy) - generates image for OG meta tags
 - [**pdfx**](tools/pdfx) - generates PDF from many given sources (URL, raw, POST)
+- [**qrx**](tools/qrx) - generates QR-codes
 
 **Dev**
 
 - [**pupr**](tools/pupr) - generates SSR via Chrome Puppeteer pre-rendering
-- [**screenx**](tools/screenx) - generates SSR via Chrome Puppeteer pre-rendering
-- [**qrx**](tools/qrx) - generates QR-codes
 
 ## Integrations
 

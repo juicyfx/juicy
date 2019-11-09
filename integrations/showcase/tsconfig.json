@@ -7,7 +7,7 @@
       ],
       "target": "esnext",
       "module": "commonjs",
-      "outDir": "dist",
+      "outDir": "public",
       "sourceMap": false,
       "declaration": false,
       "typeRoots": [
@@ -15,7 +15,7 @@
       ]
     },
     "include": [
-      "src/**/*"
+      "api/**/*"
     ],
     "exclude": [
       "dist",
