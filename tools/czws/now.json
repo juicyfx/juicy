@@ -2,7 +2,6 @@
     "version": 2,
     "scope": "juicyfx",
     "name": "czws",
-    "alias": ["czws.jfx.cz"],
     "builds": [
         { "src": "api/ares/*.ts", "use": "@now/node"}
     ],

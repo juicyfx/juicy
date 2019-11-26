@@ -2,7 +2,6 @@
   "version": 2,
   "scope": "juicyfx",
   "name": "pdfx",
-  "alias": ["pdfx.jfx.cz"],
   "builds": [
     {
       "src": "api/*.ts",

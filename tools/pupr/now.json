@@ -2,7 +2,6 @@
   "version": 2,
   "scope": "juicyfx",
   "name": "pupr",
-  "alias": ["pupr.jfx.cz"],
   "builds": [
     {
       "src": "src/pupr.js",
