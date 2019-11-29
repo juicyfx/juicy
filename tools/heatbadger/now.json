@@ -1,0 +1,11 @@
+{
+  "scope": "juicyfx",
+  "name": "heatbadger",
+  "routes": [
+    { "src": "/github/([a-z]+)/([a-z\\-]+)/.*", "dest": "/api/github.ts?r=$1/$2" },
+    { "src": "/(.*)", "dest": "/api/badger.ts" }
+  ],
+  "env": {
+    "GITHUB_TOKEN": "@github-juicyfx-heatbadger"
+  }
+}

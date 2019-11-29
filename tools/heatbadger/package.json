@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "chrome-aws-lambda": "^2.0.1",
+    "puppeteer-core": "^2.0.0"
+  },
+  "devDependencies": {
+    "@now/node": "^1.2.0",
+    "@types/puppeteer-core": "^2.0.0",
+    "micro": "^9.3.4",
+    "micro-dev": "^3.0.0",
+    "typescript": "^3.7.2"
+  },
+  "scripts": {
+    "dev": "micro-dev tests/github.js -i api -w dist",
+    "compile": "tsc",
+    "watch": "tsc --watch"
+  }
+}
