@@ -1,0 +1,11 @@
+{
+  "scope": "juicyfx",
+  "name": "avatarless",
+  "regions": ["all"],
+  "routes": [
+    { "src": "/g/(.+@.+\\..+)", "dest": "/api/gravatar.ts?_email=$1" },
+    { "src": "/i/(.+)", "dest": "/api/initials.ts?_initials=$1" },
+    { "src": "/gi/(.+@.+\\..+)", "dest": "/api/gravatar+initials.ts?_email=$1" },
+    { "src": "/.*", "dest": "/api/index.ts" }
+  ]
+}
