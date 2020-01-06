@@ -91,8 +91,7 @@ function createAvatarless(options: AvatarlessOptions): string {
       x="50%"
       y="50%"
       text-anchor="middle"
-      alignment-baseline="middle"
-      dominant-baseline="middle"
+      dominant-baseline="central"
       font-family="Verdana,DejaVu Sans,sans-serif">
     ${options.text}
     </text>
