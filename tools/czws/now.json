@@ -1,11 +1,10 @@
 {
-    "version": 2,
-    "scope": "juicyfx",
-    "name": "czws",
-    "builds": [
-        { "src": "api/ares/*.ts", "use": "@now/node"}
-    ],
-    "routes": [
-        { "src": "/ares/([a-z]+)/", "dest": "/api/ares/$1.ts" }
-    ]
+  "scope": "juicyfx",
+  "name": "czws",
+  "builds": [
+    { "src": "api/ares/*.ts", "use": "@now/node"}
+  ],
+  "routes": [
+    { "src": "/ares/([a-z]+)/", "dest": "/api/ares/$1.ts" }
+  ]
 }

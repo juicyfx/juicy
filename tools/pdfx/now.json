@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "scope": "juicyfx",
   "name": "pdfx",
   "builds": [

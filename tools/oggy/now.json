@@ -1,11 +1,10 @@
 {
-    "version": 2,
-    "scope": "juicyfx",
-    "name": "oggy",
-    "builds": [
-        { "src": "dist/card.js", "use": "@now/node@canary" }
-    ],
-    "routes": [
-        { "src": "/(.+)", "dest": "/dist/card.js" }
-    ]
+  "scope": "juicyfx",
+  "name": "oggy",
+  "builds": [
+    { "src": "dist/card.js", "use": "@now/node@canary" }
+  ],
+  "routes": [
+    { "src": "/(.+)", "dest": "/dist/card.js" }
+  ]
 }

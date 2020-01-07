@@ -1,8 +1,6 @@
 {
-  "version": 2,
   "name": "showcase",
   "scope": "juicyfx",
-  "alias": ["showcase.jfx.cz"],
   "routes": [
     { "src": "/(.*)", "dest": "/api/index.ts" }
   ]
