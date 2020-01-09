@@ -1,0 +1,7 @@
+{
+  "scope": "juicyfx",
+  "name": "coloring",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index.ts" }
+  ]
+}
