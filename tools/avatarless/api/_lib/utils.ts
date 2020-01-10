@@ -1,22 +1,20 @@
 import { NowRequest } from "@now/node";
 
 const COLORS = [
-  "#fccbc7", "#fbb4af", "#f99d97", "#f8877f", "#f77066", "#f55a4e", "#f7a9c4", "#f492b3", "#f27ba3",
-  "#f06493", "#ee4c83", "#d88be5", "#d176e1", "#ca61dc", "#bda7e3", "#ae94dd", "#9f80d7", "#916dd1",
-  "#abb4e2", "#98a2db", "#8591d5", "#7280ce", "#b2dbfb", "#9acffa", "#82c4f8", "#6ab8f7", "#51adf6",
-  "#39a1f4", "#92dcfe", "#79d4fd", "#60ccfd", "#47c4fd", "#2ebcfc", "#14b4fc", "#6eefff", "#54ecff",
-  "#3be9ff", "#21e6ff", "#08e3ff", "#00d3ed", "#00bcd4", "#30ffec", "#16ffe9", "#00fce4", "#00e2cd",
-  "#00c9b6", "#b5dfb7", "#a3d7a5", "#92cf94", "#80c883", "#6ec071", "#5cb860", "#4caf50", "#d5e9bd",
-  "#c8e3aa", "#bcdc97", "#b0d683", "#a4d070", "#97c95d", "#8bc34a", "#7eb73d", "#71a436", "#eef3bb",
-  "#e8efa5", "#e3eb90", "#dde77a", "#d8e464", "#d2e04f", "#cddc39", "#c6d626", "#b1c022", "#9daa1e",
-  "#89951a", "#fffbd4", "#fff8ba", "#fff5a1", "#fff387", "#fff06e", "#ffee54", "#ffeb3b", "#ffe821",
-  "#ffe608", "#edd500", "#d4be00", "#baa700", "#a19100", "#ffe7a0", "#ffe186", "#ffda6d", "#ffd453",
-  "#ffce3a", "#ffc720", "#ffc107", "#ecb100", "#d39e00", "#b98b00", "#ffd699", "#ffcc80", "#ffc166",
-  "#ffb74d", "#ffad33", "#ffa21a", "#ff9800", "#e68900", "#cc7a00", "#ffcbbb", "#ffb8a1", "#ffa588",
-  "#ff916e", "#ff7e55", "#ff6a3b", "#ff5722", "#c2a398", "#b89588", "#af8778", "#a57868", "#eaeaea",
-  "#dedede", "#d1d1d1", "#c4c4c4", "#b7b7b7", "#ababab", "#9e9e9e", "#919191", "#848484", "#b7c6cd",
-  "#a8bac3", "#99aeb8", "#8aa2ae", "#7a96a3", "#6b8a99"
-]
+  '#EF5350', '#F44336', '#E53935', '#D32F2F', '#C62828', '#B71C1C', '#EC407A', '#E91E63',
+  '#D81B60', '#C2185B', '#AD1457', '#880E4F', '#FF5252', '#FF1744', '#D50000', '#FF4081',
+  '#F50057', '#C51162', '#BA68C8', '#AB47BC', '#9C27B0', '#8E24AA', '#7B1FA2', '#6A1B9A',
+  '#4A148C', '#E040FB', '#D500F9', '#AA00FF', '#9575CD', '#7E57C2', '#673AB7', '#5E35B1',
+  '#512DA8', '#4527A0', '#311B92', '#7C4DFF', '#651FFF', '#6200EA', '#7986CB', '#5C6BC0',
+  '#3F51B5', '#3949AB', '#303F9F', '#283593', '#1A237E', '#536DFE', '#3D5AFE', '#304FFE',
+  '#1E88E5', '#1976D2', '#1565C0', '#0D47A1', '#448AFF', '#2979FF', '#2962FF', '#0288D1',
+  '#0277BD', '#01579B', '#0097A7', '#00838F', '#006064', '#009688', '#00897B', '#00796B',
+  '#00695C', '#004D40', '#0091EA', '#43A047', '#388E3C', '#2E7D32', '#1B5E20', '#558B2F',
+  '#33691E', '#827717', '#E65100', '#F4511E', '#E64A19', '#D84315', '#BF360C', '#A1887F',
+  '#8D6E63', '#795548', '#6D4C41', '#5D4037', '#4E342E', '#3E2723', '#757575', '#616161',
+  '#424242', '#212121', '#78909C', '#607D8B', '#546E7A', '#455A64', '#37474F', '#263238',
+  '#FF3D00', '#DD2C00',
+];
 
 const DEFAULT_MIN_SIZE = 16;
 const DEFAULT_SIZE = 256;
@@ -35,11 +33,11 @@ function stringCodes(text: string): number {
 }
 
 export function prepareAvatarlessOptions(req: NowRequest): AvatarlessOptions {
-  const text = <string>req.query._initials || <string>req.query.t || 'N/A';
+  const text = <string>req.query._initials || <string>req.query.t || undefined;
   const size = Math.max(DEFAULT_MIN_SIZE, parseInt(<string>req.query.s || String(DEFAULT_SIZE)));
-  const bgColor = <string>req.query.bc || suggestColor(text);
+  const bgColor = <string>req.query.bc || suggestColor(<string>req.query._email);
   const textColor = <string>req.query.tc || 'white';
-  const textSize = Math.floor(size / DEFAULT_SIZE * 95);
+  const textSize = Math.floor(size / DEFAULT_SIZE * 140);
 
   return {
     text,

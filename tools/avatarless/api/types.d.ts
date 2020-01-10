@@ -15,7 +15,7 @@ interface GravatarOptions {
 }
 
 interface AvatarlessOptions {
-  text: string,
+  text: string | undefined,
   size: number,
   bgColor: string,
   textColor: string

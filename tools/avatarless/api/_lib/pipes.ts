@@ -3,6 +3,7 @@ import crypto from 'crypto';
 import * as http from './http';
 import * as errors from './errors';
 import { prepareAvatarlessOptions, prepareGravatarOptions } from './utils';
+import { SILHOUETTE_PERSON } from './icons';
 
 export function pipeLogging(req: NowRequest, _res: NowResponse): void {
   console.log("[HTTP]", req.url);
@@ -37,7 +38,7 @@ export async function pipeGravatar(req: NowRequest, res: NowResponse): Promise<v
   const gravatar = await createGravatar(options);
 
   res.setHeader('Content-Type', 'image/png');
-  res.setHeader('Cache-Control', `max-age=${60*60}, s-maxage=${60*60}, stale-while-revalidate, public`);
+  res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, stale-while-revalidate, public`);
   res.write(gravatar);
   res.end();
 }
@@ -47,7 +48,7 @@ export async function pipeGravatarOnly(req: NowRequest, res: NowResponse): Promi
   const gravatar = await createGravatar(options);
 
   res.setHeader('Content-Type', 'image/png');
-  res.setHeader('Cache-Control', `max-age=${60*60}, s-maxage=${60*60}, stale-while-revalidate, public`);
+  res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, stale-while-revalidate, public`);
   res.write(gravatar);
   res.end();
 }
@@ -57,7 +58,7 @@ export function pipeAvatarless(req: NowRequest, res: NowResponse): void {
   const svg = createAvatarless(options);
 
   res.setHeader('Content-Type', 'image/svg+xml');
-  res.setHeader('Cache-Control', `max-age=${60*60}, s-maxage=${60*60}, stale-while-revalidate, public`);
+  res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, stale-while-revalidate, public`);
   res.end(svg.trim());
 }
 
@@ -82,20 +83,32 @@ async function createGravatar(options: GravatarOptions): Promise<Buffer> {
 function createAvatarless(options: AvatarlessOptions): string {
   console.log('[AVATARLESS] Fallback to avatarless')
 
+  const tmp: { [key: string]: string | undefined; } = {};
+
+  // If text is provided, use custom text with font
+  // Otherwise use siluette
+  if (options.text !== undefined) {
+    tmp.text = `
+      <text
+        fill="${options.textColor}"
+        font-size="${options.textSize}"
+        x="50%"
+        y="50%"
+        text-anchor="middle"
+        dominant-baseline="central"
+        font-family="Verdana,DejaVu Sans,sans-serif">
+      ${options.text}
+      </text>
+    `;
+  } else {
+    tmp.text = SILHOUETTE_PERSON;
+  }
+
   const svg = `
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${options.size}" height="${options.size}">
-    <rect x="0" y="0" width="${options.size}" height="${options.size}" fill="${options.bgColor}"/>
-    <text
-      fill="${options.textColor}"
-      font-size="${options.textSize}"
-      x="50%"
-      y="50%"
-      text-anchor="middle"
-      dominant-baseline="central"
-      font-family="Verdana,DejaVu Sans,sans-serif">
-    ${options.text}
-    </text>
-  </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${options.size}" height="${options.size}">
+      <rect x="0" y="0" width="${options.size}" height="${options.size}" fill="${options.bgColor}"/>
+      ${tmp.text}
+    </svg>
   `;
 
   return svg.trim();
