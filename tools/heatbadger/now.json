@@ -1,9 +1,12 @@
 {
   "scope": "juicyfx",
   "name": "heatbadger",
-  "routes": [
-    { "src": "/github/([a-z]+)/([a-z\\-]+)/.*", "dest": "/api/github.ts?r=$1/$2" },
-    { "src": "/(.*)", "dest": "/api/badger.ts" }
+  "rewrites": [
+    { "source": "/github/([a-z]+)/([a-z\\-]+)/.*", "destination": "/api/github.ts?r=$1/$2" },
+    { "source": "/badge/(.*)", "destination": "/api/badger.ts" }
+  ],
+  "redirects": [
+    { "source": "/", "destination": "https://github.com/juicyfx/juicy/tree/master/tools/qrx" }
   ],
   "env": {
     "GITHUB_TOKEN": "@github-juicyfx-heatbadger"
