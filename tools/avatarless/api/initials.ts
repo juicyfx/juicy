@@ -1,5 +1,5 @@
 import { NowRequest, NowResponse } from '@now/node';
-import { pipeLogging, pipeCOORS, pipeRequirements, pipeAvatarless } from './_lib/pipes';
+import { pipeLogging, pipeCOORS, pipeRequirements, pipeAvatarlessInitials } from './_lib/pipes';
 
 export default async function handler(req: NowRequest, res: NowResponse): Promise<void> {
   try {
@@ -13,7 +13,7 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
     pipeRequirements(req, res, ['_initials']);
 
     // Avatarless generator
-    pipeAvatarless(req, res);
+    pipeAvatarlessInitials(req, res);
   } catch (e) {
     console.error(e);
     res.statusCode = 500;

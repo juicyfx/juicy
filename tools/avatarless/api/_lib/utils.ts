@@ -32,10 +32,26 @@ function stringCodes(text: string): number {
     .reduce((a, b) => a + b);
 }
 
-export function prepareAvatarlessOptions(req: NowRequest): AvatarlessOptions {
+export function prepareAvatarlessInitialsOptions(req: NowRequest): AvatarlessOptions {
   const text = <string>req.query._initials || <string>req.query.t || undefined;
   const size = Math.max(DEFAULT_MIN_SIZE, parseInt(<string>req.query.s || String(DEFAULT_SIZE)));
-  const bgColor = <string>req.query.bc || suggestColor(<string>req.query._email);
+  const bgColor = <string>req.query.bc || suggestColor(String(text));
+  const textColor = <string>req.query.tc || 'white';
+  const textSize = Math.floor(size / DEFAULT_SIZE * 140);
+
+  return {
+    text,
+    size,
+    bgColor,
+    textColor,
+    textSize
+  }
+}
+
+export function prepareAvatarlessEmailOptions(req: NowRequest): AvatarlessOptions {
+  const text = <string>req.query.t || undefined;
+  const size = Math.max(DEFAULT_MIN_SIZE, parseInt(<string>req.query.s || String(DEFAULT_SIZE)));
+  const bgColor = <string>req.query.bc || suggestColor(String(text));
   const textColor = <string>req.query.tc || 'white';
   const textSize = Math.floor(size / DEFAULT_SIZE * 140);
 

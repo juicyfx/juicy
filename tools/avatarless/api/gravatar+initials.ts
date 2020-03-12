@@ -1,5 +1,5 @@
 import { NowRequest, NowResponse } from '@now/node';
-import { pipeLogging, pipeCOORS, pipeRequirements, pipeGravatar, pipeAvatarless } from './_lib/pipes';
+import { pipeLogging, pipeCOORS, pipeRequirements, pipeGravatar, pipeAvatarlessEmail } from './_lib/pipes';
 
 export default async function handler(req: NowRequest, res: NowResponse): Promise<void> {
   try {
@@ -17,7 +17,7 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
       await pipeGravatar(req, res);
     } catch (e) {
       // Fallback to avatarless generator
-      pipeAvatarless(req, res);
+      pipeAvatarlessEmail(req, res);
     }
   } catch (e) {
     console.error(e);

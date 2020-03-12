@@ -2,7 +2,7 @@ import { NowRequest, NowResponse } from '@now/node';
 import crypto from 'crypto';
 import * as http from './http';
 import * as errors from './errors';
-import { prepareAvatarlessOptions, prepareGravatarOptions } from './utils';
+import { prepareAvatarlessInitialsOptions, prepareAvatarlessEmailOptions, prepareGravatarOptions } from './utils';
 import { SILHOUETTE_PERSON } from './icons';
 
 export function pipeLogging(req: NowRequest, _res: NowResponse): void {
@@ -53,8 +53,17 @@ export async function pipeGravatarOnly(req: NowRequest, res: NowResponse): Promi
   res.end();
 }
 
-export function pipeAvatarless(req: NowRequest, res: NowResponse): void {
-  const options = prepareAvatarlessOptions(req);
+export function pipeAvatarlessInitials(req: NowRequest, res: NowResponse): void {
+  const options = prepareAvatarlessInitialsOptions(req);
+  const svg = createAvatarless(options);
+
+  res.setHeader('Content-Type', 'image/svg+xml');
+  res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, stale-while-revalidate, public`);
+  res.end(svg.trim());
+}
+
+export function pipeAvatarlessEmail(req: NowRequest, res: NowResponse): void {
+  const options = prepareAvatarlessEmailOptions(req);
   const svg = createAvatarless(options);
 
   res.setHeader('Content-Type', 'image/svg+xml');
