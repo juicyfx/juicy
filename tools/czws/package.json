@@ -9,7 +9,7 @@
     "xml-js": "^1.6.9"
   },
   "devDependencies": {
-    "@now/node": "^0.12.6"
+    "@now/node": "^1.4.1"
   },
   "scripts": {
     "dev": "node dev.js"

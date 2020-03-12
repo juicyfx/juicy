@@ -1,10 +1,9 @@
 {
   "scope": "juicyfx",
   "name": "czws",
-  "builds": [
-    { "src": "api/ares/*.ts", "use": "@now/node"}
-  ],
-  "routes": [
-    { "src": "/ares/([a-z]+)/", "dest": "/api/ares/$1.ts" }
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "https://assets.jfx.cz/favicon.ico" },
+    { "source": "/", "destination": "/public/index.html" },
+    { "source": "/ares/([a-z]+)/", "destination": "/api/ares/$1.ts" }
   ]
 }

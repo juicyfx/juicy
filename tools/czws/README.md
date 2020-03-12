@@ -11,4 +11,4 @@
 
 #### Usage
 
-https://czws.jfx.cz/ares/basic?ico=N
+https://czws.jfx.cz/ares/basic/?ico=N
