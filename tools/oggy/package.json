@@ -4,8 +4,7 @@
   "description": "Create cool OG:image",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/card.js",
-    "build": "tsc",
+    "dev": "micro-dev dist/oggy.js -w dist",
     "watch": "tsc --watch"
   },
   "dependencies": {
@@ -16,6 +15,8 @@
   "devDependencies": {
     "@types/marked": "^0.7.3",
     "@types/puppeteer-core": "^2.0.0",
+    "micro": "^9.3.4",
+    "micro-dev": "^3.0.0",
     "typescript": "^3.8.3"
   }
 }

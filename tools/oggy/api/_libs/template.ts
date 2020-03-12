@@ -1,10 +1,9 @@
 import { readFileSync } from 'fs';
-import * as marked from 'marked';
 import { sanitizeHtml } from './sanitizer';
 
 function getCss(fontSize: string) {
-  const regular = readFileSync(`${__dirname}/../fonts/Inter-UI-Regular.woff2`).toString('base64');
-  const bold = readFileSync(`${__dirname}/../fonts/Inter-UI-Bold.woff2`).toString('base64');
+  const regular = readFileSync(`${__dirname}/../../web/fonts/Inter-UI-Regular.woff2`).toString('base64');
+  const bold = readFileSync(`${__dirname}/../../web/fonts/Inter-UI-Bold.woff2`).toString('base64');
 
   return `
     @font-face {
@@ -84,7 +83,7 @@ function getCss(fontSize: string) {
 
 
 export function getHtml(parsedReq: ParsedRequest) {
-  const { text, theme, md, fontSize, images } = parsedReq;
+  const { text, theme, fontSize, images } = parsedReq;
   return `<!DOCTYPE html>
 <html>
     <meta charset="utf-8">
@@ -103,9 +102,7 @@ export function getHtml(parsedReq: ParsedRequest) {
   })}
             </div>
             <div class="spacer">
-            <div class="heading">${md
-      ? marked(text)
-      : sanitizeHtml(text)}
+            <div class="heading">${sanitizeHtml(text)}
             </div>
         </div>
     </body>

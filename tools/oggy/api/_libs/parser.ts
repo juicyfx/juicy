@@ -3,7 +3,11 @@ import { parse } from 'url';
 
 export function parseRequest(req: IncomingMessage) {
   console.log('HTTP ' + req.url);
-  const { pathname = '/', query = {} } = parse(req.url || '', true);
+  const parsedUrl = parse(req.url || '', true);
+
+  const query = parsedUrl.query || {};
+  const pathname = parsedUrl.pathname || '/';
+
   const { fontSize, images, theme, md } = query;
   if (Array.isArray(fontSize)) {
     throw new Error('Expected a single fontSize');

@@ -1,12 +1,19 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "module": "commonjs",
-    "target": "esnext",
-    "moduleResolution": "node",
-    "jsx": "react",
-    "sourceMap": true,
     "strict": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "target": "esnext",
+    "module": "commonjs",
+    "outDir": "dist",
+    "sourceMap": false,
+    "declaration": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noEmitOnError": true,
@@ -15,7 +22,11 @@
     "removeComments": true,
     "preserveConstEnums": true
   },
+  "include": [
+    "api/**/*",
+  ],
   "exclude": [
-    "node_modules"
+    "dist",
+    "web"
   ]
 }
