@@ -1,8 +1,8 @@
 # NodeJS
-node_modules
+/node_modules
 
 # YARN/NPM
-yarn.lock
+/yarn.lock
 
 # TS
-public
+/public
