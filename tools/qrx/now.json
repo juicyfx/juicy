@@ -1,13 +1,8 @@
 {
   "scope": "juicyfx",
   "name": "qrx",
-  "builds": [
-    {
-      "src": "api/index.ts",
-      "use": "@now/node"
-    }
-  ],
-  "routes": [
-    { "src": ".*", "dest": "/api/index.ts" }
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "https://assets.jfx.cz/favicon.ico" },
+    { "source": "/(.*)", "destination": "/api/index.ts" }
   ]
 }
