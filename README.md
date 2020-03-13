@@ -19,13 +19,16 @@ Secondary goal is to help others trully understand how ZEIT ecosystem works and 
 
 **Stable**
 
-- [**czws**](tools/czws) - Czech Republic webservices (e.q. ARES)
-- [**oggy**](tools/oggy) - generates image for OG meta tags
-- [**pdfx**](tools/pdfx) - generates PDF from many given sources (URL, raw, POST)
-- [**qrx**](tools/qrx) - generates QR-codes
+- [**avatarless**](tools/avatarless) - Gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
+- [**coloring**](tools/coloring) - Generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
+- [**czws**](tools/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.jfx.cz)]
+- [**oggy**](tools/oggy) - generates image for OG meta tags [[👀🕶](https://oggy.jfx.cz)]
+- [**pdfx**](tools/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.jfx.cz)]
+- [**qrx**](tools/qrx) - generates QR-codes [[👀🕶](https://qrx.jfx.cz)]
 
 **Dev**
 
+- [**heatbadger**](tools/heatbadger) - image generate for github
 - [**pupr**](tools/pupr) - generates SSR via Chrome Puppeteer pre-rendering
 
 ## Integrations
