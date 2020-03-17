@@ -8,21 +8,21 @@
     "last 2 Chrome versions"
   ],
   "dependencies": {
-    "chrome-aws-lambda": "^1.20.0",
-    "puppeteer-core": "^1.20.0",
-    "vue": "^2.6.10"
+    "chrome-aws-lambda": "^2.1.1",
+    "puppeteer-core": "^2.1.1",
+    "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@now/node": "^0.12.6",
-    "@types/puppeteer-core": "^1.9.0",
-    "@vue/component-compiler-utils": "^3.0.0",
+    "@now/node": "^1.4.1",
+    "@types/puppeteer-core": "^2.0.0",
+    "@vue/component-compiler-utils": "^3.1.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.22.9",
-    "puppeteer": "^1.18.1",
-    "typescript": "^3.5.3",
-    "vue-hot-reload-api": "^2.3.3",
-    "vue-template-compiler": "^2.6.10"
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.3",
+    "puppeteer": "^2.1.1",
+    "typescript": "^3.8.3",
+    "vue-hot-reload-api": "^2.3.4",
+    "vue-template-compiler": "^2.6.11"
   }
 }

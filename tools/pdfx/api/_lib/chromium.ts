@@ -22,7 +22,7 @@ export async function getPdf(source: PdfSource, options: PdfOptions): Promise<Bu
     throw Error("Unsupported source");
   }
 
-  await page.emulateMedia("screen");
+  await page.emulateMediaType("screen");
 
   const content = await page.pdf({
     ...OPTIONS_DEFAULTS,

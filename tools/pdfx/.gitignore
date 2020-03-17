@@ -1,5 +1,11 @@
-node_modules
-package-lock.json
-dist
-.cache
-public
+# Node
+/node_modules
+/package-lock.json
+
+# App
+/dist
+/cache
+/public
+
+# ZEIT
+/.now
