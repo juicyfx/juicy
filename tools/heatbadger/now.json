@@ -2,11 +2,10 @@
   "scope": "juicyfx",
   "name": "heatbadger",
   "rewrites": [
-    { "source": "/github/([a-z]+)/([a-z\\-]+)/(.*)", "destination": "/api/github.ts?r=$1/$2" },
-    { "source": "/badge/(.*)", "destination": "/api/badger.ts" }
+    { "source": "/github/readme/([a-z]+)/([a-z\\-]+)/(.*)", "destination": "/api/github/readme.ts?r=$1/$2" }
   ],
   "redirects": [
-    { "source": "/", "destination": "https://github.com/juicyfx/juicy/tree/master/tools/qrx" }
+    { "source": "/", "destination": "https://github.com/juicyfx/juicy/tree/master/tools/heatbadger" }
   ],
   "env": {
     "GITHUB_TOKEN": "@github-juicyfx-heatbadger"

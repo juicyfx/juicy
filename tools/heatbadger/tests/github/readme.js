@@ -1,4 +1,4 @@
-const badger = require('../dist/github').default;
+const badger = require('../../dist/github/readme').default;
 const { URL } = require('url');
 
 module.exports.default = (req, res) => {

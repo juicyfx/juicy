@@ -1,8 +1,8 @@
 import { NowRequest, NowResponse } from '@now/node';
-import { getImage } from "./_lib/chrome";
-import { createTemplate } from './_lib/templates/github';
-import { fetchRepository } from './_lib/github';
-import { trimEmoji } from './_lib/utils';
+import { getImage } from "../_lib/chrome";
+import { createTemplate } from '../_lib/templates/github';
+import { fetchRepository } from '../_lib/github';
+import { trimEmoji } from '../_lib/utils';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
