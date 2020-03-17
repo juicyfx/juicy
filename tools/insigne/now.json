@@ -1,0 +1,13 @@
+{
+  "scope": "juicyfx",
+  "name": "insigne",
+  "rewrites": [
+    { "source": "/github/unreleased/([\\w]+)/([\\w\\-]+)/(.*)", "destination": "/api/github/unreleased.ts?r=$1/$2" }
+  ],
+  "redirects": [
+    { "source": "/", "destination": "https://github.com/juicyfx/juicy/tree/master/tools/insigne" }
+  ],
+  "env": {
+    "GITHUB_TOKEN": "@github-juicyfx-insigne"
+  }
+}

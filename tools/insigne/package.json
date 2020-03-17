@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@now/node": "^1.4.1",
+    "micro": "^9.3.4",
+    "micro-dev": "^3.0.0",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "dev": "micro-dev dist/github/unreleased.js -i api -w dist",
+    "compile": "tsc",
+    "watch": "tsc --watch"
+  }
+}
