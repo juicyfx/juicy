@@ -1,14 +1,14 @@
 {
   "dependencies": {
-    "chrome-aws-lambda": "^2.0.1",
-    "puppeteer-core": "^2.0.0"
+    "chrome-aws-lambda": "^2.1.1",
+    "puppeteer-core": "^2.1.1"
   },
   "devDependencies": {
-    "@now/node": "^1.2.0",
+    "@now/node": "^1.4.1",
     "@types/puppeteer-core": "^2.0.0",
     "micro": "^9.3.4",
     "micro-dev": "^3.0.0",
-    "typescript": "^3.7.2"
+    "typescript": "^3.8.3"
   },
   "scripts": {
     "dev": "micro-dev tests/github.js -i api -w dist",

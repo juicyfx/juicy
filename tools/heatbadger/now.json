@@ -2,7 +2,7 @@
   "scope": "juicyfx",
   "name": "heatbadger",
   "rewrites": [
-    { "source": "/github/([a-z]+)/([a-z\\-]+)/.*", "destination": "/api/github.ts?r=$1/$2" },
+    { "source": "/github/([a-z]+)/([a-z\\-]+)/(.*)", "destination": "/api/github.ts?r=$1/$2" },
     { "source": "/badge/(.*)", "destination": "/api/badger.ts" }
   ],
   "redirects": [
