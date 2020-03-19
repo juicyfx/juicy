@@ -2,7 +2,6 @@
   "scripts": {
     "watch": "tsc --watch"
   },
-  "dependencies": {},
   "devDependencies": {
     "@now/node": "^1.4.1",
     "typescript": "^3.8.3"
