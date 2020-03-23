@@ -1,0 +1,53 @@
+{
+  "scope": "juicyfx",
+  "name": "iconist",
+  "routes": [
+    {
+      "src": "/fa/s/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=fontawesome&spec=solid&icon=$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/fa/r/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=fontawesome&spec=regular&icon=$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/fa/b/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=fontawesome&spec=brands&icon=$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/hero/outline/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=heroicons&spec=outline-md&icon=dm-$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/hero/solid/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=heroicons&spec=solid-sm&icon=sm-$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/feather/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=feathericons&icon=$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/linear/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=linearicons&icon=$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/drip/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=dripicons&icon=$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/line/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=lineawesome&icon=$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/remixicon/(?<spec>[\\w\\-]+)/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=remixicon&spec=$spec&icon=$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/",
+      "status": 302,
+      "headers": {
+        "Location": "https://github.com/juicyfx/juicy"
+      }
+    }
+  ]
+}

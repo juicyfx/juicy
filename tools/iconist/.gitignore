@@ -1,0 +1,9 @@
+# Node
+/node_modules
+/package-lock.json
+
+# App
+/dist
+
+# ZEIT
+/.now
