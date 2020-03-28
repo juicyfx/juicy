@@ -9,7 +9,7 @@ Tools and integrations for <a href="https://zeit.co">ZEIT Now</a>
 </p>
 
 <p align=center>
-    <a href="https://circleci.com/gh/juicyfx/juicy"><img src="https://img.shields.io/circleci/build/github/juicyfx/juicy?style=flat-square"></a>
+    <a href="https://github.com/juicyfx/juicy/actions"><img src="https://badgen.net/github/checks/juicyfx/juicy/master?style=flat-square"></a>
 </p>
 
 The main goal of **Juicy Functions** is to provide easy a free tools and integrations for [ZEIT Now](https://zeit.co).
