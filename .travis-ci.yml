@@ -1,0 +1,58 @@
+language: php
+
+php:
+  - 5.6
+  - 7.0
+  - 7.1
+  - hhvm
+
+matrix:
+  fast_finish: true
+
+  allow_failures:
+      - php: hhvm
+
+  include:
+    - php: 5.6
+      env: COMPOSER_FLAG=--prefer-lowest
+    - php: 5.6
+      env: COMPOSER_FLAG=--prefer-stable
+    - php: 7.0
+      env: COMPOSER_FLAG=--prefer-lowest
+    - php: 7.0
+      env: COMPOSER_FLAG=--prefer-stable
+    - php: 7.1
+      env: COMPOSER_FLAG=--prefer-lowest
+    - php: 7.1
+      env: COMPOSER_FLAG=--prefer-stable
+
+before_script:
+  # Composer
+  - travis_retry composer install --no-interaction
+  # Coverage
+  - if [[ "$TRAVIS_PHP_VERSION" == "7.1" && "$COMPOSER_FLAG" == "" ]]; then COVERAGE=1; fi
+
+script:
+  # Quality Assurance
+  - travis_retry composer qa
+
+  # Nette\Tester
+  - composer run-script tester
+
+  # Nette\Tester + CodeCoverage
+  - if [ "$COVERAGE" != "" ]; then composer tester-coverage; fi
+
+after_script:
+  # Coverage (Coveralls)
+  - if [ "$COVERAGE" != "" ]; then wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.1/coveralls.phar; fi
+  - if [ "$COVERAGE" != "" ]; then php coveralls.phar --verbose --config tests/.coveralls.yml; fi
+
+after_failure:
+  # Print *.actual content
+  - for i in $(find tests -name \*.actual); do echo "--- $i"; cat $i; echo; echo; done
+
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.composer/cache

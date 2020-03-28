@@ -1,0 +1,25 @@
+name: Main workflow
+
+on: [push, pull_request]
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+
+      - name: Dependencies
+        run: composer install --prefer-dist
+
+      - name: QA
+        run: make php-qa
+
+      - name: Tests
+        run: make php-tests
