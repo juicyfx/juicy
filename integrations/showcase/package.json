@@ -9,16 +9,15 @@
     "dist"
   ],
   "dependencies": {
-    "@zeit/integration-utils": "latest",
+    "@zeit/integration-utils": "^0.6.4",
     "htmldom": "^4.0.11"
   },
   "devDependencies": {
     "@types/glob": "^7.1.1",
-    "@types/node": "^10.0.0",
-    "@types/node-fetch": "^2.5.0",
+    "@types/node": "^13.9.5",
+    "@types/node-fetch": "^2.5.5",
     "htm": "^2.2.1",
-    "jest": "^24.8.0",
     "micro-dev": "^3.0.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.8.3"
   }
 }
