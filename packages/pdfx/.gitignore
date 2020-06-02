@@ -1,11 +1,10 @@
-# Node
+# NodeJS
 /node_modules
-/package-lock.json
 
 # App
 /dist
 /.cache
 /public
 
-# ZEIT
-.now
+# Vercel
+.vercel

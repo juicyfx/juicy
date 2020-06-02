@@ -1,8 +1,8 @@
-# Node
+# NodeJS
 /node_modules
 
 # App
 /dist
 
-# ZEIT
-.now
+# Vercel
+.vercel

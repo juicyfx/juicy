@@ -1,8 +1,8 @@
 # NodeJS
 /node_modules
 
-# TS
-/public
+# App
+/dist
 
-# ZEIT
-.now
+# Vercel
+.vercel
