@@ -1,7 +1,7 @@
 <h1 align=center>Juicy(fx)</h1>
 
 <p align=center>
-Tools and integrations for <a href="https://vercel.com">Vercel</a>
+Tools and integrations for <a href="https://vercel.com">Vercel</a> platform.
 </p>
 
 <p align=center>
@@ -9,8 +9,14 @@ Tools and integrations for <a href="https://vercel.com">Vercel</a>
 </p>
 
 <p align=center>
+	<img src="https://github.com/juicyfx/juicy/blob/master/packages/assets/logo.png">
+</p>
+
+<p align=center>
     <a href="https://github.com/juicyfx/juicy/actions"><img src="https://badgen.net/github/checks/juicyfx/juicy/master?style=flat-square"></a>
 </p>
+
+------
 
 The goal of Juicy Functions is to provide free and easy integrations for the [Vercel](https://vercel.com) platform.
 I wanted also trully understand how [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction) works

@@ -1,6 +1,10 @@
 # IDE
 /.idea
 
-# Composer
+# NodeJS
+/node_modules
+/package-lock.json
+
+# Client: PHP
 /client/php/vendor
 /composer.lock
