@@ -1,0 +1,74 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/avatarless"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/coloring"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/czws"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/heatbadger"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/iconist"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/insigne"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/oggy"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/pdfx"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/pupr"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/qrx"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/packages/showcase"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
