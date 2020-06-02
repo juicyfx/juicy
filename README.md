@@ -1,15 +1,15 @@
 <h1 align=center>Juicy(fx)</h1>
 
 <p align=center>
-Tools and integrations for <a href="https://vercel.com">Vercel</a> platform.
+Free tools and integrations for <a href="https://vercel.com">Vercel</a> platform.
+</p>
+
+<p align=center>
+	<img src="https://github.com/juicyfx/juicy/blob/master/packages/assets/logo.png" width="256">
 </p>
 
 <p align=center>
 🕹 <a href="https://f3l1x.io">f3l1x.io</a> | 💻 <a href="https://github.com/f3l1x">f3l1x</a> | 🐦 <a href="https://twitter.com/xf3l1x">@xf3l1x</a>
-</p>
-
-<p align=center>
-	<img src="https://github.com/juicyfx/juicy/blob/master/packages/assets/logo.png">
 </p>
 
 <p align=center>

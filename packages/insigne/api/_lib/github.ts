@@ -7,7 +7,7 @@ export async function fetchLastTag(repo: string): Promise<[GithubRepoTag]> {
     throw new Error(`Repository ${repo} not found for tag`);
   }
 
-  const data = JSON.parse(res.data.toString('UTF-8'));
+  const data = JSON.parse(res.data.toString('utf-8'));
 
   return data;
 }
@@ -19,7 +19,7 @@ export async function fetchRepoCompare(repo: string, rev1: string, rev2: string)
     throw new Error(`Repository ${repo} not found for comparing`);
   }
 
-  const data = JSON.parse(res.data.toString('UTF-8'));
+  const data = JSON.parse(res.data.toString('utf-8'));
 
   return data;
 }
