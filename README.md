@@ -1,7 +1,7 @@
 <h1 align=center>Juicy(fx)</h1>
 
 <p align=center>
-Tools and integrations for <a href="https://zeit.co">ZEIT Now</a>
+Tools and integrations for <a href="https://vercel.com">Vercel</a>
 </p>
 
 <p align=center>
@@ -12,8 +12,9 @@ Tools and integrations for <a href="https://zeit.co">ZEIT Now</a>
     <a href="https://github.com/juicyfx/juicy/actions"><img src="https://badgen.net/github/checks/juicyfx/juicy/master?style=flat-square"></a>
 </p>
 
-The main goal of **Juicy Functions** is to provide easy a free tools and integrations for [ZEIT Now](https://zeit.co).
-Secondary goal is to help others trully understand how ZEIT ecosystem works and how lambd(s) works.
+The goal of Juicy Functions is to provide free and easy integrations for the [Vercel](https://vercel.com) platform.
+I wanted also trully understand how [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction) works
+and givin something back to the community. Enjoy it!
 
 ## Tools
 
