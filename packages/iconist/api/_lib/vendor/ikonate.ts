@@ -11,7 +11,7 @@ export async function generate(req: IconRequest): Promise<string> {
   }
 
   // Parse SVG to AST
-  const $ = cheerio.load(file.toString('UTF-8'));
+  const $ = cheerio.load(file.toString('utf-8'));
   const $svg = $('svg');
 
   // Update attributes

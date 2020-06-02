@@ -1,4 +1,6 @@
 {
+  "name": "iconist",
+  "version": "0.0.0",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
     "cheerio": "^1.0.0-rc.3",

@@ -1,4 +1,6 @@
 {
+  "name": "coloring",
+  "version": "0.0.0",
   "dependencies": {
     "htm": "^2.2.1",
     "tinycolor2": "^1.4.1",

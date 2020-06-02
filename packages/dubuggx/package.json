@@ -1,5 +1,6 @@
 {
   "name": "debuggx",
+  "version": "0.0.0",
   "scripts": {
     "watch": "tsc --watch",
     "build": "tsc",

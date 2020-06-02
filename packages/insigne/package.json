@@ -1,4 +1,6 @@
 {
+  "name": "insigne",
+  "version": "0.0.0",
   "devDependencies": {
     "@now/node": "^1.4.1",
     "micro": "^9.3.4",

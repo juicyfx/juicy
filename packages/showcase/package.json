@@ -1,13 +1,11 @@
 {
   "name": "showcase",
+  "version": "0.0.0",
   "scripts": {
     "watch": "tsc --watch",
     "build": "tsc",
     "dev": "micro-dev public/index.js"
   },
-  "files": [
-    "dist"
-  ],
   "dependencies": {
     "@zeit/integration-utils": "^0.6.4",
     "htmldom": "^4.0.11"

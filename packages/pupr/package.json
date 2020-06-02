@@ -1,9 +1,8 @@
 {
   "name": "pur",
-  "version": "0.0.1",
-  "description": "Puppeteer pre-renderer for SSR and bots.",
+  "version": "0.0.0",
   "engines": {
-    "node": ">=8"
+    "node": "12.x"
   },
   "dependencies": {
     "chrome-aws-lambda": "1.17.1",

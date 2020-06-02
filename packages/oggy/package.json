@@ -1,8 +1,6 @@
 {
   "name": "oggy",
-  "version": "0.0.1",
-  "description": "Create cool OG:image",
-  "license": "MIT",
+  "version": "0.0.0",
   "scripts": {
     "dev": "micro-dev dist/oggy.js -w dist",
     "watch": "tsc --watch"
