@@ -1,7 +1,8 @@
-# NPM
+# Node
 /node_modules
 
 # App
 /dist
 
+# ZEIT
 .now

@@ -16,36 +16,34 @@ The goal of Juicy Functions is to provide free and easy integrations for the [Ve
 I wanted also trully understand how [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction) works
 and givin something back to the community. Enjoy it!
 
-## Tools
+## Packages
 
-**Stable**
+**Tools**
 
-- [**avatarless**](tools/avatarless) - Gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
-- [**coloring**](tools/coloring) - Generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
-- [**czws**](tools/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.jfx.cz)]
-- [**oggy**](tools/oggy) - generates image for OG meta tags [[👀🕶](https://oggy.jfx.cz)]
-- [**pdfx**](tools/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.jfx.cz)]
-- [**qrx**](tools/qrx) - generates QR-codes [[👀🕶](https://qrx.jfx.cz)]
+- [**avatarless**](packages/avatarless) - Gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
+- [**coloring**](packages/coloring) - Generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
+- [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.jfx.cz)]
+- [**heatbadger**](packages/heatbadger) - generate image for github repository [WIP]
+- [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
+- [**oggy**](oggy) - generates image for OG meta tags [[👀🕶](https://oggy.jfx.cz)]
+- [**pdfx**](packages/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.jfx.cz)]
+- [**qrx**](packages/qrx) - generates QR-codes [[👀🕶](https://qrx.jfx.cz)]
+- [**pupr**](packages/pupr) - generates SSR via Chrome Puppeteer pre-rendering [WIP]
 
-**Dev**
+**Integrations**
 
-- [**heatbadger**](tools/heatbadger) - image generate for github
-- [**pupr**](tools/pupr) - generates SSR via Chrome Puppeteer pre-rendering
+- [**coster**](packages/coster) - calculates and predicts your costs  [WIP]
+- [**dubuggx**](packages/dubuggx) - collection of tools useful for makers of builders/integrations [WIP]
+- [**intex**](packages/intex) - testing integration  [WIP]
+- [**showcase**](packages/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
 
-## Integrations
+**Misc**
 
-**Stable**
-
-**Dev**
-
-- [**dubuggx**](integrations/dubuggx) - collection of tools useful for makers of builders/integrations
-- [**intex**](integrations/intex) - testing integration
-- [**coster**](integrations/coster) -  calculates and predicts your costs
-- [**showcase**](integrations/showcase) -  show all possible UI components for your integratins
+- [**assets**](packages/assets) - juicy functions assets
 
 ## Clients
 
-- [**Juicy(fx) PHP**](client/php) -  PHP client for Juicy Tools
+- [**Juicy(fx) PHP**](client/php) - PHP client for Juicy Tools
 
 ## Roadmap
 
