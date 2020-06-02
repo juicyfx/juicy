@@ -5,7 +5,7 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "qrcode": "^1.4.1"
+    "qrcode": "^1.4.4"
   },
   "devDependencies": {
     "@now/node": "^1.4.1",
