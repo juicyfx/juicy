@@ -6,6 +6,7 @@ import * as dripicons from "./vendor/dripicons";
 import * as lineawesome from "./vendor/lineawesome";
 import * as ikonate from "./vendor/ikonate";
 import * as remixicon from "./vendor/remixicon";
+import * as twemoji from "./vendor/twemoji";
 
 export function generate(req: IconRequest): Promise<string> {
   if (req.vendor === 'fontawesome') {
@@ -38,6 +39,10 @@ export function generate(req: IconRequest): Promise<string> {
 
   if (req.vendor === 'remixicon') {
     return remixicon.generate(req);
+  }
+
+  if (req.vendor === 'twemoji') {
+    return twemoji.generate(req);
   }
 
   throw "Unknown icon vendor";

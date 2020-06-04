@@ -43,6 +43,10 @@
       "dest": "/api/index?vendor=remixicon&spec=$spec&icon=$icon&size=$size&color=$color"
     },
     {
+      "src": "/twemoji/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?",
+      "dest": "/api/index?vendor=twemoji&icon=$icon&size=$size"
+    },
+    {
       "src": "/",
       "status": 302,
       "headers": {
