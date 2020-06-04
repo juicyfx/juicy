@@ -6,7 +6,9 @@ type Vendor =
   'dripicons' |
   'lineawesome' |
   'ikonate' |
-  'remixicon';
+  'remixicon' |
+  'twemoji' |
+  'notoemoji';
 
 interface IconRequest {
   vendor: Vendor,

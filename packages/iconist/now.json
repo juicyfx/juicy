@@ -47,6 +47,10 @@
       "dest": "/api/index?vendor=twemoji&icon=$icon&size=$size"
     },
     {
+      "src": "/notoemoji/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?",
+      "dest": "/api/index?vendor=notoemoji&icon=$icon&size=$size"
+    },
+    {
       "src": "/",
       "status": 302,
       "headers": {
