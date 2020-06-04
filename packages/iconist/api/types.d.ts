@@ -8,7 +8,8 @@ type Vendor =
   'ikonate' |
   'remixicon' |
   'twemoji' |
-  'notoemoji';
+  'notoemoji' |
+  'openmoji';
 
 interface IconRequest {
   vendor: Vendor,

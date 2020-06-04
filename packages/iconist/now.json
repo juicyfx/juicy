@@ -51,6 +51,10 @@
       "dest": "/api/index?vendor=notoemoji&icon=$icon&size=$size"
     },
     {
+      "src": "/openmoji/(?<spec>[\\w\\-]+)/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=openmoji&spec=$spec&icon=$icon&size=$size&color=$color"
+    },
+    {
       "src": "/",
       "status": 302,
       "headers": {

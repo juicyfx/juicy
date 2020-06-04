@@ -8,6 +8,7 @@ import * as ikonate from "./vendor/ikonate";
 import * as remixicon from "./vendor/remixicon";
 import * as twemoji from "./vendor/twemoji";
 import * as notoemoji from "./vendor/notoemoji";
+import * as openmoji from "./vendor/openmoji";
 
 export function generate(req: IconRequest): Promise<string> {
   if (req.vendor === 'fontawesome') {
@@ -48,6 +49,10 @@ export function generate(req: IconRequest): Promise<string> {
 
   if (req.vendor === 'notoemoji') {
     return notoemoji.generate(req);
+  }
+
+  if (req.vendor === 'openmoji') {
+    return openmoji.generate(req);
   }
 
   throw "Unknown icon vendor";
