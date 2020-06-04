@@ -7,6 +7,7 @@ import * as lineawesome from "./vendor/lineawesome";
 import * as ikonate from "./vendor/ikonate";
 import * as remixicon from "./vendor/remixicon";
 import * as twemoji from "./vendor/twemoji";
+import * as emojitwo from "./vendor/emojitwo";
 import * as notoemoji from "./vendor/notoemoji";
 import * as openmoji from "./vendor/openmoji";
 
@@ -45,6 +46,10 @@ export function generate(req: IconRequest): Promise<string> {
 
   if (req.vendor === 'twemoji') {
     return twemoji.generate(req);
+  }
+
+  if (req.vendor === 'emojitwo') {
+    return emojitwo.generate(req);
   }
 
   if (req.vendor === 'notoemoji') {

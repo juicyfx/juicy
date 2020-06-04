@@ -8,6 +8,7 @@ type Vendor =
   'ikonate' |
   'remixicon' |
   'twemoji' |
+  'emojitwo' |
   'notoemoji' |
   'openmoji';
 
