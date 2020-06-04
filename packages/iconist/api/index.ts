@@ -2,6 +2,9 @@ import { NowRequest, NowResponse } from '@now/node';
 import { generate } from './_lib/generator';
 import { clamp, isEmpty } from './_lib/utils';
 
+const CACHE_BROWSER = 60 * 60 * 24 * 2;
+const CACHE_CDN = 60 * 60 * 24 * 7;
+
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url, req.query);
 
@@ -25,7 +28,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'image/svg+xml');
-    res.setHeader('Cache-Control', `max-age=${60 * 60 * 24}, s-maxage=${60 * 60 * 24}, public`);
+    res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
     res.end(icon);
   } catch (e) {
     console.error(e);
