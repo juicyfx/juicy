@@ -5,7 +5,7 @@ import { readFile } from "../utils";
 export async function generate(req: IconRequest): Promise<string> {
   try {
     // Read icon file
-    var file = await readFile(path.resolve('node_modules', `linearicons/dist/svg/${req.icon}.svg`));
+    var file = await readFile(path.resolve('node_modules', `@obr/linearicons/dist/${req.icon}.svg`));
   } catch (e) {
     throw `Linearicon ${req.icon}.svg not found`;
   }
