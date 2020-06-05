@@ -5,7 +5,7 @@ import { readFile, lowercase } from "../utils";
 export async function generate(req: IconRequest): Promise<string> {
   try {
     // Read icon file
-    var file = await readFile(path.resolve('node_modules', `openmoji/${lowercase(req.spec)}/svg/${req.icon}.svg`));
+    var file = await readFile(path.resolve('node_modules', `@obr/openmoji/dist/${lowercase(req.spec)}/${req.icon}.svg`));
   } catch (e) {
     throw `Openmoji ${req.icon}.svg not found`;
   }
