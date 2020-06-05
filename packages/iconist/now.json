@@ -15,12 +15,8 @@
       "dest": "/api/index?vendor=fontawesome&spec=brands&icon=$icon&size=$size&color=$color"
     },
     {
-      "src": "/hero/outline/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
-      "dest": "/api/index?vendor=heroicons&spec=outline-md&icon=dm-$icon&size=$size&color=$color"
-    },
-    {
-      "src": "/hero/solid/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
-      "dest": "/api/index?vendor=heroicons&spec=solid-sm&icon=sm-$icon&size=$size&color=$color"
+      "src": "/hero/(?<spec>[\\w\\-]+)/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=heroicons&spec=$spec&icon=$icon&size=$size&color=$color"
     },
     {
       "src": "/feather/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
@@ -65,6 +61,10 @@
     {
       "src": "/ikonate/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
       "dest": "/api/index?vendor=ikonate&icon=$icon&size=$size&color=$color"
+    },
+    {
+      "src": "/_/",
+      "dest": "/api/meta"
     },
     {
       "src": "/",

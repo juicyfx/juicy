@@ -1,5 +1,5 @@
 import { NowRequest, NowResponse } from '@now/node';
-import { generate } from './_lib/generator';
+import { generate } from './_lib/manager';
 import { clamp, isEmpty } from './_lib/utils';
 
 const CACHE_BROWSER = 60 * 60 * 24 * 2;
@@ -14,8 +14,8 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     const size = !isEmpty(req.query['size']) ? <string>req.query['size'] : 32;
     const stroke = !isEmpty(req.query['stroke']) ? parseInt(<string>req.query['stroke']) : null;
 
-    const iconReq: IconRequest = {
-      vendor: <Vendor>req.query.vendor,
+    const iconReq: GenerateRequest = {
+      vendor: <string>req.query.vendor as Vendor,
       icon: <string>req.query.icon,
       size: clamp(16, size, 512),
       spec,
