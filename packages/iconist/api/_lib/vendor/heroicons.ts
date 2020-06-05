@@ -1,11 +1,11 @@
 import cheerio from "cheerio";
 import path from "path";
-import { readFile } from "../utils";
+import { readFile, lowercase } from "../utils";
 
 export async function generate(req: IconRequest): Promise<string> {
   try {
     // Read icon file
-    var file = await readFile(path.resolve('node_modules', `@obr/heroicons/dist/${req.spec}/${req.icon}.svg`));
+    var file = await readFile(path.resolve('node_modules', `@obr/heroicons/dist/${lowercase(req.spec)}/${req.icon}.svg`));
   } catch (e) {
     throw `Heroicon ${req.spec}/${req.icon}.svg not found`;
   }
