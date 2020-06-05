@@ -39,6 +39,10 @@
       "dest": "/api/index?vendor=lineawesome&icon=$icon&size=$size&color=$color"
     },
     {
+      "src": "/remix/(?<spec>[\\w\\-]+)/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
+      "dest": "/api/index?vendor=remixicon&spec=$spec&icon=$icon&size=$size&color=$color"
+    },
+    {
       "src": "/remixicon/(?<spec>[\\w\\-]+)/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
       "dest": "/api/index?vendor=remixicon&spec=$spec&icon=$icon&size=$size&color=$color"
     },
