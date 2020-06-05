@@ -1,26 +1,31 @@
-import feather, { FeatherAttributes } from "feather-icons";
+import cheerio from "cheerio";
+import path from "path";
+import { readFile } from "../utils";
 
 export async function generate(req: IconRequest): Promise<string> {
-  if (!feather.icons[req.icon]) {
-    throw `Feathericon ${req.icon} not found`;
+  try {
+    // Read icon file
+    var file = await readFile(path.resolve('node_modules', `@obr/feathericons/dist/${req.icon}.svg`));
+  } catch (e) {
+    throw `Feathericons ${req.icon}.svg not found`;
   }
 
-  // Load icon
-  const icon = feather.icons[req.icon];
+  // Parse SVG to AST
+  const $ = cheerio.load(file.toString('utf-8'));
+  const $svg = $('svg');
 
-  // Update attrs
-  const attrs: FeatherAttributes = {
-    'stroke-width': req.stroke || 2,
-    'width': req.size,
-    'height': req.size,
-  };
-
+  // Update attributes
   if (req.color) {
-    attrs['color'] = `#${req.color}`;
+    $svg.attr('color', `#${req.color}`);
+    $svg.attr('fill', `#${req.color}`);
   }
+
+  $svg.attr('stroke-width', String(req.stroke || 2));
+  $svg.attr('width', String(req.size));
+  $svg.attr('height', String(req.size));
 
   // Export icon
-  const svg = icon.toSvg(attrs);
+  const svg = $.html('svg');
 
   return svg;
 }
