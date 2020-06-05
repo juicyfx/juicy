@@ -16,7 +16,7 @@ const URL = 'https://iconist-f3l1x.juicyfx1.now.sh';
     const readme = [`# ${vendor}`, '', ''];
 
     result.icons.forEach(icon => {
-      readme.push(`- ![](${icon})`);
+      readme.push(`- ![](${icon}) → ${icon}`);
     })
 
     fs.writeFileSync(path.resolve(__dirname, '../docs', `${vendor}.md`), readme.join('\n'));

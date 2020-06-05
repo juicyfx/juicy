@@ -28,7 +28,7 @@ export async function browse(req: BrowseRequest): Promise<BrowseResponse> {
   const files = await readPackage(`**/*.svg`, `${pkg}/dist`);
 
   const icons = files
-    .map(i => path.parse(i).name)
+    .map(i => path.parse(i).name.replace('emoji_', ''))
     .map(i => `${req.url}/notoemoji/${i}`);
 
   return {

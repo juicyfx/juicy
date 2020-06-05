@@ -58,7 +58,7 @@ export async function browse(req: BrowseRequest): Promise<BrowseResponse> {
       const parsed = path.parse(i);
       return parsed.dir + path.sep + parsed.name;
     })
-    .map(i => `${req.url}/twemoji/${i}`);
+    .map(i => `${req.url}/remix/${i}`);
 
   return {
     vendor: req.vendor,
