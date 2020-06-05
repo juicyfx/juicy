@@ -11,7 +11,7 @@
     "htmldom": "^4.0.11"
   },
   "devDependencies": {
-    "@types/glob": "^7.1.1",
+    "@types/glob": "^7.1.2",
     "@types/node": "^13.9.5",
     "@types/node-fetch": "^2.5.5",
     "htm": "^2.2.1",
