@@ -17,6 +17,6 @@
     "@types/puppeteer-core": "^2.0.0",
     "micro": "^9.3.4",
     "micro-dev": "^3.0.0",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.5"
   }
 }
