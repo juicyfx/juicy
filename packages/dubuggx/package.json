@@ -2,8 +2,9 @@
   "name": "debuggx",
   "version": "0.0.0",
   "scripts": {
-    "watch": "tsc --watch",
+    "compile": "tsc",
     "build": "tsc",
+    "watch": "tsc --watch",
     "dev": "micro-dev -l 5050 dist"
   },
   "files": [

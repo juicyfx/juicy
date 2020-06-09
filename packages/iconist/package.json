@@ -1,6 +1,12 @@
 {
   "name": "iconist",
   "version": "0.0.0",
+  "scripts": {
+    "compile": "tsc",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "tsc --noEmit --watch & micro-dev dist"
+  },
   "dependencies": {
     "@obr/dripicons": "0.0.1",
     "@obr/emojitwo": "0.0.1",
@@ -24,10 +30,5 @@
     "micro": "^9.3.4",
     "micro-dev": "^3.0.0",
     "typescript": "^3.8.3"
-  },
-  "scripts": {
-    "compile": "tsc",
-    "watch": "tsc --watch",
-    "dev": "tsc --noEmit --watch & micro-dev dist"
   }
 }

@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "dev": "tsc --noEmit --watch & parcel web/index.html",
+    "compile": "tsc",
+    "watch": "tsc --watch",
     "build": "tsc --noEmit && parcel build web/index.html -d public",
-    "watch": "tsc --watch"
+    "dev": "tsc --noEmit --watch & parcel web/index.html"
   },
   "browserslist": [
     "last 2 Chrome versions"

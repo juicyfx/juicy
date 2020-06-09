@@ -2,8 +2,10 @@
   "name": "oggy",
   "version": "0.0.0",
   "scripts": {
-    "dev": "micro-dev dist/oggy.js -w dist",
-    "watch": "tsc --watch"
+    "compile": "tsc",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "micro-dev dist/oggy.js -w dist"
   },
   "dependencies": {
     "chrome-aws-lambda": "^2.1.1",

@@ -1,9 +1,6 @@
 {
   "name": "pur",
   "version": "0.0.0",
-  "engines": {
-    "node": "12.x"
-  },
   "dependencies": {
     "chrome-aws-lambda": "1.17.1",
     "puppeteer-core": "3.3.0"

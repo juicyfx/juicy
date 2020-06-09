@@ -1,6 +1,12 @@
 {
   "name": "heatbadger",
   "version": "0.0.0",
+  "scripts": {
+    "compile": "tsc",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "micro-dev tests/github.js -i api -w dist"
+  },
   "dependencies": {
     "chrome-aws-lambda": "^2.1.1",
     "puppeteer-core": "^2.1.1"
@@ -11,10 +17,5 @@
     "micro": "^9.3.4",
     "micro-dev": "^3.0.0",
     "typescript": "^3.8.3"
-  },
-  "scripts": {
-    "dev": "micro-dev tests/github.js -i api -w dist",
-    "compile": "tsc",
-    "watch": "tsc --watch"
   }
 }

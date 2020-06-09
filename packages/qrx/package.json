@@ -2,6 +2,8 @@
   "name": "qrx",
   "version": "0.0.0",
   "scripts": {
+    "compile": "tsc",
+    "build": "tsc",
     "watch": "tsc --watch"
   },
   "dependencies": {

@@ -1,17 +1,17 @@
 {
   "name": "czws",
   "version": "0.0.0",
-  "description": "Czech webservices",
-  "private": true,
-  "license": "MIT",
+  "scripts": {
+    "compile": "echo 'OK'",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "dev": "node dev.js"
+  },
   "dependencies": {
     "node-fetch": "^2.3.0",
     "xml-js": "^1.6.9"
   },
   "devDependencies": {
     "@now/node": "^1.4.1"
-  },
-  "scripts": {
-    "dev": "node dev.js"
   }
 }
