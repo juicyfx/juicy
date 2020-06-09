@@ -1,7 +1,7 @@
 import { NowRequest, NowResponse } from '@now/node';
 import { isEmpty, getOrigin } from './_lib/utils';
 import { VENDORS } from './_lib/app';
-import { browse } from './_lib/manager';
+import { browse } from './_lib/handler/browse-handler';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url, req.query);

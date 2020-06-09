@@ -1,6 +1,7 @@
 import cheerio from "cheerio";
 import path from "path";
 import { readFile, lowercase, readPackage } from "../utils";
+import { NotFoundError } from "../errors";
 
 // const SPECS = [
 //   'buildings',
@@ -27,7 +28,7 @@ export async function generate(req: GenerateRequest): Promise<string> {
     // Read icon file
     var file = await readFile(path.resolve('node_modules', `@obr/remixicon/dist/${lowercase(req.spec)}/${req.icon}.svg`));
   } catch (e) {
-    throw `Remixicon ${req.icon}.svg not found`;
+    throw new NotFoundError(Vendor.remixicon, `${req.spec}/${req.icon}`);
   }
 
   // Parse SVG to AST

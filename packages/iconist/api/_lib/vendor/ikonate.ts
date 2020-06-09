@@ -1,13 +1,14 @@
 import cheerio from "cheerio";
 import path from "path";
 import { readFile, readPackage } from "../utils";
+import { NotFoundError } from "../errors";
 
 export async function generate(req: GenerateRequest): Promise<string> {
   try {
     // Read icon file
     var file = await readFile(path.resolve('node_modules', `@obr/ikonate/dist/${req.icon}.svg`));
   } catch (e) {
-    throw `Ikonate ${req.icon}.svg not found`;
+    throw new NotFoundError(Vendor.ikonate, req.icon);
   }
 
   // Parse SVG to AST

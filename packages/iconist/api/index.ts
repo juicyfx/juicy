@@ -1,6 +1,8 @@
 import { NowRequest, NowResponse } from '@now/node';
-import { generate } from './_lib/manager';
+import { generate } from './_lib/handler/generate-handler';
 import { clamp, isEmpty } from './_lib/utils';
+import { NotFoundError } from './_lib/errors';
+import { errorDefault, errorNotFound } from './_lib/handler/error-handler';
 
 const CACHE_BROWSER = 60 * 60 * 24 * 2;
 const CACHE_CDN = 60 * 60 * 24 * 7;
@@ -31,10 +33,10 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
     res.end(icon);
   } catch (e) {
-    console.error(e);
-
-    res.statusCode = 500;
-    res.setHeader("Content-Type", "text/html");
-    res.end(typeof e === 'string' ? e : e.message);
+    if (e instanceof NotFoundError) {
+      await errorNotFound(req, res, e);
+    } else {
+      errorDefault(req, res, e);
+    }
   }
 }

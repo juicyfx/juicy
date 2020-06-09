@@ -1,13 +1,14 @@
 import cheerio from "cheerio";
 import path from "path";
 import { readFile, lowercase, readPackage } from "../utils";
+import { NotFoundError } from "../errors";
 
 export async function generate(req: GenerateRequest): Promise<string> {
   try {
     // Read icon file
     var file = await readFile(path.resolve('node_modules', `@obr/heroicons/dist/${lowercase(req.spec)}/${req.icon}.svg`));
   } catch (e) {
-    throw `Heroicon ${req.spec}/${req.icon}.svg not found`;
+    throw new NotFoundError(Vendor.heroicons, `${req.spec}/${req.icon}`);
   }
 
   // Parse SVG to AST
