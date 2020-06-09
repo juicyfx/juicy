@@ -3,14 +3,13 @@
     "strict": true,
     "esModuleInterop": true,
     "lib": [
-      "esnext",
-      "dom"
+      "esnext"
     ],
     "target": "esnext",
     "module": "commonjs",
     "outDir": "dist",
     "sourceMap": false,
-    "declaration": true,
+    "declaration": false,
     "typeRoots": [
       "./node_modules/@types"
     ],

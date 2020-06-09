@@ -43,7 +43,7 @@ export function renderNode(node: HtmNode[] | HtmNode | string): string {
 
   const { type, props, children } = node;
 
-  const content = children.map((k, i) => {
+  const content = children.map((_k, i) => {
     return renderNode(children[i]);
   });
 

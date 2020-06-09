@@ -323,7 +323,7 @@ const UI = htm`
 </Fieldset>
 `;
 
-export default withUiHook(async => {
+export default withUiHook(async () => {
   return htm`
     <Page>
     ${BUTTONS}
