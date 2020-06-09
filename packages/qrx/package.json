@@ -12,6 +12,6 @@
   "devDependencies": {
     "@now/node": "^1.4.1",
     "@types/qrcode": "^1.3.4",
-    "typescript": "^3.5.3"
+    "typescript": "^3.9.5"
   }
 }
