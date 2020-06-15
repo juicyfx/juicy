@@ -31,7 +31,7 @@ and givin something back to the community. Enjoy it!
 - [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.jfx.cz)]
 - [**heatbadger**](packages/heatbadger) - generate image for github repository [WIP]
 - [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
-- [**oggy**](oggy) - generates image for OG meta tags [[👀🕶](https://oggy.jfx.cz)]
+- [**oggy**](packages/oggy) - generates image for OG meta tags [[👀🕶](https://oggy.jfx.cz)]
 - [**pdfx**](packages/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.jfx.cz)]
 - [**qrx**](packages/qrx) - generates QR-codes [[👀🕶](https://qrx.jfx.cz)]
 - [**pupr**](packages/pupr) - generates SSR via Chrome Puppeteer pre-rendering [WIP]
