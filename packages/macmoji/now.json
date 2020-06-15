@@ -1,0 +1,10 @@
+{
+  "scope": "juicyfx",
+  "name": "macmoji",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index.ts?emoji=$1" }
+  ],
+  "redirects": [
+    { "source": "/", "destination": "https://github.com/juicyfx/juicy/" }
+  ]
+}
