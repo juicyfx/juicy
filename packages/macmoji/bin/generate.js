@@ -9,9 +9,8 @@ const URL = 'https://macmoji.vercel.app';
   const readme = ['# macmoji', '', ''];
 
   for (emoji of emojis) {
-    Array.from(emoji.codes.split(' ')).forEach(code => {
-      readme.push(`- ![](${URL + '/' + code}) → ${emoji.char} | ${code}`);
-    })
+    const code = emoji.codes.split(' ').join('-');
+    readme.push(`<div><img src="${URL + '/' + code}" width="32" title="${emoji.char} (${code})"> → ${emoji.char} (${code})</div>`);
   }
 
   fs.writeFileSync(path.resolve(__dirname, '..', `macmoji.md`), readme.join('\n'));
