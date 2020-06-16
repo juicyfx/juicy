@@ -3,6 +3,9 @@ import path from "path";
 import fs from "fs";
 import util from "util";
 
+const CACHE_BROWSER = 60 * 60 * 24 * 2;
+const CACHE_CDN = 60 * 60 * 24 * 7;
+
 const readFile = util.promisify(fs.readFile);
 
 export default async function handler(req: NowRequest, res: NowResponse) {
@@ -24,7 +27,7 @@ async function generateImage(req: NowRequest, res: NowResponse): Promise<void> {
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "image/png");
-    res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, stale-while-revalidate, public`);
+    res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
     res.write(file);
     res.end();
   } catch (e) {
@@ -38,5 +41,5 @@ async function generateImage(req: NowRequest, res: NowResponse): Promise<void> {
 }
 
 export async function getImage(emoji: string): Promise<Buffer> {
-  return await readFile(path.resolve('node_modules', `@obr/macmoji/dist/${emoji}.png`));
+  return await readFile(path.resolve('node_modules', `@obr/macmoji/dist/${emoji.toUpperCase()}.png`));
 }
