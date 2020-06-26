@@ -1,0 +1,34 @@
+{
+  "name": "vercel-md",
+  "description": "Markdown Runtime for Vercel platform",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "homepage": "https://github.com/juicyfx/juicy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juicyfx/juicy.git"
+  },
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "prepublishOnly": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "rehype-document": "^2.2.0",
+    "rehype-format": "^2.3.0",
+    "rehype-stringify": "^4.0.0",
+    "remark-parse": "^6.0.1",
+    "remark-rehype": "^3.0.1",
+    "unified": "^7.0.0",
+    "unified-stream": "^1.0.2"
+  },
+  "devDependencies": {
+    "@now/build-utils": "^0.9.4",
+    "@types/node": "^10.0.0",
+    "typescript": "^3.5.3"
+  }
+}
