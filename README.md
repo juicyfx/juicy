@@ -5,7 +5,7 @@ Free tools and integrations for <a href="https://vercel.com">Vercel</a> platform
 </p>
 
 <p align=center>
-	<img src="https://github.com/juicyfx/juicy/blob/master/packages/assets/logo.png" width="256">
+	<img src="https://github.com/juicyfx/juicy/blob/master/packages/juicy/logo.png" width="256">
 </p>
 
 <p align=center>
