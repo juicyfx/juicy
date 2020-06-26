@@ -24,36 +24,29 @@ and givin something back to the community. Enjoy it!
 
 ## Packages
 
-**Tools**
-
 - [**avatarless**](packages/avatarless) - Gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
 - [**coloring**](packages/coloring) - Generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
-- [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.jfx.cz)]
+- [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
 - [**heatbadger**](packages/heatbadger) - generate image for github repository [WIP]
 - [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
-- [**oggy**](packages/oggy) - generates image for OG meta tags [[👀🕶](https://oggy.jfx.cz)]
-- [**pdfx**](packages/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.jfx.cz)]
-- [**qrx**](packages/qrx) - generates QR-codes [[👀🕶](https://qrx.jfx.cz)]
-- [**pupr**](packages/pupr) - generates SSR via Chrome Puppeteer pre-rendering [WIP]
-
-**Integrations**
-
-- [**coster**](packages/coster) - calculates and predicts your costs  [WIP]
-- [**dubuggx**](packages/dubuggx) - collection of tools useful for makers of builders/integrations [WIP]
+- [**insigne**](packages/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
 - [**intex**](packages/intex) - testing integration  [WIP]
+- [**juicy**](packages/juicy) - juicy functions assets
+- [**macmoji**](packages/macmoji) - macOS emojis [[👀🕶](https://macmoji.vercel.app)]
+- [**oggo**](packages/oggo) - generates image for OG meta tags [[👀🕶](https://oggo.vercel.app)]
+- [**pdfx**](packages/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.vercel.app)]
+- [**pupr**](packages/pupr) - generates SSR via Chrome Puppeteer pre-rendering [WIP]
+- [**qrx**](packages/qrx) - generates QR-codes [[👀🕶](https://qrx.vercel.app)]
 - [**showcase**](packages/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
 
-**Misc**
+## Runtimes
 
-- [**assets**](packages/assets) - juicy functions assets
+- [**debug**](packages/debug) - debugging runtime
+- [**markdown**](packages/md) - markdown runtime
 
 ## Clients
 
 - [**Juicy(fx) PHP**](client/php) - PHP client for Juicy Tools
-
-## Roadmap
-
-- more tools and integrations
 
 ## 📝 License
 
