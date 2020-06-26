@@ -9,5 +9,5 @@ Makefile export-ignore
 phpstan.neon export-ignore
 README.md export-ignore
 ruleset.xml export-ignore
-integrations export-ignore
-tools export-ignore
+packages export-ignore
+runtimes export-ignore

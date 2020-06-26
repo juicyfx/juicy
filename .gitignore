@@ -6,5 +6,5 @@
 /package-lock.json
 
 # Client: PHP
-/client/php/vendor
+/clients/php/vendor
 /composer.lock

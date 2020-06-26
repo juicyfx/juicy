@@ -27,19 +27,19 @@
   },
   "autoload": {
     "psr-4": {
-      "JuicyFx\\Juicy\\": "client/php/src"
+      "JuicyFx\\Juicy\\": "clients/php/src"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\Cases\\": "client/php/tests/cases"
+      "Tests\\Cases\\": "clients/php/tests/cases"
     }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
     "sort-packages": true,
-    "vendor-dir": "client/php/vendor"
+    "vendor-dir": "clients/php/vendor"
   },
   "extra": {
     "branch-alias": {
