@@ -18,7 +18,7 @@
     "dist"
   ],
   "dependencies": {
-    "rehype-document": "^2.2.0",
+    "rehype-document": "^5.1.0",
     "rehype-format": "^3.1.0",
     "rehype-stringify": "^4.0.0",
     "remark-parse": "^8.0.2",
