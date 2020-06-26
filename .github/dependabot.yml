@@ -1,5 +1,7 @@
 version: 2
 updates:
+
+# Packages
 - package-ecosystem: npm
   directory: "/"
   schedule:
@@ -68,6 +70,28 @@ updates:
   open-pull-requests-limit: 10
 - package-ecosystem: npm
   directory: "/packages/showcase"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+
+# Clients
+- package-ecosystem: composer
+  directory: "/clients/php"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+
+# Runtimes
+- package-ecosystem: npm
+  directory: "/runtimes/debug"
+  schedule:
+    interval: daily
+    time: '11:00'
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/runtimes/md"
   schedule:
     interval: daily
     time: '11:00'
