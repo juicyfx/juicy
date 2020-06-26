@@ -18,7 +18,7 @@
     "dist"
   ],
   "devDependencies": {
-    "@now/build-utils": "^0.9.4",
+    "@now/build-utils": "^2.4.0",
     "@types/node": "^14.0.14",
     "typescript": "^3.5.3"
   }
