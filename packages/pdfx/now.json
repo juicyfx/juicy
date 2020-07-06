@@ -14,6 +14,7 @@
     { "src": "package.json", "use": "@now/static-build" }
   ],
   "routes": [
+    { "src": "/favicon.ico", "dest": "https://juicy.vercel.app/favicon.ico" },
     { "src": "/", "dest": "/public/index.html" },
     { "src": "^/url/(.*)", "dest": "/api/url.ts" },
     { "src": "^/raw/(.*)", "dest": "/api/raw.ts" },
@@ -22,7 +23,7 @@
   ],
   "build": {
     "env": {
-      "PDFX_URL": "https://pdfx.jfx.cz"
+      "PDFX_URL": "https://pdfx.vercel.app"
     }
   }
 }

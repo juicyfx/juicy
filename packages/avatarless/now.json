@@ -2,6 +2,7 @@
   "scope": "juicyfx",
   "name": "avatarless",
   "rewrites": [
+    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/g/(.+@.+\\..+)", "destination": "/api/gravatar.ts?_email=$1" },
     { "source": "/i/(.+)", "destination": "/api/initials.ts?_initials=$1" },
     { "source": "/gi/(.+@.+\\..+)", "destination": "/api/gravatar+initials.ts?_email=$1" },

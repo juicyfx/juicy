@@ -2,7 +2,7 @@
   "scope": "juicyfx",
   "name": "oggy",
   "rewrites": [
-    { "source": "/favicon.ico", "destination": "https://assets.jfx.cz/favicon.ico" },
+    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/", "destination": "/web/index.html" },
     { "source": "/(.*)", "destination": "/api/oggy.ts" }
   ]

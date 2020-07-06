@@ -2,7 +2,7 @@
   "scope": "juicyfx",
   "name": "czws",
   "rewrites": [
-    { "source": "/favicon.ico", "destination": "https://assets.jfx.cz/favicon.ico" },
+    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/", "destination": "/public/index.html" },
     { "source": "/ares/([a-z]+)/", "destination": "/api/ares/$1.ts" }
   ]

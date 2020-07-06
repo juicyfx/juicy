@@ -2,6 +2,7 @@
   "scope": "juicyfx",
   "name": "macmoji",
   "rewrites": [
+    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/(.*)", "destination": "/api/index.ts?emoji=$1" }
   ],
   "redirects": [

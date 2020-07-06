@@ -3,6 +3,10 @@
   "name": "iconist",
   "routes": [
     {
+      "src": "/favicon.ico",
+      "dest": "https://juicy.vercel.app/favicon.ico"
+    },
+    {
       "src": "/fa/s/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?",
       "dest": "/api/index?vendor=fontawesome&spec=solid&icon=$icon&size=$size&color=$color"
     },

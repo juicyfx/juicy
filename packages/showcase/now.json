@@ -1,7 +1,8 @@
 {
   "name": "showcase",
   "scope": "juicyfx",
-  "routes": [
-    { "src": "/(.*)", "dest": "/api/index.ts" }
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
+    { "source": "/(.*)", "destination": "/api/index.ts" }
   ]
 }
