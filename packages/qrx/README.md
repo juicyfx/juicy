@@ -4,7 +4,7 @@
 
 ## Demo
 
-- https://qrx.jfx.cz?t=hello
+- https://qrx.vercel.app?t=hello
 
 ## Usage
 

@@ -3,7 +3,7 @@ const fs = require("fs");
 
 function createRequest(options, data, output) {
   const defaults = {
-    hostname: "pdfx.jfx.cz",
+    hostname: "pdfx.vercel.app",
     path: "/post/",
     method: "POST",
     headers: {

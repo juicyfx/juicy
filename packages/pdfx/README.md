@@ -1,7 +1,7 @@
 # Juicy(fx) | PDF[x]
 
 > Generates PDF from many given sources (URL, raw, POST)
-> https://pdfx.jfx.cz
+> https://pdfx.vercel.app
 
 ## Usage
 
@@ -26,17 +26,17 @@ marginLeft?: string | number
 preferCSSPageSize?: boolean
 ```
 
-For example: https://pdfx.jfx.cz/url/?url=https://f3l1x.io&format=A3
+For example: https://pdfx.vercel.app/url/?url=https://f3l1x.io&format=A3
 
 ## Endpoints
 
 ### URL
 
-> https://pdfx.jfx.cz/url/?url=https://f3l1x.io&format=A3
+> https://pdfx.vercel.app/url/?url=https://f3l1x.io&format=A3
 
 ### RAW
 
-> https://pdfx.jfx.cz/raw/?raw=RAW_STRING&format=A3
+> https://pdfx.vercel.app/raw/?raw=RAW_STRING&format=A3
 
 ### POST
 
@@ -45,7 +45,7 @@ curl \
   -X POST \
   --data "This is plain data" \
   -H "Content-Type: text/plain" \
-  https://pdfx.jfx.cz/post/ \
+  https://pdfx.vercel.app/post/ \
   -o pdf-plain.pdf
 ```
 
@@ -54,7 +54,7 @@ curl \
   -X POST \
   --data '{"data":"This is post data","format":"A3"}' \
   -H "Content-Type: application/json" \
-  https://pdfx.jfx.cz/post/ \
+  https://pdfx.vercel.app/post/ \
   -o pdf-post.pdf
 ```
 
@@ -77,7 +77,7 @@ curl \
   -X POST \
   --data @body.json \
   -H "Content-Type: application/json" \
-  https://pdfx.jfx.cz/post/ \
+  https://pdfx.vercel.app/post/ \
   -o pdf-post-file.pdf
 ```
 

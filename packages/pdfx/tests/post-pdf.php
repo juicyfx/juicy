@@ -13,7 +13,7 @@ function createCurl()
 function fromJson()
 {
 	$ch = createCurl();
-	curl_setopt($ch, CURLOPT_URL, "https://pdfx.jfx.cz/post/?displayHeaderFooter=1&marginTop=100&marginBottom=100");
+	curl_setopt($ch, CURLOPT_URL, "https://pdfx.vercel.app/post/?displayHeaderFooter=1&marginTop=100&marginBottom=100");
 	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
 		'data' => 'HELLO PHP',
 		'headerTemplate' => '<div style="font-size: 30px">THIS IS HEADER</div>',
@@ -31,7 +31,7 @@ function fromJson()
 function fromRaw()
 {
 	$ch = createCurl();
-	curl_setopt($ch, CURLOPT_URL, "https://pdfx.jfx.cz/post/");
+	curl_setopt($ch, CURLOPT_URL, "https://pdfx.vercel.app/post/");
 	curl_setopt($ch, CURLOPT_POSTFIELDS, 'HELLO RAW');
 	curl_setopt($ch, CURLOPT_HTTPHEADER, [
 		'Content-Type: text/plain',
@@ -45,7 +45,7 @@ function fromRaw()
 function fromUrl()
 {
 	$ch = createCurl();
-	curl_setopt($ch, CURLOPT_URL, "https://pdfx.jfx.cz/url/?url=http://f3l1x.io/&displayHeaderFooter=1&marginTop=100&marginBottom=100");
+	curl_setopt($ch, CURLOPT_URL, "https://pdfx.vercel.app/url/?url=http://f3l1x.io/&displayHeaderFooter=1&marginTop=100&marginBottom=100");
 	curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
 		'data' => 'HELLO PHP',
 		'headerTemplate' => '<div style="font-size: 30px">THIS IS HEADER</div>',

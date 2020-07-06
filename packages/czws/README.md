@@ -1,7 +1,7 @@
 # Juicy(fx) | CZWS
 
 > Czech Republic webservices
-> https://czws.jfx.cz
+> https://czws.vercel.app
 
 ## Webservices
 
@@ -11,4 +11,4 @@
 
 #### Usage
 
-https://czws.jfx.cz/ares/basic/?ico=N
+https://czws.vercel.app/ares/basic/?ico=N
