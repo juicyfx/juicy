@@ -1,9 +1,9 @@
 {
   "scope": "juicyfx",
-  "name": "oggy",
+  "name": "oggo",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/", "destination": "/web/index.html" },
-    { "source": "/(.*)", "destination": "/api/oggy.ts" }
+    { "source": "/felix/(.*)", "destination": "/api/felix.ts" },
+    { "source": "/(.*)", "destination": "/web/index.html" }
   ]
 }

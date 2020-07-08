@@ -1,6 +1,6 @@
 import { createBrowser } from "./chromium";
 
-export async function getScreenshot(source: string, type: FileType): Promise<Buffer> {
+export async function getImage(source: string): Promise<string> {
   let content = null;
   let browser = null;
   let page = null;
@@ -8,9 +8,9 @@ export async function getScreenshot(source: string, type: FileType): Promise<Buf
   try {
     browser = await createBrowser();
     page = await browser.newPage();
-    await page.setViewport({ width: 2048, height: 1170 });
     await page.setContent(source);
-    content = await page.screenshot({ type });
+
+    content = await page.screenshot();
   } catch (error) {
     throw error;
   } finally {
@@ -24,3 +24,4 @@ export async function getScreenshot(source: string, type: FileType): Promise<Buf
 
   return content;
 }
+
