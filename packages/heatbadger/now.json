@@ -6,7 +6,7 @@
     { "source": "/github/readme/([a-z]+)/([a-z\\-]+)/(.*)", "destination": "/api/github/readme.ts?r=$1/$2" }
   ],
   "redirects": [
-    { "source": "/", "destination": "https://github.com/juicyfx/juicy/tree/master/tools/heatbadger" }
+    { "source": "/", "destination": "https://github.com/juicyfx/juicy/" }
   ],
   "env": {
     "GITHUB_TOKEN": "@github-juicyfx-heatbadger"
