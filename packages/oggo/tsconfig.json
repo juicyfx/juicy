@@ -2,17 +2,13 @@
   "compilerOptions": {
     "strict": true,
     "esModuleInterop": true,
-    "lib": [
-      "esnext",
-      "dom"
-    ],
     "target": "esnext",
     "module": "commonjs",
     "outDir": "dist",
     "sourceMap": false,
-    "declaration": true,
+    "declaration": false,
     "typeRoots": [
-      "./node_modules/@types"
+      "./node_modules/@types",
     ],
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -20,13 +16,10 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,
-    "preserveConstEnums": true
+    "preserveConstEnums": true,
+    "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "api/**/*",
-  ],
   "exclude": [
     "dist",
-    "web"
   ]
 }
