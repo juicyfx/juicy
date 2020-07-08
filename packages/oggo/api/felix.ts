@@ -44,7 +44,7 @@ function createTemplate(text: string): string {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEADBADGER</title>
+    <title>OGGO</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
     <style>
     html, body { font-family: 'Inter', sans-serif; }
