@@ -36,7 +36,9 @@ export async function createBrowser(): Promise<Browser> {
   }
 
   // Extra fonts
-  chromeAws.font('https://rawcdn.githack.com/rsms/inter/164e01df21ecb9e7122c33d321fb9e9ccb2d5bb4/docs/font-files/Inter-Regular.woff2');
+  chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-Regular.woff2');
+  chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-SemiBold.woff2');
+  chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-Bold.woff2');
 
   return await launch(options);
 }
