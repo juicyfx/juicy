@@ -2,8 +2,7 @@
   "name": "czws",
   "version": "0.0.0",
   "scripts": {
-    "compile": "echo 'OK'",
-    "build": "tsc",
+    "compile": "tsc",
     "watch": "tsc --watch",
     "dev": "node dev.js"
   },
