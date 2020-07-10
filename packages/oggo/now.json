@@ -3,7 +3,9 @@
   "name": "oggo",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/felix/(.*)", "destination": "/api/felix.ts" },
-    { "source": "/(.*)", "destination": "/web/index.html" }
+    { "source": "/felix/(.*)", "destination": "/api/felix.ts" }
+  ],
+  "redirects": [
+    { "source": "/(.*)", "destination": "https://github.com/juicyfx/juicy/tree/master/packages/oggo" }
   ]
 }
