@@ -14,7 +14,7 @@
     "vue": "^2.6.11"
   },
   "devDependencies": {
-    "@now/node": "^1.7.1",
+    "@now/node": "^1.7.2",
     "@types/puppeteer-core": "^2.0.0",
     "@vue/component-compiler-utils": "^3.1.1",
     "babel-core": "^6.26.3",
