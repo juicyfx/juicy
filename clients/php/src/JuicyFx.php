@@ -8,7 +8,7 @@ use JuicyFx\Juicy\Lambda\Pdfx\PdfxClient;
 class JuicyFx
 {
 
-	public const PDFX_URL = 'https://pdfx.juicyfx1.now.sh';
+	public const PDFX_URL = 'https://pdfx.vercel.app';
 	public const PDFX_DEFAULTS = [
 		'base_uri' => self::PDFX_URL,
 		'http_errors' => 'false',
