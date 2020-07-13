@@ -1,0 +1,16 @@
+{
+  "name": "flymd",
+  "version": "0.0.0",
+  "scripts": {
+    "compile": "tsc",
+    "watch": "tsc --watch"
+  },
+  "dependencies": {
+    "markdown-it": "^11.0.0"
+  },
+  "devDependencies": {
+    "@now/node": "^1.7.1",
+    "@types/markdown-it": "^10.0.1",
+    "typescript": "^3.9.6"
+  }
+}
