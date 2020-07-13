@@ -6,7 +6,7 @@
     "watch": "tsc --watch"
   },
   "devDependencies": {
-    "@now/node": "^1.7.1",
+    "@now/node": "^1.7.2",
     "typescript": "^3.9.6"
   }
 }
