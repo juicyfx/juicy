@@ -1,0 +1,9 @@
+# NodeJS
+/node_modules
+
+# App
+/dist
+
+# Vercel
+.vercel
+.env*

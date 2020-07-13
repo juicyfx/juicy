@@ -1,0 +1,8 @@
+{
+  "scope": "juicyfx",
+  "name": "hitx",
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
+    { "source": "/(.*)", "destination": "/api/hit.ts" }
+  ]
+}
