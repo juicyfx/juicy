@@ -9,3 +9,9 @@ interface QrOptions {
   fontSize: string;
   images: string[];
 }
+
+interface HttpResponse {
+  statusCode: number,
+  data: Buffer,
+  headers: import('http').IncomingHttpHeaders
+}

@@ -3,6 +3,7 @@
   "name": "qrx",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/(.*)", "destination": "/api/index.ts" }
+    { "source": "/gen/(.*)", "destination": "/api/index.ts" },
+    { "source": "/(.*)", "destination": "https://flymd.vercel.app/juicy/qrx" }
   ]
 }
