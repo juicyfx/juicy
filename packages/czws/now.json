@@ -3,7 +3,7 @@
   "name": "czws",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/", "destination": "/public/index.html" },
-    { "source": "/ares/([a-z]+)/", "destination": "/api/ares/$1.ts" }
+    { "source": "/ares/([a-z]+)/", "destination": "/api/ares/$1.ts" },
+    { "source": "/", "destination": "https://flymd.vercel.app/juicy/czws" }
   ]
 }

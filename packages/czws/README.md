@@ -9,6 +9,4 @@
 
 ### ARES
 
-#### Usage
-
-https://czws.vercel.app/ares/basic/?ico=N
+https://czws.vercel.app/ares/basic/?ico=88575306
