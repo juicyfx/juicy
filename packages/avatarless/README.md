@@ -1,27 +1,23 @@
 # Juicy(fx) | Avatarless
 
 > Server gravatar or fallback images.
+> https://avatarless.now.sh
 
 ## Usage
 
 **Gravatar**
-/g/milan@sulc.dev
-/g/milan@sulc.dev?s=128&d=retro
 
-- ![](https://avatarless.now.sh/g/milan@sulc.dev?s=40&d=retro) https://avatarless.now.sh/g/milan@sulc.dev?s=40&d=retro
-- ![](https://avatarless.now.sh/g/filipsuska@gmail.com?s=40&d=retro) https://avatarless.now.sh/g/filipsuska@gmail.com?s=40&d=retro
+- ![](https://avatarless.now.sh/g/milan@sulc.dev?s=32) [/g/milan@sulc.dev](https://avatarless.now.sh/g/milan@sulc.dev)
+- ![](https://avatarless.now.sh/g/milan@sulc.dev?s=64&d=retro) [/g/milan@sulc.dev?s=64&d=retro](https://avatarless.now.sh/g/milan@sulc.dev?s=64&d=retro)
 
 **Initials**
-/i/MS
-/i/MS?s=128&tc=black&bc=yellow
 
-- ![](https://avatarless.now.sh/i/SF?s=40) https://avatarless.now.sh/i/SF?s=40
-- ![](https://avatarless.now.sh/i/MS?s=40) https://avatarless.now.sh/i/MS?s=40
+- ![](https://avatarless.now.sh/i/MS?s=32) [/i/MS](https://avatarless.now.sh/i/MS)
+- ![](https://avatarless.now.sh/i/MS?s=64&tc=black&bc=yellow) [/i/MS?s=64&tc=black&bc=yellow](https://avatarless.now.sh/i/MS?s=64&tc=black&bc=yellow)
 
 **Gravatar+Initials**
 
-/gi/milan@sulc.dev?t=MS
-/gi/milan@sulc.dev?t=MS&s=128&tc=black&bc=yellow
+- ![](https://avatarless.now.sh/gi/milan@sulc.dev?t=MS&s=32) [/gi/milan@sulc.dev?t=MS](https://avatarless.now.sh/gi/milan@sulc.dev?t=MS)
+- ![](https://avatarless.now.sh/gi/fake@sulc.dev?t=MS&s=32) [/gi/fake@sulc.dev?t=MS](https://avatarless.now.sh/gi/fake@sulc.dev?t=MS)
+- ![](https://avatarless.now.sh/gi/milan@sulc.dev?t=MS&s=64&tc=black&bc=yellow) [/gi/milan@sulc.dev?t=MS&s=64&tc=black&bc=yellow](https://avatarless.now.sh/gi/milan@sulc.dev?t=MS&s=64&tc=black&bc=yellow)
 
-- ![](https://avatarless.now.sh/gi/filipsuska@gmail.com?t=SF&s=40) https://avatarless.now.sh/gi/filipsuska@gmail.com?t=SF&s=40
-- ![](https://avatarless.now.sh/gi/milan@sulc.dev?t=MS&s=40) https://avatarless.now.sh/gi/milan@sulc.dev?t=MS&s=40

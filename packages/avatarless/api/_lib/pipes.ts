@@ -1,7 +1,6 @@
 import { NowRequest, NowResponse } from '@now/node';
 import crypto from 'crypto';
 import * as http from './http';
-import * as errors from './errors';
 import { prepareAvatarlessInitialsOptions, prepareAvatarlessEmailOptions, prepareGravatarOptions } from './utils';
 import { SILHOUETTE_PERSON } from './icons';
 
@@ -26,7 +25,8 @@ export function pipeCOORS(req: NowRequest, res: NowResponse): void {
 export function pipeRequirements(req: NowRequest, res: NowResponse, keys: string[]): void {
   keys.forEach(k => {
     if (!req.query[k]) {
-      res.end(errors.USAGE);
+      res.statusCode = 400;
+      res.end('Invalid usage, take a look at readme');
     }
   })
 }

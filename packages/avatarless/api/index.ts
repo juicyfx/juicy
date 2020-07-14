@@ -1,5 +1,4 @@
 import { NowRequest, NowResponse } from '@now/node';
-import * as errors from './_lib/errors';
 import { pipeLogging, pipeCOORS } from './_lib/pipes';
 
 export default async function handler(req: NowRequest, res: NowResponse): Promise<void> {
@@ -11,7 +10,9 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
     pipeCOORS(req, res);
 
     // Send global usage
-    res.end(errors.USAGE);
+    res.statusCode = 302;
+    res.setHeader('Location', 'https://avatarless.now.sh/');
+    res.end();
   } catch (e) {
     console.error(e);
     res.statusCode = 500;
