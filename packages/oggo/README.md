@@ -1,12 +1,14 @@
-# Juicy(fx) | Oggy
+# Juicy(fx) | Oggo
 
-> Generates image for OG meta tags
+Generates image for OG meta tags
 > https://oggo.vercel.app
 
-## Demo
+## Usage
+
+**Felix**
+
+Generates image for [f3l1x.io](https://f3l1x.io) website.
 
 > https://oggo.vercel.app/felix/?t=Hello%20world!
 
-<a href="https://oggo.vercel.app/felix/?t=Hello%20world!">
-	<img src="https://oggo.vercel.app/felix/?t=Hello%20world!" width="512">
-</a>
+![](https://oggo.vercel.app/felix/?t=Hello%20world!)

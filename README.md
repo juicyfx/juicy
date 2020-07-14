@@ -24,18 +24,19 @@ and givin something back to the community. Enjoy it!
 
 ## Packages
 
-- [**avatarless**](packages/avatarless) - Gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
-- [**coloring**](packages/coloring) - Generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
+- [**avatarless**](packages/avatarless) - gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
+- [**coloring**](packages/coloring) - generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
 - [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
+- [**flymd**](packages/flymd) - convert markdown to HTML on-the-fly [[👀🕶](https://flymd.vercel.app?)]
 - [**heatbadger**](packages/heatbadger) - generate image for github repository [WIP]
-- [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
+- [**hitx**](packages/hitx) - hitx and other counting service
+- [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://hitx.vercel.app/?id=https://github.com/f3l1x/f3l1x&t=github%20views)]
 - [**insigne**](packages/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
 - [**intex**](packages/intex) - testing integration  [WIP]
 - [**juicy**](packages/juicy) - juicy functions assets
 - [**macmoji**](packages/macmoji) - macOS emojis [[👀🕶](https://macmoji.vercel.app)]
 - [**oggo**](packages/oggo) - generates image for OG meta tags [[👀🕶](https://oggo.vercel.app)]
 - [**pdfx**](packages/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.vercel.app)]
-- [**pupr**](packages/pupr) - generates SSR via Chrome Puppeteer pre-rendering [WIP]
 - [**qrx**](packages/qrx) - generates QR-codes [[👀🕶](https://qrx.vercel.app)]
 - [**showcase**](packages/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
 

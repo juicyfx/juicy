@@ -15,7 +15,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   } else {
     res.statusCode = 400;
     res.setHeader("Content-Type", "text/html");
-    res.end(`<h1>Client Error</h1><p>Provide ?file={url-to-file}></p>`);
+    res.end(`<h1>Client Error</h1><p>Provide ?f={url-to-file}</p>`);
   }
 }
 

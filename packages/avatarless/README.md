@@ -1,7 +1,9 @@
 # Juicy(fx) | Avatarless
 
-> Server gravatar or fallback images.
+Server gravatar or fallback images.
 > https://avatarless.now.sh
+
+-----
 
 ## Usage
 
@@ -20,4 +22,3 @@
 - ![](https://avatarless.now.sh/gi/milan@sulc.dev?t=MS&s=32) [/gi/milan@sulc.dev?t=MS](https://avatarless.now.sh/gi/milan@sulc.dev?t=MS)
 - ![](https://avatarless.now.sh/gi/fake@sulc.dev?t=MS&s=32) [/gi/fake@sulc.dev?t=MS](https://avatarless.now.sh/gi/fake@sulc.dev?t=MS)
 - ![](https://avatarless.now.sh/gi/milan@sulc.dev?t=MS&s=64&tc=black&bc=yellow) [/gi/milan@sulc.dev?t=MS&s=64&tc=black&bc=yellow](https://avatarless.now.sh/gi/milan@sulc.dev?t=MS&s=64&tc=black&bc=yellow)
-

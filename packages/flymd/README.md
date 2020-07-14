@@ -1,8 +1,8 @@
-# Juicy(fx) | Markdown On The Fly
+# Juicy(fx) | Flymd
 
-> Converts markdown to HTML
+Converts markdown to HTML on-the-fly
 > https://flymd.vercel.app
 
-## Demo
+## Usage
 
-https://flymd.vercel.app/?file=https://raw.githubusercontent.com/juicyfx/juicy/master/packages/avatarless/README.md
+https://flymd.vercel.app/?f=https://raw.githubusercontent.com/juicyfx/juicy/master/README.md
