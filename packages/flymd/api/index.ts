@@ -2,8 +2,8 @@ import { NowRequest, NowResponse } from '@now/node';
 import * as http from "./_lib/http";
 import { createTemplate } from "./_lib/template";
 
-const CACHE_BROWSER = 60 * 60 * 24 * 2;
-const CACHE_CDN = 60 * 60 * 24 * 7;
+const CACHE_BROWSER = 60 * 60 * 24; // 24h
+const CACHE_CDN = 60 * 60 * 1; // 1h
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
