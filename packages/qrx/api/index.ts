@@ -46,24 +46,24 @@ function parseOptions(req: NowRequest): QRCodeToDataURLOptions {
 
   if (query.width) {
     options.width = Number.parseInt(query.width);
+  }
 
-    if (query.margin) {
-      options.margin = Number.parseInt(query.margin);
-    }
+  if (query.margin) {
+    options.margin = Number.parseInt(query.margin);
+  }
 
-    if (query.scale) {
-      options.scale = Number.parseInt(query.scale);
-    }
+  if (query.scale) {
+    options.scale = Number.parseInt(query.scale);
+  }
 
-    if (query.colorDark) {
-      options.color = options.color || {};
-      options.color.dark = query.colorDark;
-    }
+  if (query.colorDark) {
+    options.color = options.color || {};
+    options.color.dark = query.colorDark;
+  }
 
-    if (query.colorLight) {
-      options.color = options.color || {};
-      options.color.light = query.colorLight;
-    }
+  if (query.colorLight) {
+    options.color = options.color || {};
+    options.color.light = query.colorLight;
   }
 
   return options;
