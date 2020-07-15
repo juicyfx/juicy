@@ -72,10 +72,7 @@
     },
     {
       "src": "/",
-      "status": 302,
-      "headers": {
-        "Location": "https://github.com/juicyfx/juicy"
-      }
+      "dest": "https://flymd.vercel.app/juicy/iconist"
     }
   ]
 }
