@@ -29,7 +29,7 @@ and givin something back to the community. Enjoy it!
 - [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
 - [**flymd**](packages/flymd) - convert markdown to HTML on-the-fly
 - [**heatbadger**](packages/heatbadger) - generate image for github repository [[👀🕶](https://heatbadger.now.sh)]
-- [**hitx**](packages/hitx) - hitx and other counting service [[👀🕶](https://hitx.vercel.app/?id=https://github.com/f3l1x/f3l1x&t=github%20views))]
+- [**hitx**](packages/hitx) - hitx and other counting service [[👀🕶](https://hitx.vercel.app)]
 - [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
 - [**insigne**](packages/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
 - [**intex**](packages/intex) - testing integration  [WIP]

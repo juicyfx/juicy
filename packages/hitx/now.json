@@ -3,6 +3,7 @@
   "name": "hitx",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/(.*)", "destination": "/api/hit.ts" }
+    { "source": "/counter/", "destination": "/api/counter.ts" },
+    { "source": "/", "destination": "https://flymd.vercel.app/juicy/hitx" }
   ]
 }
