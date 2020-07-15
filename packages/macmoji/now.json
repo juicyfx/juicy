@@ -3,9 +3,7 @@
   "name": "macmoji",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
+    { "source": "/", "destination": "https://flymd.vercel.app/juicy/macmoji" },
     { "source": "/(.*)", "destination": "/api/index.ts?emoji=$1" }
-  ],
-  "redirects": [
-    { "source": "/", "destination": "https://github.com/juicyfx/juicy/" }
   ]
 }
