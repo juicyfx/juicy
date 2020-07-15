@@ -27,10 +27,10 @@ and givin something back to the community. Enjoy it!
 - [**avatarless**](packages/avatarless) - gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
 - [**coloring**](packages/coloring) - generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
 - [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
-- [**flymd**](packages/flymd) - convert markdown to HTML on-the-fly [[👀🕶](https://flymd.vercel.app?)]
-- [**heatbadger**](packages/heatbadger) - generate image for github repository [WIP]
-- [**hitx**](packages/hitx) - hitx and other counting service
-- [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://hitx.vercel.app/?id=https://github.com/f3l1x/f3l1x&t=github%20views)]
+- [**flymd**](packages/flymd) - convert markdown to HTML on-the-fly
+- [**heatbadger**](packages/heatbadger) - generate image for github repository [[👀🕶](https://heatbadger.now.sh)]
+- [**hitx**](packages/hitx) - hitx and other counting service [[👀🕶](https://hitx.vercel.app/?id=https://github.com/f3l1x/f3l1x&t=github%20views))]
+- [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
 - [**insigne**](packages/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
 - [**intex**](packages/intex) - testing integration  [WIP]
 - [**juicy**](packages/juicy) - juicy functions assets
@@ -42,12 +42,12 @@ and givin something back to the community. Enjoy it!
 
 ## Runtimes
 
-- [**debug**](packages/debug) - debugging runtime
-- [**markdown**](packages/md) - markdown runtime
+- [**debug**](packages/debug) - debugging runtime [WIP]
+- [**markdown**](packages/md) - markdown runtime [WIP]
 
 ## Clients
 
-- [**Juicy(fx) PHP**](client/php) - PHP client for Juicy Tools
+- [**Juicy(fx) PHP**](client/php) - PHP client for Juicy(fx)
 
 ## 📝 License
 
