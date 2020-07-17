@@ -22,7 +22,7 @@
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10",
     "puppeteer": "^5.1.0",
-    "typescript": "^3.9.6",
+    "typescript": "^3.9.7",
     "vue-hot-reload-api": "^2.3.4",
     "vue-template-compiler": "^2.6.11"
   }
