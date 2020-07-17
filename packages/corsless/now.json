@@ -1,0 +1,29 @@
+{
+  "scope": "juicyfx",
+  "name": "corsless",
+  "routes": [
+    {
+      "src": "/favicon.ico",
+      "dest": "https://juicy.vercel.app/favicon.ico"
+    },
+    {
+      "src": "/gist/(.*)",
+      "dest": "https://gist.githubusercontent.com/$1",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Methods": "GET",
+        "Access-Control-Allow-Headers": "*"
+      },
+      "methods": ["GET"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.ts",
+      "methods": ["OPTIONS"]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "https://flymd.vercel.app/juicy/corsless"
+    }
+  ]
+}

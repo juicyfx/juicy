@@ -1,0 +1,12 @@
+{
+  "name": "corsless",
+  "version": "0.0.0",
+  "scripts": {
+    "compile": "tsc",
+    "watch": "tsc --watch"
+  },
+  "devDependencies": {
+    "@now/node": "^1.6.1",
+    "typescript": "^3.9.5"
+  }
+}

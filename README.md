@@ -26,6 +26,7 @@ and givin something back to the community. Enjoy it!
 
 - [**avatarless**](packages/avatarless) - gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
 - [**coloring**](packages/coloring) - generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
+- [**corsless**](packages/corsless) - handy proxy for Github services supporting CORS headers [[👀🕶](https://corsless.now.sh)]
 - [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
 - [**flymd**](packages/flymd) - convert markdown to HTML on-the-fly
 - [**heatbadger**](packages/heatbadger) - generate image for github repository [[👀🕶](https://heatbadger.now.sh)]
