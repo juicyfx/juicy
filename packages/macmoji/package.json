@@ -13,7 +13,7 @@
   "devDependencies": {
     "@now/node": "^1.6.1",
     "@types/puppeteer-core": "^2.0.0",
-    "emoji.json": "^12.1.1",
+    "emoji.json": "^13.0.0",
     "typescript": "^3.9.5"
   }
 }
