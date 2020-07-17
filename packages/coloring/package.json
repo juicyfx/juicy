@@ -13,6 +13,6 @@
   "devDependencies": {
     "@now/node": "^1.7.2",
     "@types/tinycolor2": "^1.4.2",
-    "typescript": "^3.9.6"
+    "typescript": "^3.9.7"
   }
 }
