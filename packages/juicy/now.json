@@ -3,5 +3,8 @@
   "name": "juicy",
   "redirects": [
     { "source": "/", "destination": "https://github.com/juicyfx/juicy/" }
+  ],
+  "rewrites": [
+    { "source": "/readme/([a-z0-9\\-\\_]+)", "destination": "https://flyx.vercel.app/md/html?github=juicyfx/juicy/master/packages/$1/README.md" }
   ]
 }
