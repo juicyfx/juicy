@@ -4,7 +4,7 @@
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/github/readme/([a-z]+)/([a-z\\-]+)/(.*)", "destination": "/api/github/readme.ts?r=$1/$2" },
-    { "source": "/", "destination": "https://flymd.vercel.app/juicy/heatbadger" }
+    { "source": "/", "destination": "https://juicy.vercel.app/readme/heatbadger" }
   ],
   "env": {
     "GITHUB_TOKEN": "@github-juicyfx-heatbadger"

@@ -4,6 +4,6 @@
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/gen/(.*)", "destination": "/api/index.ts" },
-    { "source": "/(.*)", "destination": "https://flymd.vercel.app/juicy/qrx" }
+    { "source": "/(.*)", "destination": "https://juicy.vercel.app/readme/qrx" }
   ]
 }

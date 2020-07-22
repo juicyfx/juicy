@@ -4,6 +4,6 @@
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/ares/([a-z]+)/", "destination": "/api/ares/$1.ts" },
-    { "source": "/", "destination": "https://flymd.vercel.app/juicy/czws" }
+    { "source": "/", "destination": "https://juicy.vercel.app/readme/czws" }
   ]
 }
