@@ -1,5 +1,5 @@
 {
-  "name": "flymd",
+  "name": "flyx",
   "version": "0.0.0",
   "scripts": {
     "compile": "tsc",
@@ -9,7 +9,7 @@
     "markdown-it": "^11.0.0"
   },
   "devDependencies": {
-    "@now/node": "^1.7.1",
+    "@vercel/node": "^1.7.3",
     "@types/markdown-it": "^10.0.1",
     "typescript": "^3.9.6"
   }

@@ -3,7 +3,7 @@
   "name": "flymd",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/juicy/(.+)", "destination": "/api/index.ts?v=juicy&p=$1" },
-    { "source": "/(.*)", "destination": "/api/index.ts" }
+    { "source": "/md/html", "destination": "/api/md/html.ts" },
+    { "source": "/(.*)", "destination": "https://juicy.vercel.app/readme/flyx" }
   ]
 }
