@@ -9,7 +9,7 @@
     "last 2 Chrome versions"
   ],
   "dependencies": {
-    "chrome-aws-lambda": "^3.1.1",
+    "chrome-aws-lambda": "^5.2.0",
     "puppeteer-core": "^5.2.1",
     "vue": "^2.6.11"
   },
