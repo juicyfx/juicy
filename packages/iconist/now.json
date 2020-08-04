@@ -67,6 +67,10 @@
       "dest": "/api/index?vendor=ikonate&icon=$icon&size=$size&color=$color"
     },
     {
+      "src": "/svgporn/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?",
+      "dest": "/api/index?vendor=svgporn&icon=$icon&size=$size"
+    },
+    {
       "src": "/_/",
       "dest": "/api/meta"
     },

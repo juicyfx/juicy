@@ -11,4 +11,5 @@ export const VENDORS = [
   Vendor.emojitwo,
   Vendor.notoemoji,
   Vendor.openmoji,
+  Vendor.svgporn,
 ];

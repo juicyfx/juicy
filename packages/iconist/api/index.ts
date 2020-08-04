@@ -4,8 +4,8 @@ import { clamp, isEmpty } from './_lib/utils';
 import { NotFoundError } from './_lib/errors';
 import { errorDefault, errorNotFound } from './_lib/handler/error-handler';
 
-const CACHE_BROWSER = 60 * 60 * 24 * 2;
-const CACHE_CDN = 60 * 60 * 24 * 7;
+const CACHE_BROWSER = 60 * 60 * 24 * 2; // 2 days
+const CACHE_CDN = 60 * 60 * 24 * 7; // 7 days
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url, req.query);

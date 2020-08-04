@@ -10,6 +10,7 @@ import * as twemoji from "../vendor/twemoji";
 import * as emojitwo from "../vendor/emojitwo";
 import * as notoemoji from "../vendor/notoemoji";
 import * as openmoji from "../vendor/openmoji";
+import * as svgporn from "../vendor/svgporn";
 
 export function browse(req: BrowseRequest): Promise<BrowseResponse> {
   if (req.vendor === Vendor.fontawesome) {
@@ -60,5 +61,9 @@ export function browse(req: BrowseRequest): Promise<BrowseResponse> {
     return openmoji.browse(req);
   }
 
-  throw "Unknown icon vendor";
+  if (req.vendor === Vendor.svgporn) {
+    return svgporn.browse(req);
+  }
+
+  throw `Unknown icon vendor ${req.vendor}`;
 }

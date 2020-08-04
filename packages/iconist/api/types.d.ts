@@ -10,7 +10,8 @@ declare const enum Vendor {
   twemoji = 'twemoji',
   emojitwo = 'emojitwo',
   notoemoji = 'notoemoji',
-  openmoji = 'openmoji'
+  openmoji = 'openmoji',
+  svgporn = 'svgporn'
 }
 
 interface GenerateRequest {
