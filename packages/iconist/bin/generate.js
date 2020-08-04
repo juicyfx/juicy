@@ -1,14 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 const app = require('../dist/_lib/app');
-const manager = require('../dist/_lib/manager');
+const browser = require('../dist/_lib/handler/browse-handler');
 
-const URL = 'https://iconist-f3l1x.juicyfx1.now.sh';
+const URL = 'https://iconist.vercel.app';
 
 (async () => {
 
   for (vendor of app.VENDORS) {
-    const result = await manager.browse({
+    const result = await browser.browse({
       url: URL,
       vendor,
     });
