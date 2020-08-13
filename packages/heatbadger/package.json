@@ -7,7 +7,7 @@
     "dev": "micro-dev tests/github.js -i api -w dist"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^3.1.1",
+    "chrome-aws-lambda": "^5.2.1",
     "puppeteer-core": "^5.2.1"
   },
   "devDependencies": {
