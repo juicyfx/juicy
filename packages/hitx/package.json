@@ -6,7 +6,7 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "faunadb": "^2.14.2"
+    "faunadb": "^3.0.1"
   },
   "devDependencies": {
     "@now/node": "^1.7.0",
