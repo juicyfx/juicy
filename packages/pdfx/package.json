@@ -11,7 +11,7 @@
   "dependencies": {
     "chrome-aws-lambda": "^5.2.1",
     "puppeteer-core": "^5.2.1",
-    "vue": "^2.6.11"
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "@now/node": "^1.7.4",
@@ -24,6 +24,6 @@
     "puppeteer": "^5.2.1",
     "typescript": "^4.0.2",
     "vue-hot-reload-api": "^2.3.4",
-    "vue-template-compiler": "^2.6.11"
+    "vue-template-compiler": "^2.6.12"
   }
 }
