@@ -10,6 +10,6 @@
   },
   "devDependencies": {
     "@now/node": "^1.7.0",
-    "typescript": "^3.9.6"
+    "typescript": "^4.0.2"
   }
 }
