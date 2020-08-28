@@ -11,7 +11,7 @@
     "puppeteer-core": "^5.2.1"
   },
   "devDependencies": {
-    "@now/node": "^1.7.4",
+    "@now/node": "^1.8.1",
     "@types/puppeteer-core": "^2.0.0",
     "micro": "^9.3.4",
     "micro-dev": "^3.0.0",
