@@ -23,7 +23,7 @@
     "fast-glob": "^3.2.4"
   },
   "devDependencies": {
-    "@now/node": "^1.8.0",
+    "@now/node": "^1.8.1",
     "@types/cheerio": "^0.22.21",
     "@types/feather-icons": "^4.7.0",
     "micro": "^9.3.4",
