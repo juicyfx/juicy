@@ -11,6 +11,6 @@
     "xml-js": "^1.6.9"
   },
   "devDependencies": {
-    "@now/node": "^1.8.2"
+    "@now/node": "^1.8.3"
   }
 }
