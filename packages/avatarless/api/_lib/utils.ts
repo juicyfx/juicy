@@ -1,4 +1,4 @@
-import { NowRequest } from "@now/node";
+import { NowRequest } from "@vercel/node";
 
 const COLORS = [
   '#EF5350', '#F44336', '#E53935', '#D32F2F', '#C62828', '#B71C1C', '#EC407A', '#E91E63',

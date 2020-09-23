@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { NowRequest, NowResponse } from '@vercel/node';
 import crypto from 'crypto';
 import * as http from './http';
 import { prepareAvatarlessInitialsOptions, prepareAvatarlessEmailOptions, prepareGravatarOptions } from './utils';

@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { NowRequest, NowResponse } from '@vercel/node';
 import { pipeLogging, pipeCOORS, pipeRequirements, pipeGravatar, pipeAvatarlessEmail } from './_lib/pipes';
 
 export default async function handler(req: NowRequest, res: NowResponse): Promise<void> {
