@@ -4,6 +4,9 @@ import * as http from './http';
 import { prepareAvatarlessInitialsOptions, prepareAvatarlessEmailOptions, prepareGravatarOptions } from './utils';
 import { SILHOUETTE_PERSON } from './icons';
 
+const CACHE_BROWSER = 60 * 60 * 24 * 2; // 2 days
+const CACHE_CDN = 60 * 60 * 24 * 7; // 7 days
+
 export function pipeLogging(req: NowRequest, _res: NowResponse): void {
   console.log("[HTTP]", req.url);
   console.log("[HTTP]", req.query);
@@ -38,7 +41,7 @@ export async function pipeGravatar(req: NowRequest, res: NowResponse): Promise<v
   const gravatar = await createGravatar(options);
 
   res.setHeader('Content-Type', 'image/png');
-  res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, stale-while-revalidate, public`);
+  res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, stale-while-revalidate, public`);
   res.write(gravatar);
   res.end();
 }
@@ -48,7 +51,7 @@ export async function pipeGravatarOnly(req: NowRequest, res: NowResponse): Promi
   const gravatar = await createGravatar(options);
 
   res.setHeader('Content-Type', 'image/png');
-  res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, stale-while-revalidate, public`);
+  res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, stale-while-revalidate, public`);
   res.write(gravatar);
   res.end();
 }
@@ -58,7 +61,7 @@ export function pipeAvatarlessInitials(req: NowRequest, res: NowResponse): void 
   const svg = createAvatarless(options);
 
   res.setHeader('Content-Type', 'image/svg+xml');
-  res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, stale-while-revalidate, public`);
+  res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, stale-while-revalidate, public`);
   res.end(svg.trim());
 }
 
@@ -67,7 +70,7 @@ export function pipeAvatarlessEmail(req: NowRequest, res: NowResponse): void {
   const svg = createAvatarless(options);
 
   res.setHeader('Content-Type', 'image/svg+xml');
-  res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, stale-while-revalidate, public`);
+  res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, stale-while-revalidate, public`);
   res.end(svg.trim());
 }
 
