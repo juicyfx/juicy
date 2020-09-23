@@ -16,7 +16,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
       res.statusCode = 200;
       res.setHeader("Content-Type", "image/svg+xml;charset=utf8");
-      res.setHeader("Cache-Control", "max-age=1, stale-while-revalidate");
+      res.setHeader("Cache-Control", "max-age=1, s-maxage=1, stale-while-revalidate");
       res.end(badgeRes.data);
     } catch (e) {
       res.statusCode = 500;
