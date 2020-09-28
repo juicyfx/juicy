@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "htm": "^3.0.4",
-    "tinycolor2": "^1.4.1",
+    "tinycolor2": "^1.4.2",
     "vhtml": "^2.2.0"
   },
   "devDependencies": {
