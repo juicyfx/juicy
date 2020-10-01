@@ -1,0 +1,25 @@
+{
+  "name": "vercel-plain",
+  "description": "Plain Runtime for Vercel platform",
+  "version": "0.0.2",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "homepage": "https://github.com/juicyfx/juicy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juicyfx/juicy.git"
+  },
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "prepublishOnly": "tsc"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^14.0.14",
+    "@vercel/build-utils": "^2.4.0",
+    "typescript": "^4.0.2"
+  }
+}
