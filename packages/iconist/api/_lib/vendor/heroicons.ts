@@ -25,6 +25,19 @@ export async function generate(req: GenerateRequest): Promise<string> {
   $svg.attr('width', String(req.size));
   $svg.attr('height', String(req.size));
 
+  // Update inner structure
+  $svg.find('path').map((_index: number, el: CheerioElement) => {
+    if (el.attribs['stroke']) {
+      el.attribs['stroke'] = 'currentColor';
+    }
+
+    if (el.attribs['fill']) {
+      el.attribs['fill'] = 'currentColor';
+    }
+
+    return el;
+  });
+
   // Export icon
   const svg = $.html('svg');
 
