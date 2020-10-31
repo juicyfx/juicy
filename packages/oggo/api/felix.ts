@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { NowRequest, NowResponse } from '@vercel/node';
 import { getImage } from "./_lib/chrome";
 
 const CACHE_BROWSER = 60 * 60 * 24 * 2;
@@ -21,7 +21,16 @@ async function generateImage(req: NowRequest, res: NowResponse): Promise<void> {
     const text = <string>req.query.t;
 
     const template = createTemplate(text);
-    const file = await getImage(template);
+    const file = await getImage(
+      template,
+      {
+        defaultViewport: {
+          deviceScaleFactor: 2,
+          width: 1280,
+          height: 640,
+        }
+      }
+    );
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "image/png");

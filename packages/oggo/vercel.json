@@ -4,6 +4,7 @@
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/felix/(.*)", "destination": "/api/felix.ts" },
+    { "source": "/nuxt/(.*)", "destination": "/api/nuxt.ts" },
     { "source": "/", "destination": "https://juicy.vercel.app/readme/oggo" }
   ]
 }

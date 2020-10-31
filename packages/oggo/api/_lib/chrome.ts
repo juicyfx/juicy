@@ -1,12 +1,13 @@
+import { LaunchOptions } from "puppeteer-core";
 import { createBrowser } from "./chromium";
 
-export async function getImage(source: string): Promise<string> {
+export async function getImage(source: string, options: LaunchOptions = {}): Promise<string> {
   let content = null;
   let browser = null;
   let page = null;
 
   try {
-    browser = await createBrowser();
+    browser = await createBrowser(options);
     page = await browser.newPage();
     await page.setContent(source);
 
