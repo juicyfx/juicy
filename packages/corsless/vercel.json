@@ -17,6 +17,11 @@
       "methods": ["GET"]
     },
     {
+      "src": "/headers/(.*)",
+      "dest": "/api/headers.ts",
+      "methods": ["GET"]
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/index.ts",
       "methods": ["OPTIONS"]
