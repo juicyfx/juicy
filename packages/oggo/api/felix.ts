@@ -56,7 +56,7 @@ function createTemplate(text: string): string {
     <title>OGGO</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
     <style>
-    html, body { font-family: 'Inter', sans-serif; }
+    * { font-family: 'Inter', sans-serif; }
     </style>
 </head>
 <body class="h-screen bg-gray-200">

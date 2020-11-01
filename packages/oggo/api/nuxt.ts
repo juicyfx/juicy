@@ -59,7 +59,8 @@ function createTemplate(ctx: { module: string, color: string, text: string }): s
     <title>NUXT</title>
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
     <style>
-      html, body { font-family: 'Inter', sans-serif; }
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700');
+      * { font-family: 'Quicksand', sans-serif; }
     </style>
 </head>
 <body class="h-screen bg-white antialiased">
@@ -69,7 +70,7 @@ function createTemplate(ctx: { module: string, color: string, text: string }): s
       <div class="text-right"><img class="h-24 inline-block" src="https://raw.githubusercontent.com/nuxt-community/${ctx.module}-module/master/docs/static/icon.png" /></div>
     </div>
     <div class="h-full w-full flex flex-col items-center justify-center tracking-wider">
-      <div style="font-size: 3.5rem;" class="font-semibold text-center">nuxt <span class="font-sans">/<span> <span style="color: #${ctx.color}">${ctx.module}</span></div>
+      <div style="font-size: 3.5rem;" class="font-semibold text-center">nuxt<span>/</span><span style="color: #${ctx.color}">${ctx.module}</span></div>
       <div style="font-size: 2.5rem;" class="text-center">${ctx.text}</div>
     </div>
     <div class="w-full grid grid-cols-2">

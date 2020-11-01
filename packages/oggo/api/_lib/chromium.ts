@@ -3,7 +3,6 @@ import chromeAws from "chrome-aws-lambda";
 
 export async function createBrowser(args: LaunchOptions = {}): Promise<Browser> {
   const defaults: LaunchOptions = {
-    ...args,
     defaultViewport: {
       deviceScaleFactor: 1,
       width: 1280,
@@ -15,6 +14,7 @@ export async function createBrowser(args: LaunchOptions = {}): Promise<Browser> 
   if (isDev()) {
     options = {
       ...defaults,
+      ...args,
       ...{
         args: [],
         executablePath: lookupChrome(),
@@ -24,6 +24,7 @@ export async function createBrowser(args: LaunchOptions = {}): Promise<Browser> 
   } else {
     options = {
       ...defaults,
+      ...args,
       ...{
         args: chromeAws.args,
         executablePath: await chromeAws.executablePath,
@@ -33,9 +34,9 @@ export async function createBrowser(args: LaunchOptions = {}): Promise<Browser> 
   }
 
   // Extra fonts
-  chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-Regular.woff2');
-  chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-SemiBold.woff2');
-  chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-Bold.woff2');
+  await chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-Regular.woff2');
+  await chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-SemiBold.woff2');
+  await chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-Bold.woff2');
 
   return await launch(options);
 }
