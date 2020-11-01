@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { NowRequest, NowResponse } from '@vercel/node';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   res.setHeader("Access-Control-Allow-Origin", '*');
