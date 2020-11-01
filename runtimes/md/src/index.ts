@@ -9,6 +9,8 @@ import doc from 'rehype-document';
 import format from 'rehype-format';
 import html from 'rehype-stringify';
 
+export const version = 3;
+
 export async function build({ files, entrypoint, config = {} }: BuildOptions): Promise<any> {
   const stream = files[entrypoint].toStream();
   const options = config || {};
