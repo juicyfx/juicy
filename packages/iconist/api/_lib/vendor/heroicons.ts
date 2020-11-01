@@ -26,7 +26,7 @@ export async function generate(req: GenerateRequest): Promise<string> {
   $svg.attr('height', String(req.size));
 
   // Update inner structure
-  $svg.find('path').map((_index: number, el: CheerioElement) => {
+  $svg.find('path').map((_index, el) => {
     if (el.attribs['stroke']) {
       el.attribs['stroke'] = 'currentColor';
     }
