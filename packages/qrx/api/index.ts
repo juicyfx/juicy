@@ -5,7 +5,6 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
 
   // Apply optimistic CORS
-  // Optimistic CORS
   res.setHeader("Access-Control-Allow-Origin", '*');
   res.setHeader("Access-Control-Allow-Methods", '*');
   res.setHeader("Access-Control-Allow-Headers", '*');
@@ -31,7 +30,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     } catch (e) {
       res.statusCode = 500;
       res.setHeader("Content-Type", "text/html");
-      res.end(e);
+      res.end(JSON.stringify({ message: e.message, code: e.code }));
     }
   } else {
     res.statusCode = 400;
