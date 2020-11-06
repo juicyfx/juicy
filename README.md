@@ -33,6 +33,7 @@ and givin something back to the community. Enjoy it!
 - [**hitx**](packages/hitx) - hitx and other counting service [[👀🕶](https://hitx.vercel.app)]
 - [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
 - [**insigne**](packages/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
+- [**instafetch**](packages/instafetch) - fetch data from Instagram [[👀🕶](https://instafetch.vercel.app)]
 - [**intex**](packages/intex) - testing integration  [WIP]
 - [**juicy**](packages/juicy) - juicy functions assets
 - [**macmoji**](packages/macmoji) - macOS emojis [[👀🕶](https://macmoji.vercel.app)]
