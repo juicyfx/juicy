@@ -3,11 +3,11 @@
     "strict": true,
     "esModuleInterop": true,
     "lib": [
-      "esnext",
-      "dom"
+      "ES2018",
+      "DOM"
     ],
-    "target": "esnext",
-    "module": "commonjs",
+    "target": "ES2018",
+    "module": "CommonJS",
     "outDir": "dist",
     "sourceMap": false,
     "declaration": true,

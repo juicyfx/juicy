@@ -2,8 +2,8 @@
   "compilerOptions": {
     "strict": true,
     "esModuleInterop": true,
-    "target": "esnext",
-    "module": "commonjs",
+    "target": "ES2018",
+    "module": "CommonJS",
     "outDir": "dist",
     "sourceMap": false,
     "declaration": false,

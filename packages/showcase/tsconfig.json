@@ -2,11 +2,8 @@
   "compilerOptions": {
     "strict": true,
     "esModuleInterop": true,
-    "lib": [
-      "esnext"
-    ],
-    "target": "esnext",
-    "module": "commonjs",
+    "target": "ES2018",
+    "module": "CommonJS",
     "outDir": "dist",
     "sourceMap": false,
     "declaration": false,
@@ -18,6 +15,7 @@
     "noEmitOnError": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "skipLibCheck": true,
     "removeComments": true,
     "preserveConstEnums": true
   },
