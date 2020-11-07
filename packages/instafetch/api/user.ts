@@ -8,7 +8,7 @@ if (!globalThis.XMLHttpRequest) {
   globalThis.XMLHttpRequest = XMLHttpRequest;
 }
 
-const CACHE_BROWSER = 60 * 60 * 24 * 1; // 1 day
+const CACHE_BROWSER = 60 * 60 * 24 * 1; // 2 day
 const CACHE_CDN = 60 * 60 * 24 * 7; // 7 days
 
 export default async function handler(req: NowRequest, res: NowResponse) {
@@ -29,6 +29,9 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   if (req.query._user) {
     try {
       const nanogram = new Nanogram();
+      // @ts-ignore
+      nanogram.INSTAGRAM_HOSTNAME = 'https://instaproxy.felix.workers.dev/';
+
       const response = await nanogram.getMediaByUsername(<string>req.query._user);
       const output: any = {
         ...response,
@@ -38,7 +41,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
       if (response.ok) {
         res.setHeader('Content-Type', 'application/json')
-        res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, stale-while-revalidate, public`);
+        res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
       }
 
       res.send(JSON.stringify(output));
