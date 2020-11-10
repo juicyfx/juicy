@@ -36,7 +36,11 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       const output: any = {
         ...response,
         photos: response.profile?.edge_owner_to_timeline_media.edges
-          .map(edge => ({ url: edge.node.display_url, preview: edge.node.thumbnail_src })) || []
+          .map(edge => ({
+            permalink: `https://www.instagram.com/p/${edge.node.shortcode}`,
+            url: edge.node.display_url,
+            preview: edge.node.thumbnail_src
+          })) || []
       };
 
       if (response.ok) {
