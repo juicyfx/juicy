@@ -12,7 +12,7 @@ export function pipeLogging(req: NowRequest, _res: NowResponse): void {
   console.log("[HTTP]", req.query);
 }
 
-export function pipeCOORS(req: NowRequest, res: NowResponse): void {
+export function pipeCORS(req: NowRequest, res: NowResponse): void {
   // Optimistic CORS
   res.setHeader("Access-Control-Allow-Origin", '*');
   res.setHeader("Access-Control-Allow-Methods", '*');

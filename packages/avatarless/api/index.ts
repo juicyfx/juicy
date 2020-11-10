@@ -1,5 +1,5 @@
 import { NowRequest, NowResponse } from '@vercel/node';
-import { pipeLogging, pipeCOORS } from './_lib/pipes';
+import { pipeLogging, pipeCORS } from './_lib/pipes';
 
 export default async function handler(req: NowRequest, res: NowResponse): Promise<void> {
   try {
@@ -7,7 +7,7 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
     pipeLogging(req, res);
 
     // Apply COORS
-    pipeCOORS(req, res);
+    pipeCORS(req, res);
 
     // Send global usage
     res.statusCode = 302;
