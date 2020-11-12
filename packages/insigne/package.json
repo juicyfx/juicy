@@ -7,7 +7,7 @@
     "dev": "micro-dev dist/github/unreleased.js -i api -w dist"
   },
   "devDependencies": {
-    "@now/node": "^1.8.4",
+    "@now/node": "^1.8.5",
     "micro": "^9.3.4",
     "micro-dev": "^3.0.0",
     "typescript": "^4.0.5"
