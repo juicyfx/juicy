@@ -1,0 +1,25 @@
+{
+    "require": {
+        "php": "^7.4",
+        "raiym/instagram-php-scraper": "^0.10.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "symfony/cache": "^5.1",
+        "contributte/tracy": "^0.4.1",
+        "contributte/utils": "^0.4.2"
+    },
+    "require-dev": {
+        "contributte/dev": "^0.1"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "scripts": {
+        "dev": [
+            "php -S 0.0.0.0:8000 -t api"
+        ]
+    }
+}

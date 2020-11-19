@@ -1,0 +1,15 @@
+{
+  "scope": "juicyfx",
+  "name": "instaphp",
+  "regions": ["bru1"],
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.3.1"
+    }
+  },
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
+    { "source": "/user/([a-z0-9\\.\\_\\-]+)(/?)", "destination": "/api/user.php?_user=$1" },
+    { "source": "/(.*)", "destination": "https://juicy.vercel.app/readme/instaphp" }
+  ]
+}
