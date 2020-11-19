@@ -1,15 +1,9 @@
 import { NowRequest, NowResponse } from '@vercel/node';
-import Nanogram from "nanogram.js";
-// @ts-ignore
-import { XMLHttpRequest } from "xmlhttprequest";
+import { IncomingMessage } from "http";
+import https from "https";
 
-// polyfill
-if (!globalThis.XMLHttpRequest) {
-  globalThis.XMLHttpRequest = XMLHttpRequest;
-}
-
-const CACHE_BROWSER = 60 * 60 * 24 * 1; // 2 day
-const CACHE_CDN = 60 * 60 * 24 * 7; // 7 days
+const CACHE_BROWSER = 60 * 60 * 24 * 5; // 5 day
+const CACHE_CDN = 60 * 60 * 24 * 5; // 5 days
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
@@ -28,26 +22,22 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
   if (req.query._user) {
     try {
-      const nanogram = new Nanogram();
-      // @ts-ignore
-      nanogram.INSTAGRAM_HOSTNAME = 'https://instaproxy.felix.workers.dev/';
+      const result = await fetch(`https://instaphp.vercel.app/user/${<string>req.query._user}`);
 
-      const response = await nanogram.getMediaByUsername(<string>req.query._user);
-      const output: any = {
-        ...response,
-        photos: response.profile?.edge_owner_to_timeline_media.edges
-          .map(edge => ({
-            permalink: `https://www.instagram.com/p/${edge.node.shortcode}`,
-            url: edge.node.display_url,
-            preview: edge.node.thumbnail_src
-          })) || []
-      };
-
-      if (response.ok) {
-        res.setHeader('Content-Type', 'application/json')
-        res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
+      if (!result) {
+        throw `No data from instagram`;
       }
 
+      const output = {
+        photos: result.map((row: any) => ({
+          permalink: row.link,
+          url: row.imageHighResolutionUrl,
+          preview: row.imageThumbnailUrl,
+        }))
+      };
+
+      res.setHeader('Content-Type', 'application/json')
+      res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
       res.send(JSON.stringify(output));
     } catch (e) {
       res.statusCode = 500;
@@ -59,4 +49,24 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     res.setHeader("Content-Type", "text/html");
     res.end('Invalid usage, take a look at readme');
   }
+}
+
+async function fetch(url: string): Promise<any> {
+  return new Promise((resolve, reject) => {
+    const req = https.get(url, (res: IncomingMessage) => {
+      const data: any = [];
+
+      res.on('data', chunk => {
+        data.push(chunk);
+      });
+
+      res.on('end', () => {
+        resolve(JSON.parse(Buffer.concat(data).toString()));
+      });
+    });
+
+    req.on('error', reject);
+
+    req.end();
+  });
 }
