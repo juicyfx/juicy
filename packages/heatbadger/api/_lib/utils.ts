@@ -3,5 +3,5 @@ export function isDev(): boolean {
 }
 
 export function trimEmoji(str: string): string {
-  return str.replace(/\:[\w\-]+\:/, '').trim();
+  return str.replace(/\p{Emoji}/gu, '').trim();
 }
