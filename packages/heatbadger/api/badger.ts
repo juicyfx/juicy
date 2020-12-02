@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { NowRequest, NowResponse } from '@vercel/node';
 import { getImage } from "./_lib/chrome";
 import { createTemplate } from './_lib/templates/github';
 

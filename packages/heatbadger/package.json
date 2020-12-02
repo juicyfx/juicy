@@ -11,10 +11,8 @@
     "puppeteer-core": "^5.5.0"
   },
   "devDependencies": {
-    "@now/node": "^1.8.5",
     "@types/puppeteer-core": "^2.0.0",
-    "micro": "^9.3.4",
-    "micro-dev": "^3.0.0",
+    "@vercel/node": "^1.8.5",
     "typescript": "^4.0.5"
   }
 }
