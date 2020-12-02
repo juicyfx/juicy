@@ -3,7 +3,7 @@
   "name": "heatbadger",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/github/readme/([a-z]+)/([a-z\\-]+)(/?)", "destination": "/api/github/readme.ts?r=$1/$2" },
+    { "source": "/github/readme/([a-z0-9]+)/([a-z0-9\\-]+)(/?)", "destination": "/api/github/readme.ts?r=$1/$2" },
     { "source": "/", "destination": "https://juicy.vercel.app/readme/heatbadger" }
   ],
   "env": {
