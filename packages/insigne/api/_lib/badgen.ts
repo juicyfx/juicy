@@ -1,7 +1,7 @@
-import { request } from "./http";
+import { requestBadgen } from "./http";
 
 export async function fetchBadge(url: string): Promise<[GithubRepoTag]> {
-  const res = await request({ url: `https://badgen.net/https//${url}/`, method: 'GET' });
+  const res = await requestBadgen({ url: `https://badgen.net/https//${url}/`, method: 'GET' });
 
   if (res.statusCode !== 200) {
     throw new Error(`Badgen errored`);

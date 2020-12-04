@@ -19,3 +19,11 @@ interface Badgen {
   status: string,
   color: string,
 }
+
+interface PackagistVendorStats {
+  downloads: {
+    daily: number,
+    monthly: number,
+    total: number,
+  }
+}

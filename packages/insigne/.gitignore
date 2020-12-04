@@ -6,3 +6,6 @@
 
 # Vercel
 .vercel
+
+# Env
+/.env*

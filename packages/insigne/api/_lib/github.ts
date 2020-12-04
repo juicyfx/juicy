@@ -1,7 +1,7 @@
-import { request } from "./http";
+import { requestGithub } from "./http";
 
 export async function fetchLastTag(repo: string): Promise<[GithubRepoTag]> {
-  const res = await request({ url: `https://api.github.com/repos/${repo}/tags?per_page=1`, method: 'GET' });
+  const res = await requestGithub({ url: `https://api.github.com/repos/${repo}/tags?per_page=1`, method: 'GET' });
 
   if (res.statusCode !== 200) {
     throw new Error(`Repository ${repo} not found for tag`);
@@ -13,7 +13,7 @@ export async function fetchLastTag(repo: string): Promise<[GithubRepoTag]> {
 }
 
 export async function fetchRepoCompare(repo: string, rev1: string, rev2: string): Promise<GithubRepoCompare> {
-  const res = await request({ url: `https://api.github.com/repos/${repo}/compare/${rev1}...${rev2}`, method: 'GET' });
+  const res = await requestGithub({ url: `https://api.github.com/repos/${repo}/compare/${rev1}...${rev2}`, method: 'GET' });
 
   if (res.statusCode !== 200) {
     throw new Error(`Repository ${repo} not found for comparing`);
