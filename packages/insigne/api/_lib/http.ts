@@ -1,8 +1,30 @@
-import { IncomingMessage, RequestOptions } from 'http';
+import { IncomingMessage, RequestOptions, OutgoingHttpHeaders } from 'http';
 import https from 'https';
 import * as URL from 'url';
 
-export async function request({ url, method = 'GET' }: { url: string, method: string }): Promise<HttpResponse> {
+export async function requestGithub({ url, method = 'GET' }: { url: string, method: string }): Promise<HttpResponse> {
+  const res = await request({ url, method, headers: { Authorization: `token ${process.env.GITHUB_TOKEN}` } });
+
+  console.log(`[GITHUB] X-RateLimit-Limit: ${res.headers['x-ratelimit-limit']}`);
+  console.log(`[GITHUB] X-RateLimit-Remaining: ${res.headers['x-ratelimit-remaining']}`);
+
+  return res;
+};
+
+export async function requestPackagist({ url, method = 'GET' }: { url: string, method: string }): Promise<HttpResponse> {
+  console.log(url);
+  const res = await request({ url, method });
+
+  return res;
+};
+
+export async function requestBadgen({ url, method = 'GET' }: { url: string, method: string }): Promise<HttpResponse> {
+  const res = await request({ url, method });
+
+  return res;
+};
+
+async function request({ url, method = 'GET', headers = {} }: { url: string, method: string, headers?: OutgoingHttpHeaders }): Promise<HttpResponse> {
   const parsed = URL.parse(url);
 
   const params: RequestOptions = {
@@ -11,13 +33,10 @@ export async function request({ url, method = 'GET' }: { url: string, method: st
     port: parsed.port,
     path: parsed.path || '/',
     headers: {
+      ...headers,
       "User-Agent": "JuicyFx (Insigne)",
     }
   };
-
-  if (process.env.GITHUB_TOKEN) {
-    params.headers!['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
-  }
 
   return new Promise((resolve, reject) => {
     const req = https.request(params, (res: IncomingMessage) => {
@@ -28,9 +47,6 @@ export async function request({ url, method = 'GET' }: { url: string, method: st
       });
 
       res.on('end', () => {
-        console.log(`[GITHUB] X-RateLimit-Limit: ${res.headers['x-ratelimit-limit']}`);
-        console.log(`[GITHUB] X-RateLimit-Remaining: ${res.headers['x-ratelimit-remaining']}`);
-
         resolve({
           statusCode: res.statusCode!,
           headers: res.headers,

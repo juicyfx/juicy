@@ -1,10 +1,11 @@
 import { NowRequest, NowResponse } from '@vercel/node';
-import { fetchLastTag, fetchRepoCompare } from '../_lib/github';
+import { fetchVendorStats } from '../_lib/packagist';
+import { numerize } from '../_lib/utils';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
 
-  if (!req.query.r) {
+  if (!req.query.v) {
     res.statusCode = 400;
     res.setHeader("Content-Type", "text/html");
     res.end(`<h1>Client Error</h1><p>Provide ?r=juicyfx/juicy</p>`);
@@ -28,31 +29,39 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 }
 
 async function generateBadgen(req: NowRequest): Promise<Badgen> {
-  const r = <string>req.query.r;
+  const v = <string>req.query.v;
+  const d = <string>req.query.d;
 
   try {
-    var tagRes = await fetchLastTag(r);
+    var stats = await fetchVendorStats(v);
   } catch (e) {
     return {
-      'subject': 'unreleased',
-      'status': 'N/A',
-      'color': 'red',
-    }
-  }
-
-  try {
-    var comparedRes = await fetchRepoCompare(r, tagRes[0].name, 'master');
-  } catch (e) {
-    return {
-      'subject': 'unreleased',
+      'subject': 'N/A',
       'status': 'error',
       'color': 'red',
     }
   }
 
+  if (d === 'dd') {
+    return {
+      'subject': 'downloads',
+      'status': `${numerize(stats.downloads.monthly)}/day`,
+      'color': 'blue',
+    };
+  }
+
+
+  if (d === 'dm') {
+    return {
+      'subject': 'downloads',
+      'status': `${numerize(stats.downloads.monthly)}/month`,
+      'color': 'blue',
+    };
+  }
+
   return {
-    'subject': 'unreleased',
-    'status': String(comparedRes.ahead_by),
+    'subject': 'downloads',
+    'status': `${numerize(stats.downloads.monthly)}`,
     'color': 'blue',
   };
 }
