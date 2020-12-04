@@ -34,10 +34,12 @@ and givin something back to the community. Enjoy it!
 - [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
 - [**insigne**](packages/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
 - [**instafetch**](packages/instafetch) - fetch data from Instagram [[👀🕶](https://instafetch.vercel.app)]
+- [**instaphp**](packages/instaphp) - fetch data from Instagram written in PHP [[👀🕶](https://instaphp.vercel.app)]
 - [**intex**](packages/intex) - testing integration  [WIP]
 - [**juicy**](packages/juicy) - juicy functions assets
 - [**macmoji**](packages/macmoji) - macOS emojis [[👀🕶](https://macmoji.vercel.app)]
 - [**oggo**](packages/oggo) - generates image for OG meta tags [[👀🕶](https://oggo.vercel.app)]
+- [**packagist**](packages/packagist) - fetch data from packagist with aggregation [[👀🕶](https://packagist.vercel.app)]
 - [**pdfx**](packages/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.vercel.app)]
 - [**qrx**](packages/qrx) - generates QR-codes [[👀🕶](https://qrx.vercel.app)]
 - [**showcase**](packages/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
@@ -46,6 +48,7 @@ and givin something back to the community. Enjoy it!
 
 - [**debug**](packages/debug) - debugging runtime [WIP]
 - [**markdown**](packages/md) - markdown runtime [WIP]
+- [**plain**](packages/plain) - plainn runtime
 
 ## Clients
 
