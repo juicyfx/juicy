@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { NowRequest, NowResponse } from '@vercel/node';
 import * as db from "./_lib/db";
 import * as http from "./_lib/http";
 
