@@ -4,6 +4,17 @@ import { fetchPackage } from '../_lib/packagist';
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
 
+  // Optimistic CORS
+  res.setHeader("Access-Control-Allow-Origin", '*');
+  res.setHeader("Access-Control-Allow-Methods", '*');
+  res.setHeader("Access-Control-Allow-Headers", '*');
+
+  // OPTIONS request
+  if (req.method === 'OPTIONS') {
+    res.statusCode = 200;
+    res.end();
+  }
+
   if (!req.query.vendor || !req.query.package) {
     res.statusCode = 400;
     res.setHeader("Content-Type", "text/html");
@@ -16,7 +27,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
-    res.setHeader('Cache-Control', `max-age=${60*60}, s-maxage=${60*60}, public`);
+    res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60}, public`);
     res.end(JSON.stringify(stats))
   } catch (e) {
     res.statusCode = 500;
