@@ -6,8 +6,5 @@
     { "source": "/stats/([\\w\\-]+)/([\\w\\-]+)(/?)", "destination": "/api/stats/package.ts?vendor=$1&package=$2" },
     { "source": "/stats/([\\w\\-\\+]+)(/?)", "destination": "/api/stats/organization.ts?vendor=$1" },
     { "source": "/", "destination": "https://juicy.vercel.app/readme/packagist" }
-  ],
-  "env": {
-    "GITHUB_TOKEN": "@github-juicyfx-packagist"
-  }
+  ]
 }
