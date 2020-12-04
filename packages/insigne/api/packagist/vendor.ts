@@ -45,7 +45,7 @@ async function generateBadgen(req: NowRequest): Promise<Badgen> {
   if (d === 'dd') {
     return {
       'subject': 'downloads',
-      'status': `${numerize(stats.downloads.monthly)}/day`,
+      'status': `${numerize(stats.downloads.daily)}/day`,
       'color': 'blue',
     };
   }
@@ -61,7 +61,7 @@ async function generateBadgen(req: NowRequest): Promise<Badgen> {
 
   return {
     'subject': 'downloads',
-    'status': `${numerize(stats.downloads.monthly)}`,
+    'status': `${numerize(stats.downloads.total)}`,
     'color': 'blue',
   };
 }
