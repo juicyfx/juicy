@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@now/node": "^1.8.5",
-    "@types/cheerio": "^0.22.22",
+    "@types/cheerio": "^0.22.23",
     "@types/feather-icons": "^4.7.0",
     "micro": "^9.3.4",
     "micro-dev": "^3.0.0",
