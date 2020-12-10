@@ -12,18 +12,17 @@
     }
   ],
   "require": {
-    "php": "^7.2",
-    "guzzlehttp/guzzle": "^6.3.3"
+    "php": ">=7.2",
+    "guzzlehttp/guzzle": "^6.5.5 || ^7.2.0"
   },
   "require-dev": {
-    "mockery/mockery": "~1.2.2",
-    "ninjify/nunjuck": "^0.3.0",
-    "ninjify/qa": "^0.9.0",
-    "phpstan/extension-installer": "^1.0",
-    "phpstan/phpstan-deprecation-rules": "^0.11",
-    "phpstan/phpstan-nette": "^0.11",
-    "phpstan/phpstan-shim": "^0.11",
-    "phpstan/phpstan-strict-rules": "^0.11"
+    "mockery/mockery": "^1.4.2",
+    "ninjify/nunjuck": "^0.4.0",
+    "ninjify/qa": "^0.12.0",
+    "phpstan/phpstan": "^0.12",
+    "phpstan/phpstan-deprecation-rules": "^0.12",
+    "phpstan/phpstan-nette": "^0.12",
+    "phpstan/phpstan-strict-rules": "^0.12"
   },
   "autoload": {
     "psr-4": {
