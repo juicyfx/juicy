@@ -30,7 +30,9 @@ export async function generate(req: GenerateRequest): Promise<string> {
 
   // Update inner structure
   $svg.find('path').map((_index, el) => {
-    el.attribs['fill'] = 'currentColor';
+    if ('attribs' in el) {
+      el.attribs['fill'] = 'currentColor';
+    }
 
     return el;
   });
