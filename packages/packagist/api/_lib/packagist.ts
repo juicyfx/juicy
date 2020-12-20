@@ -20,7 +20,6 @@ export async function fetchVendors(vendors: string[]): Promise<PackagistVendorSt
   );
 
   const stats = responses.reduce<PackagistVendorStats>((acc, res) => {
-    console.log(res);
     acc.downloads.daily += res.downloads.daily;
     acc.downloads.monthly += res.downloads.monthly;
     acc.downloads.total += res.downloads.total;
