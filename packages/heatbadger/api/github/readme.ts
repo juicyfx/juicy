@@ -1,8 +1,8 @@
 import { NowRequest, NowResponse } from '@vercel/node';
 import { getImage } from "../_lib/chrome";
-import { createTemplate } from '../_lib/templates/github';
+import { createTemplate, createTemplateChristmas } from '../_lib/templates/github';
 import { fetchRepository } from '../_lib/github';
-import { trimEmoji } from '../_lib/utils';
+import { trimEmoji, dayjs } from '../_lib/utils';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
@@ -25,12 +25,15 @@ async function generateImage(req: NowRequest, res: NowResponse): Promise<void> {
     const description = trimEmoji(repository.description);
     const avatar = repository.owner.avatar_url;
 
-    const template = createTemplate(title, description, avatar);
+    const today = new Date();
+    const christmas = dayjs(today).isBetween(`${today.getFullYear()}-12-20`, `${today.getFullYear() + 1}-01-05`);
+
+    const template = christmas ? createTemplateChristmas(title, description, avatar) : createTemplate(title, description, avatar);
     const file = await getImage(template);
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "image/png");
-    res.setHeader('Cache-Control', `max-age=${60*60}, s-maxage=${60*60}, stale-while-revalidate, public`);
+    res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60 * 2}, stale-while-revalidate=${60 * 30}, public`);
     res.end(file);
   } catch (e) {
     res.statusCode = 500;
