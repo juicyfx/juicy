@@ -8,7 +8,7 @@ export async function createBrowser(): Promise<Browser> {
       deviceScaleFactor: 2,
       hasTouch: false,
       width: 900,
-      height: 350,
+      height: 400,
       isLandscape: true,
       isMobile: false,
     }

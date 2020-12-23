@@ -45,7 +45,7 @@ export function createTemplateChristmas(title: string, description: string, avat
     </style>
 </head>
 <body class="h-screen">
-  <div class="h-full flex flex-col items-center justify-between relative">
+  <div class="h-full flex flex-col items-center justify-between relative py-4">
       <div class="text-shadow absolute top-0 left-0 m-10 font-bold text-white text-4xl">MERRY<br>CHRISTMAS</div>
       <div class="text-shadow absolute top-0 right-0 m-10 font-bold text-white text-4xl">PF 2021</div>
       <div><img style="height: 180px;" src="${avatar}"></div>
