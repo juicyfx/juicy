@@ -11,7 +11,7 @@
   },
   "devDependencies": {
     "@vercel/node": "^1.8.4",
-    "@types/puppeteer-core": "^2.0.0",
+    "@types/puppeteer-core": "^5.4.0",
     "typescript": "^4.1.3"
   }
 }
