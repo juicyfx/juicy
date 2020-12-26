@@ -1,5 +1,5 @@
-import {NowRequest, NowResponse} from '@vercel/node';
-import {fetchUnreleased} from '../_lib/githubber';
+import { NowRequest, NowResponse } from '@vercel/node';
+import { fetchUnreleased } from '../_lib/githubber';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
