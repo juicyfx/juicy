@@ -21,6 +21,7 @@ if (empty($account)) {
 
 $cache = new PhpFilesAdapter('instagram', 60 * 60 * 24, Utils::getTmp());
 $instagram = Instagram::withCredentials(new Client(), $username, $password, new Psr16Cache($cache));
+$instagram->setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 11_0_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36');
 $instagram->login();
 $instagram->saveSession();
 $medias = $instagram->getMedias($account, $count);
