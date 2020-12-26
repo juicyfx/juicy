@@ -1,14 +1,14 @@
 {
     "require": {
-        "php": "^7.4",
+        "php": ">=7.4",
         "raiym/instagram-php-scraper": "^0.10.0",
         "guzzlehttp/guzzle": "^7.0",
         "symfony/cache": "^5.1",
-        "contributte/tracy": "^0.4.1",
-        "contributte/utils": "^0.4.2"
+        "contributte/tracy": "^0.5",
+        "contributte/utils": "^0.5"
     },
     "require-dev": {
-        "contributte/dev": "^0.1"
+        "contributte/dev": "^0.3"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
