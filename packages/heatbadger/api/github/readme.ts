@@ -33,7 +33,7 @@ async function generateImage(req: NowRequest, res: NowResponse): Promise<void> {
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "image/png");
-    res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60 * 2}, stale-while-revalidate=${60 * 30}, public`);
+    res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60 * 24}, stale-while-revalidate, public`);
     res.end(file);
   } catch (e) {
     res.statusCode = 500;
