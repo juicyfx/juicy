@@ -29,6 +29,7 @@ and givin something back to the community. Enjoy it!
 - [**corsless**](packages/corsless) - handy proxy for Github services supporting CORS headers [[👀🕶](https://corsless.vercel.app)]
 - [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
 - [**flyx**](packages/flyx) - on-the-fly file converting (Markdown -> HTML) [[👀🕶](https://flyx.vercel.app)]
+- [**githubber**](packages/githubber) - Github's little helper [[👀🕶](https://githubber.vercel.app)]
 - [**heatbadger**](packages/heatbadger) - generate image for github repository [[👀🕶](https://heatbadger.now.sh)]
 - [**hitx**](packages/hitx) - hitx and other counting service [[👀🕶](https://hitx.vercel.app)]
 - [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
