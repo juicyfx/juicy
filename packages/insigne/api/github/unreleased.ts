@@ -1,5 +1,5 @@
-import { NowRequest, NowResponse } from '@vercel/node';
-import { fetchLastTag, fetchRepoCompare } from '../_lib/github';
+import {NowRequest, NowResponse} from '@vercel/node';
+import {fetchUnreleased} from '../_lib/githubber';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
@@ -31,7 +31,13 @@ async function generateBadgen(req: NowRequest): Promise<Badgen> {
   const r = <string>req.query.r;
 
   try {
-    var tagRes = await fetchLastTag(r);
+    const unreleased = await fetchUnreleased(r);
+
+    return {
+      'subject': 'unreleased',
+      'status': String(unreleased.unreleased),
+      'color': 'blue',
+    };
   } catch (e) {
     return {
       'subject': 'unreleased',
@@ -40,19 +46,4 @@ async function generateBadgen(req: NowRequest): Promise<Badgen> {
     }
   }
 
-  try {
-    var comparedRes = await fetchRepoCompare(r, tagRes[0].name, 'master');
-  } catch (e) {
-    return {
-      'subject': 'unreleased',
-      'status': 'error',
-      'color': 'red',
-    }
-  }
-
-  return {
-    'subject': 'unreleased',
-    'status': String(comparedRes.ahead_by),
-    'color': 'blue',
-  };
 }

@@ -2,11 +2,9 @@ import { IncomingMessage, RequestOptions, OutgoingHttpHeaders } from 'http';
 import https from 'https';
 import * as URL from 'url';
 
-export async function requestGithub({ url, method = 'GET' }: { url: string, method: string }): Promise<HttpResponse> {
-  const res = await request({ url, method, headers: { Authorization: `token ${process.env.GITHUB_TOKEN}` } });
-
-  console.log(`[GITHUB] X-RateLimit-Limit: ${res.headers['x-ratelimit-limit']}`);
-  console.log(`[GITHUB] X-RateLimit-Remaining: ${res.headers['x-ratelimit-remaining']}`);
+export async function requestGithubber({ url, method = 'GET' }: { url: string, method: string }): Promise<HttpResponse> {
+  console.log(url);
+  const res = await request({ url, method });
 
   return res;
 };
