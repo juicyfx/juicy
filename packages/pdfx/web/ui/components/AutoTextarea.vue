@@ -1,4 +1,3 @@
-
 <template>
   <textarea v-model="internal" ref="textarea" @input="onChange"></textarea>
 </template>

@@ -6,11 +6,11 @@
       <button class="btn" @click="toPdf()">To PDF</button>
     </div>
     <div v-if="loading" align="center">Loading...</div>
-    <embed v-if="file" :src="file" width="100%" height="500px" />
+    <embed v-if="file" :src="file" width="100%" height="500px"/>
   </div>
 </template>
 <script>
-import { API_URL } from "./../utils/api";
+import {API_URL} from "./../utils/api";
 import AutoTextarea from "./components/AutoTextarea";
 
 export default {
@@ -38,7 +38,7 @@ export default {
       });
 
       const text = await res.blob();
-      const file = new Blob([text], { type: "application/pdf" });
+      const file = new Blob([text], {type: "application/pdf"});
       const fileurl = URL.createObjectURL(file);
       this.file = fileurl;
       this.loading = false;

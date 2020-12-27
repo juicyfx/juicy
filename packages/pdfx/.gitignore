@@ -2,9 +2,12 @@
 /node_modules
 
 # App
-/dist
 /.cache
+/dist
 /public
 
 # Vercel
 .vercel
+
+# Env
+/.env*

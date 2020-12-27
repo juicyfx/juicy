@@ -6,11 +6,11 @@
       <button class="btn" @click="toPdf()">To PDF</button>
     </div>
     <div v-if="loading" align="center">Loading...</div>
-    <embed @load="loaded()" :src="pdf" :key="pdf" width="100%" ref="pdf" height="0" />
+    <embed @load="loaded()" :src="pdf" :key="pdf" width="100%" ref="pdf" height="0"/>
   </div>
 </template>
 <script>
-import { API_URL } from "./../utils/api";
+import {API_URL} from "./../utils/api";
 import AutoTextarea from "./components/AutoTextarea";
 
 export default {

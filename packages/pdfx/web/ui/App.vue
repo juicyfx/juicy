@@ -49,7 +49,7 @@ body {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
 }
@@ -93,6 +93,7 @@ article {
     overflow: hidden;
     text-align: center;
     position: relative;
+
     img {
       max-width: none;
       width: 100%;
@@ -164,13 +165,16 @@ article {
 .flex-row {
   flex-direction: row;
 }
+
 .flex-grow {
   flex-grow: 1;
 }
+
 .flex-v-center {
   align-content: center;
   vertical-align: middle;
 }
+
 .mb-2 {
   margin-bottom: 1rem;
 }
@@ -183,6 +187,7 @@ article {
   * {
     margin-right: 0.5rem;
   }
+
   *:last-child {
     margin-right: 0;
   }

@@ -7,10 +7,10 @@
     <div>
       <label>Format</label>
       <select class="input-select" v-model="format">
-          <option value="A5">A5</option>
-          <option value="A4">A4</option>
-          <option value="A3">A3</option>
-          <option value="A2">A2</option>
+        <option value="A5">A5</option>
+        <option value="A4">A4</option>
+        <option value="A3">A3</option>
+        <option value="A2">A2</option>
       </select>
     </div>
     <div>
