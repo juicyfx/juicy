@@ -1,5 +1,5 @@
 import { NowRequest, NowResponse } from '@vercel/node';
-import { octokit } from '../_lib/github';
+import { octokit } from './_lib/github';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
@@ -25,19 +25,19 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     return;
   }
 
-  const comparedRes = await octokit.repos.compareCommits({
+  const resCompared = await octokit.repos.compareCommits({
     owner,
     repo,
     base: resTags.data[0].name,
     head: 'HEAD'
   });
 
-  if (resTags.status !== 200) {
+  if (resCompared.status !== 200) {
     res.statusCode = 400;
     res.json({ unreleased: -1 });
     return;
   }
 
   res.statusCode = 200;
-  res.json({ unreleased: String(comparedRes.data.ahead_by) });
+  res.json({ unreleased: String(resCompared.data.ahead_by) });
 }

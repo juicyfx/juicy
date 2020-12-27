@@ -4,7 +4,7 @@
   "regions": ["bru1"],
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
-    { "source": "/github/unreleased/([\\w\\-\\+]+)/([\\w\\-]+)(/?)", "destination": "/api/github/unreleased.ts?_owner=$1&_repo=$2" },
-    { "source": "/", "destination": "https://juicy.vercel.app/readme/githubber" }
+    { "source": "/unreleased/([\\w\\-\\+]+)/([\\w\\-]+)(/?)", "destination": "/api/unreleased.ts?_owner=$1&_repo=$2" },
+    { "source": "/release/([\\w\\-\\+]+)/([\\w\\-]+)(/?)", "destination": "/api/release.ts?_owner=$1&_repo=$2" }
   ]
 }
