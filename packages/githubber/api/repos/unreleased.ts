@@ -1,5 +1,5 @@
 import { NowRequest, NowResponse } from '@vercel/node';
-import { octokit } from './_lib/github';
+import { octokit } from '../_lib/github';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
