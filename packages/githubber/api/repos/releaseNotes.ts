@@ -45,7 +45,8 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
   // Prepare changes
   const changes = resCompared.data.commits.map(c => {
-    return `  - ${formatMessage(c.commit.message)} [${c.sha}] (@${c.author?.login})`;
+    const author = c.author ? `(@${c.author?.login})` : '';
+    return `  - ${formatMessage(c.commit.message)} [${c.sha}] ${author}`.trimRight();
   });
 
   const release = generateNotes({
