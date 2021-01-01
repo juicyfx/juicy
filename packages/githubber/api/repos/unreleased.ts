@@ -12,6 +12,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
   const owner = <string>req.query._owner;
   const repo = <string>req.query._repo;
+  const head = <string>req.query.head || 'HEAD';
 
   const resTags = await octokit.repos.listTags({
     owner,
@@ -29,7 +30,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     owner,
     repo,
     base: resTags.data[0].name,
-    head: 'HEAD'
+    head
   });
 
   if (resCompared.status !== 200) {

@@ -10,11 +10,15 @@
   },
   "dependencies": {
     "@octokit/rest": "^18.0.12",
+    "eta": "^1.12.1",
+    "lodash": "^4.17.20",
     "node-emoji": "^1.10.0",
     "semver": "^7.3.4",
-    "vue": "^2.6.12"
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.9"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.167",
     "@types/node-emoji": "^1.8.1",
     "@types/semver": "^7.3.4",
     "@vercel/node": "^1.8.5",
