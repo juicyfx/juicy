@@ -86,7 +86,7 @@
 </template>
 
 <script>
-import semver from "semver";
+import * as semver from "../lib/semver";
 
 export default {
   data: () => ({
@@ -128,7 +128,7 @@ export default {
         await this.fetchSemver();
       }
 
-      await this.fetch();
+      //await this.fetch();
 
       this.loading = false;
     },
@@ -161,7 +161,7 @@ export default {
         const tag = Array.from(data.tags).shift();
 
         if (tag) {
-          this.version.value = 'v' + semver.inc(tag, this.semver);
+          this.version.value = 'v' + semver.next(tag, this.semver);
         }
       }
     },
