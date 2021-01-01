@@ -37,9 +37,18 @@
                 <div class="flex-1 flex justify-end space-x-2">
                   <button
                       :disabled="!pkg.valid"
+                      @click.prevent.stop="changeSemver(null)"
+                      :class="[semver === null ? 'bg-gray-600 border-gray-600 text-white' : 'text-gray-400', pkg.valid ? 'hover:bg-gray-600 hover:border-gray-600 ' : 'cursor-default opacity-50']"
+                      class="flex border border-gray-400 focus:outline-none font-bold py-1 px-4 rounded"
+                      type="button"
+                  >
+                    None
+                  </button>
+                  <button
+                      :disabled="!pkg.valid"
                       @click.prevent.stop="changeSemver('major')"
-                      :class="[semver === 'major' ? 'bg-gray-600 border-gray-600' : '', pkg.valid ? 'hover:bg-gray-600 hover:border-gray-600 ' : 'cursor-default opacity-50']"
-                      class="flex border border-gray-400 focus:outline-none text-gray-400 font-bold py-1 px-4 rounded"
+                      :class="[semver === 'major' ? 'bg-gray-600 border-gray-600 text-white' : 'text-gray-400', pkg.valid ? 'hover:bg-gray-600 hover:border-gray-600 ' : 'cursor-default opacity-50']"
+                      class="flex border border-gray-400 focus:outline-none font-bold py-1 px-4 rounded"
                       type="button"
                   >
                     Major
@@ -47,8 +56,8 @@
                   <button
                       :disabled="!pkg.valid"
                       @click.prevent.stop="changeSemver('minor')"
-                      :class="[semver === 'minor' ? 'bg-gray-600 border-gray-600' : '', pkg.valid ? 'hover:bg-gray-600 hover:border-gray-600 ' : 'cursor-default opacity-50']"
-                      class="flex border border-gray-400 focus:outline-none text-gray-400 font-bold py-1 px-4 rounded"
+                      :class="[semver === 'minor' ? 'bg-gray-600 border-gray-600 text-white' : 'text-gray-400', pkg.valid ? 'hover:bg-gray-600 hover:border-gray-600 ' : 'cursor-default opacity-50']"
+                      class="flex border border-gray-400 focus:outline-none font-bold py-1 px-4 rounded"
                       type="button"
                   >
                     Minor
@@ -56,8 +65,8 @@
                   <button
                       :disabled="!pkg.valid"
                       @click.prevent.stop="changeSemver('patch')"
-                      :class="[semver === 'patch' ? 'bg-gray-600 border-gray-600' : '', pkg.valid ? 'hover:bg-gray-600 hover:border-gray-600 ' : 'cursor-default opacity-50']"
-                      class="flex border border-gray-400 focus:outline-none text-gray-400 font-bold py-1 px-4 rounded"
+                      :class="[semver === 'patch' ? 'bg-gray-600 border-gray-600 text-white' : 'text-gray-400', pkg.valid ? 'hover:bg-gray-600 hover:border-gray-600 ' : 'cursor-default opacity-50']"
+                      class="flex border border-gray-400 focus:outline-none font-bold py-1 px-4 rounded"
                       type="button"
                   >
                     Patch
@@ -128,7 +137,7 @@ export default {
         await this.fetchSemver();
       }
 
-      //await this.fetch();
+      await this.fetch();
 
       this.loading = false;
     },
