@@ -5,7 +5,7 @@ Free tools and integrations for <a href="https://vercel.com">Vercel</a> platform
 </p>
 
 <p align=center>
-	<img src="https://github.com/juicyfx/juicy/blob/master/packages/juicy/logo.png" width="256">
+	<img src="https://github.com/juicyfx/juicy/blob/master/services/juicy/logo.png" width="256">
 </p>
 
 <p align=center>
@@ -22,34 +22,34 @@ The goal of Juicy Functions is to provide free and easy integrations for the [Ve
 I wanted also trully understand how [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction) works
 and givin something back to the community. Enjoy it!
 
-## Packages
+## Services
 
-- [**avatarless**](packages/avatarless) - gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
-- [**coloring**](packages/coloring) - generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
-- [**corsless**](packages/corsless) - handy proxy for Github services supporting CORS headers [[👀🕶](https://corsless.vercel.app)]
-- [**czws**](packages/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
-- [**flyx**](packages/flyx) - on-the-fly file converting (Markdown -> HTML) [[👀🕶](https://flyx.vercel.app)]
-- [**githubber**](packages/githubber) - Github's little helper [[👀🕶](https://githubber.vercel.app)]
-- [**heatbadger**](packages/heatbadger) - generate image for github repository [[👀🕶](https://heatbadger.now.sh)]
-- [**hitx**](packages/hitx) - hitx and other counting service [[👀🕶](https://hitx.vercel.app)]
-- [**iconist**](packages/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
-- [**insigne**](packages/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
-- [**instafetch**](packages/instafetch) - fetch data from Instagram [[👀🕶](https://instafetch.vercel.app)]
-- [**instaphp**](packages/instaphp) - fetch data from Instagram written in PHP [[👀🕶](https://instaphp.vercel.app)]
-- [**intex**](packages/intex) - testing integration  [WIP]
-- [**juicy**](packages/juicy) - juicy functions assets
-- [**macmoji**](packages/macmoji) - macOS emojis [[👀🕶](https://macmoji.vercel.app)]
-- [**oggo**](packages/oggo) - generates image for OG meta tags [[👀🕶](https://oggo.vercel.app)]
-- [**packagist**](packages/packagist) - fetch data from packagist with aggregation [[👀🕶](https://packagist.vercel.app)]
-- [**pdfx**](packages/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.vercel.app)]
-- [**qrx**](packages/qrx) - generates QR-codes [[👀🕶](https://qrx.vercel.app)]
-- [**showcase**](packages/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
+- [**avatarless**](services/avatarless) - gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
+- [**coloring**](services/coloring) - generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
+- [**corsless**](services/corsless) - handy proxy for Github services supporting CORS headers [[👀🕶](https://corsless.vercel.app)]
+- [**czws**](services/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
+- [**flyx**](services/flyx) - on-the-fly file converting (Markdown -> HTML) [[👀🕶](https://flyx.vercel.app)]
+- [**githubber**](services/githubber) - Github's little helper [[👀🕶](https://githubber.vercel.app)]
+- [**heatbadger**](services/heatbadger) - generate image for github repository [[👀🕶](https://heatbadger.now.sh)]
+- [**hitx**](services/hitx) - hitx and other counting service [[👀🕶](https://hitx.vercel.app)]
+- [**iconist**](services/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
+- [**insigne**](services/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
+- [**instafetch**](services/instafetch) - fetch data from Instagram [[👀🕶](https://instafetch.vercel.app)]
+- [**instaphp**](services/instaphp) - fetch data from Instagram written in PHP [[👀🕶](https://instaphp.vercel.app)]
+- [**intex**](services/intex) - testing integration  [WIP]
+- [**juicy**](services/juicy) - juicy functions assets
+- [**macmoji**](services/macmoji) - macOS emojis [[👀🕶](https://macmoji.vercel.app)]
+- [**oggo**](services/oggo) - generates image for OG meta tags [[👀🕶](https://oggo.vercel.app)]
+- [**packagist**](services/packagist) - fetch data from packagist with aggregation [[👀🕶](https://packagist.vercel.app)]
+- [**pdfx**](services/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.vercel.app)]
+- [**qrx**](services/qrx) - generates QR-codes [[👀🕶](https://qrx.vercel.app)]
+- [**showcase**](services/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
 
 ## Runtimes
 
-- [**debug**](packages/debug) - debugging runtime [WIP]
-- [**markdown**](packages/md) - markdown runtime [WIP]
-- [**plain**](packages/plain) - plainn runtime
+- [**debug**](services/debug) - debugging runtime [WIP]
+- [**markdown**](services/md) - markdown runtime [WIP]
+- [**plain**](services/plain) - plainn runtime
 
 ## Clients
 
