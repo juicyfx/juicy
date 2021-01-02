@@ -1,0 +1,15 @@
+{
+  "scope": "juicyfx",
+  "name": "phpstan",
+  "regions": ["bru1"],
+  "functions": {
+    "api/*.php": {
+      "runtime": "vercel-php@0.4.0"
+    }
+  },
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
+    { "source": "/api(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "index.html" }
+  ]
+}

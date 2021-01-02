@@ -1,0 +1,17 @@
+# NodeJS
+/node_modules
+
+# PHP
+/vendor
+
+# App
+/.cache
+/dist
+/public
+/tmp
+
+# Vercel
+.vercel
+
+# Env
+/.env*

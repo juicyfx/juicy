@@ -1,0 +1,11 @@
+# PHP
+/vendor
+/tmp
+
+# Node
+/node_modules
+
+# App
+/tests
+/dist
+/.env

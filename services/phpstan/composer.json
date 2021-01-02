@@ -1,0 +1,24 @@
+{
+  "require": {
+    "php": ">=7.4",
+    "phpstan/phpstan": "^0.12.64",
+    "phpstan/phpstan-strict-rules": "^0.12.7",
+    "contributte/utils": "^0.5.0",
+    "nette/neon": "^3.1.2"
+  },
+  "require-dev": {
+    "contributte/dev": "^0.3.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "App\\": "api/_lib"
+    }
+  },
+  "scripts": {
+    "dev": [
+      "php -S 0.0.0.0:8000 api/index.php"
+    ]
+  }
+}
