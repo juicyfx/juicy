@@ -79,12 +79,6 @@ updates:
   schedule:
     interval: daily
 
-# Clients
-- package-ecosystem: composer
-  directory: "/clients/php"
-  schedule:
-    interval: daily
-
 # Runtimes
 - package-ecosystem: npm
   directory: "/runtimes/debug"

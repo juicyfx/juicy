@@ -4,7 +4,3 @@
 # NodeJS
 /node_modules
 /package-lock.json
-
-# Client: PHP
-/clients/php/vendor
-/composer.lock

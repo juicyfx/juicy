@@ -53,7 +53,7 @@ and givin something back to the community. Enjoy it!
 
 ## Clients
 
-- [**Juicy(fx) PHP**](client/php) - PHP client for Juicy(fx)
+- [**Juicy(fx) PHP**](https://github.com/juicyfx/juicyphp) - PHP client for Juicy(fx)
 
 ## 📝 License
 
