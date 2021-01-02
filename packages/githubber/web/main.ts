@@ -8,6 +8,7 @@ Vue.use(VueRouter)
 
 const router = new VueRouter({
   routes: [
+    { path: '/', redirect: '/release' },
     { path: '/release', component: ReleasePage },
     { path: '/readme', component: ReadmePage }
   ]
