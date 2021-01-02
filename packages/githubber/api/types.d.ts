@@ -30,3 +30,26 @@ interface ReadmeVersion {
   Nette: string,
   PHP: string,
 }
+
+interface FlowPipe<T> {
+  (data: FlowData<T>): Promise<void> | void
+}
+
+interface FlowCatcher<T> {
+  (data: FlowData<T>, error: FlowError): Promise<void> | void
+}
+
+interface FlowData<T> {
+  req: import('@vercel/node').NowRequest,
+  res: import('@vercel/node').NowResponse,
+  app: FlowApp,
+  ctx: T,
+}
+
+interface FlowError {
+  exception: any
+}
+
+interface FlowApp {
+  json(code: number, data: any): void
+}

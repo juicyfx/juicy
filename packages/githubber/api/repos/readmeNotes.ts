@@ -6,56 +6,87 @@ import path from "path";
 import { octokit } from '../_lib/github';
 import { generateTable } from "../_lib/markdown";
 import { filterMajorVersions, formatVersion } from "../_lib/semver";
+import { Flow } from "../_lib/flow";
+
+interface FlowContext {
+  owner: string,
+  repo: string,
+  composer: Composer.Composer,
+  versions: ReadmeVersion[]
+}
 
 export default async function handler(req: NowRequest, res: NowResponse): Promise<void> {
-  if (!req.query._owner || !req.query._repo) {
-    res.statusCode = 400;
-    res.json({ error: 'Invalid {owner}/{repo} provided' });
-    return;
-  }
+  return Flow.from<FlowContext>(req, res)
+    // Catch'em all
+    .catch(({ req, app }, { exception }) => {
+      console.error({ url: req.url });
+      console.error(exception);
+      app.json(500, { error: `Error occurred` });
+    })
 
-  const owner = <string>req.query._owner;
-  const repo = <string>req.query._repo;
+    // Logger
+    .pass(({ req }) => {
+      console.log("HTTP", req.url)
+    })
 
-  // Fetch composer.json
-  let composer;
-  try {
-    composer = await getComposer(owner, repo);
-    if (!composer) {
-      res.statusCode = 400;
-      res.json({ error: `Invalid data for composer.json` });
-      return;
-    }
-  } catch (e) {
-    res.statusCode = 400;
-    res.json({ error: `Cannot get composer.json` });
-    return;
-  }
+    // Validate required data
+    .validate(({ app, req, ctx }) => {
+      if (!req.query._owner || !req.query._repo) {
+        app.json(400, { error: 'Invalid {owner}/{repo} provided' });
+      }
 
-  // Fetch versions
-  const versions = await getVersions(owner, repo);
+      ctx.owner = <string>req.query._owner;
+      ctx.repo = <string>req.query._repo;
+    })
 
-  // Prepend dev version if branch-alias is defined
-  const branchAlias = _.get(composer, 'extra.branch-alias.dev-master');
-  if (branchAlias) {
-    versions.unshift({
-      State: 'dev',
-      Version: '^' + formatVersion(branchAlias),
-      Branch: 'master',
-      Nette: '3.0+',
-      PHP: composer?.require?.['php'] || '*',
-    });
-  }
+    // Fetch composer.json
+    .use(async ({ app, ctx }) => {
+      try {
+        const composer = await getComposer(ctx.owner, ctx.repo);
 
-  // Generate readme
-  const readme = await generateNotes({
-    owner,
-    repo,
-    composer,
-    versions
-  });
+        if (!composer) {
+          app.json(400, { error: `Invalid data for composer.json` });
+        } else {
+          ctx.composer = composer;
+        }
+      } catch (e) {
+        app.json(400, { error: `Cannot get composer.json` });
+      }
+    })
 
-  res.json({ readme });
+    // Fetch versions
+    .use(async ({ ctx }) => {
+      const versions = await getVersions(ctx.owner, ctx.repo);
+
+      // Prepend dev version if branch-alias is defined
+      const branchAlias = _.get(ctx.composer, 'extra.branch-alias.dev-master');
+      if (branchAlias) {
+        versions.unshift({
+          State: 'dev',
+          Version: '^' + formatVersion(branchAlias),
+          Branch: 'master',
+          Nette: '3.0+',
+          PHP: ctx.composer?.require?.['php'] || '*',
+        });
+      }
+
+      ctx.versions = versions;
+    })
+
+    // Generate readme
+    .use(async ({ app, ctx }) => {
+      const readme = await generateNotes({
+        owner: ctx.owner,
+        repo: ctx.repo,
+        composer: ctx.composer,
+        versions: ctx.versions
+      });
+
+      app.json(200, { readme });
+    })
+
+    // Run workflow
+    .run();
 }
 
 async function getComposer(owner: string, repo: string, ref: string = 'HEAD'): Promise<Composer.Composer | null> {
