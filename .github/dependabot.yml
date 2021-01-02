@@ -27,6 +27,10 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: npm
+  directory: "/packages/githubber"
+  schedule:
+    interval: daily
+- package-ecosystem: npm
   directory: "/packages/heatbadger"
   schedule:
     interval: daily
@@ -64,6 +68,10 @@ updates:
     interval: daily
 - package-ecosystem: npm
   directory: "/packages/oggo"
+  schedule:
+    interval: daily
+- package-ecosystem: npm
+  directory: "/packages/packagist"
   schedule:
     interval: daily
 - package-ecosystem: npm
