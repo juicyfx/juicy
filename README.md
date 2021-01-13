@@ -15,6 +15,8 @@ Free tools and integrations for <a href="https://vercel.com">Vercel</a> platform
 <p align=center>
 	<a href="https://github.com/juicyfx/juicy/actions"><img src="https://badgen.net/github/checks/juicyfx/juicy"></a>
 	<a href="https://github.com/juicyfx/juicy"><img src="https://badgen.net/github/license/juicyfx/juicy"></a>
+	<a href="https://bit.ly/f3l1xdis"><img src="https://badgen.net/badge/support/discussions/yellow"></a>
+	<a href="http://bit.ly/f3l1xsponsor"><img src="https://badgen.net/badge/sponsor/donations/F96854"></a>
 </p>
 
 ------
