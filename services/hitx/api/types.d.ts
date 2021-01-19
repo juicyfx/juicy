@@ -14,3 +14,9 @@ interface Hit {
   id: string,
   hits: number,
 }
+
+interface TemplateOptions {
+  title: string,
+  value: string,
+  color: string,
+}
