@@ -6,9 +6,9 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^5.5.0",
+    "chrome-aws-lambda": "^7.0.0",
     "dayjs": "^1.9.8",
-    "puppeteer-core": "^5.5.0"
+    "puppeteer-core": "^7.0.1"
   },
   "devDependencies": {
     "@types/puppeteer-core": "^5.4.0",
