@@ -4,6 +4,7 @@ import https from "https";
 
 const CACHE_BROWSER = 60 * 60 * 24 * 5; // 5 day
 const CACHE_CDN = 60 * 60 * 24 * 5; // 5 days
+const HOST = process.env.INSTAFETCH_HOST || 'http://localhost:8000';
 
 export default async function handler(req: NowRequest, res: NowResponse) {
   console.log("HTTP", req.url);
@@ -22,7 +23,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
   if (req.query._user) {
     try {
-      const result = await fetch(`https://instaphp.vercel.app/user/${<string>req.query._user}`);
+      const result = await fetch(`${HOST}/?_user=${<string>req.query._user}`);
 
       if (!result) {
         throw `No data from instagram`;
