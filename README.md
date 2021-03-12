@@ -31,6 +31,7 @@ and givin something back to the community. Enjoy it!
 - [**coloring**](services/coloring) - generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
 - [**corsless**](services/corsless) - handy proxy for Github services supporting CORS headers [[👀🕶](https://corsless.vercel.app)]
 - [**czws**](services/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
+- [**fcbk**](services/fcbk) - generate screenshots from facebook [[👀🕶](https://fcbk.vercel.app)]
 - [**flyx**](services/flyx) - on-the-fly file converting (Markdown -> HTML) [[👀🕶](https://flyx.vercel.app)]
 - [**githubber**](services/githubber) - Github's little helper [[👀🕶](https://githubber.vercel.app)]
 - [**heatbadger**](services/heatbadger) - generate image for github repository [[👀🕶](https://heatbadger.now.sh)]
