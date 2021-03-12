@@ -1,5 +1,5 @@
 {
-  "name": "githubber",
+  "name": "phpstan",
   "version": "0.0.0",
   "scripts": {
     "compile": "tsc",
