@@ -34,6 +34,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
           permalink: row.link,
           url: row.imageHighResolutionUrl,
           preview: row.imageThumbnailUrl,
+          square: row.squareImages.find(() => true)
         }))
       };
 
