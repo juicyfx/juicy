@@ -64,9 +64,6 @@ function createTemplate(ctx: PageContext): string {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FCBK</title>
-    <style>
-    * { font-family: Verdana; }
-    </style>
 </head>
 <body>
   <iframe
