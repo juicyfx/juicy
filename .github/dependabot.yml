@@ -1,89 +1,97 @@
 version: 2
 updates:
 
-# Packages
+# services
 - package-ecosystem: npm
   directory: "/"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/avatarless"
+  directory: "/services/avatarless"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/coloring"
+  directory: "/services/coloring"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/corsless"
+  directory: "/services/corsless"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/czws"
+  directory: "/services/czws"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/flyx"
+  directory: "/services/fcbk"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/githubber"
+  directory: "/services/flyx"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/heatbadger"
+  directory: "/services/githubber"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/hitx"
+  directory: "/services/heatbadger"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/iconist"
+  directory: "/services/hitx"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/insigne"
+  directory: "/services/iconist"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/instafetch"
+  directory: "/services/insigne"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/instaphp"
+  directory: "/services/instafetch"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/intex"
+  directory: "/services/instaphp"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/juicy"
+  directory: "/services/intex"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/macmoji"
+  directory: "/services/juicy"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/oggo"
+  directory: "/services/macmoji"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/packagist"
+  directory: "/services/oggo"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/pdfx"
+  directory: "/services/packagist"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/qrx"
+  directory: "/services/pdfx"
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/packages/showcase"
+  directory: "/services/phpstan"
+  schedule:
+    interval: daily
+- package-ecosystem: npm
+  directory: "/services/qrx"
+  schedule:
+    interval: daily
+- package-ecosystem: npm
+  directory: "/services/showcase"
   schedule:
     interval: daily
 
