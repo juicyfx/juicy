@@ -18,7 +18,7 @@
     "vue-router": "^3.4.9"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.167",
+    "@types/lodash": "^4.14.168",
     "@types/node-emoji": "^1.8.1",
     "@types/semver": "^7.3.4",
     "@vercel/node": "^1.8.5",
