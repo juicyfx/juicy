@@ -53,3 +53,19 @@ interface FlowError {
 interface FlowApp {
   json(code: number, data: any): void
 }
+
+interface PageContext {
+  page: string,
+  tabs: string,
+  width: number,
+  height: number,
+}
+
+interface ChromeOptions {
+  content?: string,
+  url?: string,
+  el?: string,
+  wait?: number,
+}
+
+type ChromeLaunchOptions = import('puppeteer-core').LaunchOptions & import('puppeteer-core').BrowserLaunchArgumentOptions & import('puppeteer-core').BrowserConnectOptions;
