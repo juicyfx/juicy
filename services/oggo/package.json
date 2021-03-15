@@ -10,7 +10,7 @@
     "puppeteer-core": "^7.0.1"
   },
   "devDependencies": {
-    "@vercel/node": "^1.8.4",
+    "@vercel/node": "^1.9.1",
     "@types/puppeteer-core": "^5.4.0",
     "typescript": "^4.1.3"
   }
