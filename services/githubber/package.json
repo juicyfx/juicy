@@ -15,7 +15,7 @@
     "lodash": "^4.17.20",
     "node-emoji": "^1.10.0",
     "puppeteer-core": "^8.0.0",
-    "semver": "^7.3.4",
+    "semver": "^7.3.5",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9"
   },
