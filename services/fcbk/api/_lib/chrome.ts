@@ -1,7 +1,6 @@
-import { LaunchOptions } from "puppeteer-core";
 import { createBrowser } from "./chromium";
 
-export async function getImage(source: string, browserOptions: LaunchOptions = {}, chromeOptions: ChromeOptions = {}): Promise<string> {
+export async function getImage(chromeOptions: ChromeOptions, browserOptions: ChromeLaunchOptions = {}, ): Promise<Buffer> {
   let content = null;
   let browser = null;
   let page = null;
@@ -9,7 +8,7 @@ export async function getImage(source: string, browserOptions: LaunchOptions = {
   try {
     browser = await createBrowser(browserOptions);
     page = await browser.newPage();
-    await page.setContent(source);
+    await page.setContent(chromeOptions.content);
 
     if (chromeOptions.wait) {
       await page.waitForTimeout(chromeOptions.wait);
@@ -27,6 +26,10 @@ export async function getImage(source: string, browserOptions: LaunchOptions = {
     }
   }
 
-  return content;
+  if (Buffer.isBuffer(content)) {
+    return content;
+  } else {
+    return Buffer.from(content as string);
+  }
 }
 

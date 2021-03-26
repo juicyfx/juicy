@@ -6,5 +6,8 @@ interface PageContext {
 }
 
 interface ChromeOptions {
+  content: string,
   wait?: number
 }
+
+type ChromeLaunchOptions = import('puppeteer-core').LaunchOptions & import('puppeteer-core').BrowserLaunchArgumentOptions & import('puppeteer-core').BrowserConnectOptions;
