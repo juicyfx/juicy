@@ -1,11 +1,11 @@
-import { NowRequest, NowResponse } from '@now/node';
-import { getPdf } from "./_lib/chromium";
+import { VercelRequest, VercelResponse } from '@vercel/node';
+import { getPdf } from "./_lib/chrome";
 import { parsePdfOptions } from "./_lib/request";
 import * as errors from "./_lib/errors";
 import { installFonts } from './_lib/fonts';
 import { applyCors } from './_lib/http';
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   // Setup HOME dir, if it's not
@@ -28,7 +28,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   }
 }
 
-async function fromPost(req: NowRequest, res: NowResponse) {
+async function fromPost(req: VercelRequest, res: VercelResponse) {
   try {
     let data: string;
     let rest: object = {};

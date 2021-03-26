@@ -4,14 +4,14 @@
   "builds": [
     {
       "src": "api/*.ts",
-      "use": "@now/node",
+      "use": "@vercel/node",
       "config": {
         "includeFiles": [
           "api/_fonts/**"
         ]
       }
     },
-    { "src": "package.json", "use": "@now/static-build" }
+    { "src": "package.json", "use": "@vercel/static-build" }
   ],
   "routes": [
     { "src": "/favicon.ico", "dest": "https://juicy.vercel.app/favicon.ico" },

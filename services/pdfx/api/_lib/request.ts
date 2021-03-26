@@ -1,4 +1,5 @@
 import { IncomingMessage } from "http";
+import { PDFOptions } from "puppeteer-core";
 import { toBoolean } from "./casts";
 
 export function parseRequest(req: IncomingMessage): Promise<string> {
@@ -27,8 +28,8 @@ export function parseJsonRequest(req: IncomingMessage): Promise<PostRequest> {
   });
 }
 
-export function parsePdfOptions(query: QueryParams): PdfOptions {
-  const options: PdfOptions = {};
+export function parsePdfOptions(query: QueryParams): PDFOptions {
+  const options: PDFOptions = {};
 
   // if (query.path !== undefined) {
   //   options.path = query.path;
