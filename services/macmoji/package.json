@@ -6,14 +6,10 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "chrome-aws-lambda": "^8.0.0",
-    "puppeteer-core": "^8.0.0",
     "@obr/macmoji": "^0.0.2"
   },
   "devDependencies": {
-    "@now/node": "^1.6.1",
-    "@types/puppeteer-core": "^5.4.0",
-    "emoji.json": "^13.0.0",
+    "@vercel/node": "^1.9.1",
     "typescript": "^4.2.3"
   }
 }

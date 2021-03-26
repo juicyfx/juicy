@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import path from "path";
 import fs from "fs";
 import util from "util";
@@ -8,7 +8,7 @@ const CACHE_CDN = 60 * 60 * 24 * 7;
 
 const readFile = util.promisify(fs.readFile);
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   if (req.query.emoji) {
@@ -20,7 +20,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   }
 }
 
-async function generateImage(req: NowRequest, res: NowResponse): Promise<void> {
+async function generateImage(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
     const emoji: string = Array.isArray(req.query.emoji) ? req.query.emoji.join() : req.query.emoji;
     const file = await getImage(emoji);
