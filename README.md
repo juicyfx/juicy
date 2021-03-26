@@ -48,6 +48,7 @@ and givin something back to the community. Enjoy it!
 - [**pdfx**](services/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.vercel.app)]
 - [**qrx**](services/qrx) - generates QR-codes [[👀🕶](https://qrx.vercel.app)]
 - [**showcase**](services/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
+- [**socky**](services/socky) - generate screenshots from social networks [[👀🕶](https://socky.vercel.app)]
 
 ## Runtimes
 
