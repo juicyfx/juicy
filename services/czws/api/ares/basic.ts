@@ -1,13 +1,13 @@
-import { NowRequest, NowResponse } from '@now/node';
-const { parse } = require('url');
-const convert = require('xml-js');
-const fetch = require('node-fetch');
+import { VercelRequest, VercelResponse } from '@vercel/node';
+import { parse } from 'url';
+import convert from 'xml-js';
+import fetch from 'node-fetch';
 
-export default async function handler(req: NowRequest, res: NowResponse): Promise<void> {
+export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 
-  const { query = {} } = parse(req.url, true);
+  const { query = {} } = parse(req.url!, true);
 
   if (!query.ico) {
     res.statusCode = 400;
