@@ -94,6 +94,10 @@ updates:
   directory: "/services/showcase"
   schedule:
     interval: daily
+- package-ecosystem: npm
+  directory: "/services/socky"
+  schedule:
+    interval: daily
 
 # Runtimes
 - package-ecosystem: npm
