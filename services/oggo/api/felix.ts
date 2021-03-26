@@ -1,10 +1,10 @@
-import { NowRequest, NowResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { getImage } from "./_lib/chrome";
 
 const CACHE_BROWSER = 60 * 60 * 24 * 2;
 const CACHE_CDN = 60 * 60 * 24 * 7;
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   if (req.query.t) {
@@ -16,13 +16,15 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   }
 }
 
-async function generateImage(req: NowRequest, res: NowResponse): Promise<void> {
+async function generateImage(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
     const text = <string>req.query.t;
 
     const template = createTemplate(text);
     const file = await getImage(
-      template,
+      {
+        content: template
+      },
       {
         defaultViewport: {
           deviceScaleFactor: 2,
