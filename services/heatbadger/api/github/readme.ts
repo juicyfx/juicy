@@ -1,10 +1,10 @@
-import { NowRequest, NowResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { getImage } from "../_lib/chrome";
 import { createTemplate, createTemplateChristmas } from '../_lib/templates/github';
 import { fetchRepository } from '../_lib/github';
 import { trimEmoji, dayjs } from '../_lib/utils';
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   if (req.query.r) {
@@ -16,7 +16,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   }
 }
 
-async function generateImage(req: NowRequest, res: NowResponse): Promise<void> {
+async function generateImage(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
     const r = <string>req.query.r;
     const repository = await fetchRepository(r);
@@ -29,7 +29,7 @@ async function generateImage(req: NowRequest, res: NowResponse): Promise<void> {
     const christmas = dayjs(today).isBetween(`${today.getFullYear()}-12-20`, `${today.getFullYear() + 1}-01-05`);
 
     const template = christmas ? createTemplateChristmas(title, description, avatar) : createTemplate(title, description, avatar);
-    const file = await getImage(template);
+    const file = await getImage({ content: template });
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "image/png");

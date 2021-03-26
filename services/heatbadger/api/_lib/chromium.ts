@@ -1,9 +1,9 @@
-import { launch, Browser, LaunchOptions } from "puppeteer-core";
+import { launch, Browser } from "puppeteer-core";
 import chromeAws from "chrome-aws-lambda";
 import { isDev } from "./utils";
 
-export async function createBrowser(): Promise<Browser> {
-  const defaults: LaunchOptions = {
+export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Browser> {
+  const defaults: ChromeLaunchOptions = {
     defaultViewport: {
       deviceScaleFactor: 2,
       hasTouch: false,
@@ -13,11 +13,12 @@ export async function createBrowser(): Promise<Browser> {
       isMobile: false,
     }
   };
-  let options: LaunchOptions = {};
+  let options: ChromeLaunchOptions = {};
 
   if (isDev()) {
     options = {
       ...defaults,
+      ...args,
       ...{
         args: [],
         executablePath: lookupChrome(),
@@ -27,6 +28,7 @@ export async function createBrowser(): Promise<Browser> {
   } else {
     options = {
       ...defaults,
+      ...args,
       ...{
         args: chromeAws.args,
         executablePath: await chromeAws.executablePath,

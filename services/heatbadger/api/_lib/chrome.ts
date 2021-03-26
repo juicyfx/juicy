@@ -1,14 +1,14 @@
 import { createBrowser } from "./chromium";
 
-export async function getImage(source: string): Promise<string> {
+export async function getImage(chromeOptions: ChromeOptions, browserOptions: ChromeLaunchOptions = {}): Promise<Buffer> {
   let content = null;
   let browser = null;
   let page = null;
 
   try {
-    browser = await createBrowser();
+    browser = await createBrowser(browserOptions);
     page = await browser.newPage();
-    await page.setContent(source);
+    await page.setContent(chromeOptions.content);
 
     content = await page.screenshot();
   } catch (error) {
@@ -22,5 +22,9 @@ export async function getImage(source: string): Promise<string> {
     }
   }
 
-  return content;
+  if (Buffer.isBuffer(content)) {
+    return content;
+  } else {
+    return Buffer.from(content as string);
+  }
 }

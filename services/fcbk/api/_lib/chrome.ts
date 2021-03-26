@@ -1,6 +1,6 @@
 import { createBrowser } from "./chromium";
 
-export async function getImage(chromeOptions: ChromeOptions, browserOptions: ChromeLaunchOptions = {}, ): Promise<Buffer> {
+export async function getImage(chromeOptions: ChromeOptions, browserOptions: ChromeLaunchOptions = {}): Promise<Buffer> {
   let content = null;
   let browser = null;
   let page = null;
