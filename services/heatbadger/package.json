@@ -8,7 +8,7 @@
   "dependencies": {
     "chrome-aws-lambda": "^7.0.0",
     "dayjs": "^1.9.8",
-    "puppeteer-core": "^7.0.1"
+    "puppeteer-core": "^7.0.4"
   },
   "devDependencies": {
     "@types/puppeteer-core": "^5.4.0",
