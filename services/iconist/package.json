@@ -20,7 +20,7 @@
     "@obr/remixicon": "0.0.1",
     "@obr/svgporn": "0.0.1",
     "@obr/twemoji": "^0.0.1",
-    "cheerio": "^1.0.0-rc.5",
+    "cheerio": "^1.0.0-rc.6",
     "fast-glob": "^3.2.4"
   },
   "devDependencies": {
