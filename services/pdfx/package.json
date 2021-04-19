@@ -20,7 +20,7 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "parcel-bundler": "^1.12.5",
-    "sass": "^1.32.0",
+    "sass": "^1.32.10",
     "typescript": "^4.2.4",
     "vue-hot-reload-api": "^2.3.4",
     "vue-template-compiler": "^2.6.12"
