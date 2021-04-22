@@ -9,7 +9,7 @@
     "vercel-build": "parcel build web/index.html -d public"
   },
   "dependencies": {
-    "@octokit/rest": "^18.5.0",
+    "@octokit/rest": "^18.5.3",
     "chrome-aws-lambda": "^8.0.2",
     "eta": "^1.12.1",
     "lodash": "^4.17.20",
