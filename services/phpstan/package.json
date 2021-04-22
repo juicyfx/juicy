@@ -21,7 +21,7 @@
     "@types/lodash": "^4.14.168",
     "@types/node-emoji": "^1.8.1",
     "@types/semver": "^7.3.4",
-    "@vercel/node": "^1.8.5",
+    "@vercel/node": "^1.10.0",
     "@vue/component-compiler-utils": "^3.2.0",
     "parcel-bundler": "^1.12.5",
     "typescript": "^4.2.4",
