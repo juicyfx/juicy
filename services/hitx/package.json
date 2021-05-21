@@ -6,7 +6,7 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "faunadb": "^4.2.0"
+    "faunadb": "^4.3.0"
   },
   "devDependencies": {
     "@vercel/node": "^1.10.0",
