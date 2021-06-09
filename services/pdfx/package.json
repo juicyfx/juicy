@@ -16,7 +16,7 @@
   "devDependencies": {
     "@types/puppeteer-core": "^5.4.0",
     "@vercel/node": "^1.11.0",
-    "@vue/component-compiler-utils": "^3.2.0",
+    "@vue/component-compiler-utils": "^3.2.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "parcel-bundler": "^1.12.5",
