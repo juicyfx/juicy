@@ -16,6 +16,6 @@
     "@types/node-fetch": "^2.5.10",
     "htm": "^3.0.4",
     "micro-dev": "^3.0.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.4"
   }
 }
