@@ -6,7 +6,7 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "htm": "^3.0.4",
+    "htm": "^3.1.0",
     "tinycolor2": "^1.4.2",
     "vhtml": "^2.2.0"
   },
