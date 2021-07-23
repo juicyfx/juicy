@@ -11,7 +11,7 @@
     "xml-js": "^1.6.9"
   },
   "devDependencies": {
-    "@types/node-fetch": "^2.5.11",
+    "@types/node-fetch": "^2.5.12",
     "@vercel/node": "^1.11.1"
   }
 }
