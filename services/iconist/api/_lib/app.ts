@@ -1,3 +1,19 @@
+export const enum Vendor {
+  fontawesome = 'fontawesome',
+  heroicons = 'heroicons',
+  feathericons = 'feathericons',
+  linearicons = 'linearicons',
+  dripicons = 'dripicons',
+  lineawesome = 'lineawesome',
+  ikonate = 'ikonate',
+  remixicon = 'remixicon',
+  twemoji = 'twemoji',
+  emojitwo = 'emojitwo',
+  notoemoji = 'notoemoji',
+  openmoji = 'openmoji',
+  svgporn = 'svgporn',
+  healthicons = 'healthicons',
+}
 export const VENDORS = [
   Vendor.fontawesome,
   Vendor.heroicons,
@@ -12,4 +28,5 @@ export const VENDORS = [
   Vendor.notoemoji,
   Vendor.openmoji,
   Vendor.svgporn,
+  Vendor.healthicons,
 ];

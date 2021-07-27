@@ -4,32 +4,14 @@ import { readFile, lowercase, readPackage } from "../utils";
 import { NotFoundError } from "../errors";
 import { Vendor } from "../app";
 
-// const SPECS = [
-//   'buildings',
-//   'business',
-//   'communication',
-//   'design',
-//   'development',
-//   'device',
-//   'document',
-//   'editor',
-//   'finance',
-//   'health',
-//   'logos',
-//   'map',
-//   'media',
-//   'others',
-//   'system',
-//   'user',
-//   'weather',
-// ];
-
 export async function generate(req: GenerateRequest): Promise<string> {
+  const style = req.style || 'outline';
+
   try {
     // Read icon file
-    var file = await readFile(path.resolve('node_modules', `@obr/remixicon/dist/${lowercase(req.spec)}/${req.icon}.svg`));
+    var file = await readFile(path.resolve('node_modules', `@obr/healthicons/dist/${style}/${lowercase(req.spec)}/${req.icon}.svg`));
   } catch (e) {
-    throw new NotFoundError(Vendor.remixicon, `${req.spec}/${req.icon}`);
+    throw new NotFoundError(Vendor.healthicons, `${req.spec}/${req.icon}`);
   }
 
   // Parse SVG to AST
@@ -37,13 +19,24 @@ export async function generate(req: GenerateRequest): Promise<string> {
   const $svg = $('svg');
 
   // Update attributes
+  $svg.attr('xmlns', 'http://www.w3.org/2000/svg');
+
   if (req.color) {
-    $svg.attr('color', `#${req.color}`);
     $svg.attr('fill', `#${req.color}`);
+    $svg.attr('color', `#${req.color}`);
   }
 
   $svg.attr('width', String(req.size));
   $svg.attr('height', String(req.size));
+
+  // Update inner structure
+  $svg.find('path').map((_index, el) => {
+    if ('attribs' in el) {
+      el.attribs['fill'] = 'currentColor';
+    }
+
+    return el;
+  });
 
   // Export icon
   const svg = $.html('svg');
@@ -58,9 +51,9 @@ export async function browse(req: BrowseRequest): Promise<BrowseResponse> {
   const icons = files
     .map(i => {
       const parsed = path.parse(i);
-      return parsed.dir + path.sep + parsed.name;
+      return path.basename(parsed.dir) + path.sep + parsed.name;
     })
-    .map(i => `${req.url}/remix/${i}`);
+    .map(i => `${req.url}/health/${i}`);
 
   return {
     vendor: req.vendor,

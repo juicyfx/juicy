@@ -2,6 +2,7 @@ import cheerio from "cheerio";
 import path from "path";
 import { readFile, lowercase, readPackage } from "../utils";
 import { NotFoundError } from "../errors";
+import { Vendor } from "../app";
 
 export async function generate(req: GenerateRequest): Promise<string> {
   try {

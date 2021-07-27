@@ -3,6 +3,7 @@ import { generate } from './_lib/handler/generate-handler';
 import { clamp, isEmpty } from './_lib/utils';
 import { NotFoundError } from './_lib/errors';
 import { errorDefault, errorNotFound } from './_lib/handler/error-handler';
+import { Vendor } from './_lib/app';
 
 const CACHE_BROWSER = 60 * 60 * 24 * 2; // 2 days
 const CACHE_CDN = 60 * 60 * 24 * 7; // 7 days
@@ -15,6 +16,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     const color = !isEmpty(req.query['color']) ? <string>req.query['color'] : null;
     const size = !isEmpty(req.query['size']) ? <string>req.query['size'] : 32;
     const stroke = !isEmpty(req.query['stroke']) ? parseInt(<string>req.query['stroke']) : null;
+    const style = !isEmpty(req.query['style']) ? <string>req.query['style'] : null;
 
     const iconReq: GenerateRequest = {
       vendor: <string>req.query.vendor as Vendor,
@@ -22,7 +24,8 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       size: clamp(16, size, 512),
       spec,
       color,
-      stroke
+      stroke,
+      style
     };
 
     // Generate SVG icon by given requirements

@@ -71,6 +71,10 @@
       "dest": "/api/index?vendor=svgporn&icon=$icon&size=$size"
     },
     {
+      "src": "/health/(?<spec>[\\w\\-]+)/(?<icon>[\\w\\-]+)(:?/(?<size>\\d{2,3})/?)?(:?/(?<color>\\w{6})/?)?(:?/)?",
+      "dest": "/api/index?vendor=healthicons&spec=$spec&icon=$icon&size=$size&color=$color"
+    },
+    {
       "src": "/_/",
       "dest": "/api/meta"
     },
