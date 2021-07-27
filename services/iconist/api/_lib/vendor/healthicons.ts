@@ -46,7 +46,7 @@ export async function generate(req: GenerateRequest): Promise<string> {
 
 export async function browse(req: BrowseRequest): Promise<BrowseResponse> {
   const pkg = path.resolve('node_modules', `@obr/${req.vendor}`);
-  const files = await readPackage(`**/*.svg`, `${pkg}/dist`);
+  const files = await readPackage(`outline/**/*.svg`, `${pkg}/dist`);
 
   const icons = files
     .map(i => {

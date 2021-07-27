@@ -15,7 +15,7 @@ const URL = 'https://iconist.vercel.app';
 
     const readme = [`# ${vendor}`, '', ''];
 
-    result.icons.forEach(icon => {
+    result.icons.sort().forEach(icon => {
       readme.push(`- ![](${icon}) → ${icon}`);
     })
 
