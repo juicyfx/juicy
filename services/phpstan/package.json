@@ -9,7 +9,7 @@
     "vercel-build": "parcel build web/index.html -d public"
   },
   "dependencies": {
-    "@octokit/rest": "^18.7.2",
+    "@octokit/rest": "^18.8.0",
     "eta": "^1.12.3",
     "lodash": "^4.17.20",
     "node-emoji": "^1.10.0",
