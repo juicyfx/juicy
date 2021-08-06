@@ -22,7 +22,7 @@
     "rehype-format": "^3.1.0",
     "rehype-stringify": "^9.0.0",
     "remark-parse": "^9.0.0",
-    "remark-rehype": "^8.0.0",
+    "remark-rehype": "^9.0.0",
     "unified": "^10.0.0",
     "unified-stream": "^2.0.0"
   },
