@@ -13,7 +13,7 @@
     "chrome-aws-lambda": "^10.1.0",
     "eta": "^1.12.3",
     "lodash": "^4.17.20",
-    "node-emoji": "^1.10.0",
+    "node-emoji": "^1.11.0",
     "puppeteer-core": "^10.2.0",
     "semver": "^7.3.5",
     "vue": "^2.6.14",
