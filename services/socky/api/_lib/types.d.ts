@@ -5,8 +5,16 @@ interface FacebookPageContext {
   width: number,
   height: number,
 }
+
 interface TwitterProfileContext {
   profile: string,
+  theme: string,
+  width: number,
+  height: number,
+}
+
+interface TwitterTweetContext {
+  tweet: string,
   theme: string,
   width: number,
   height: number,
