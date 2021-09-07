@@ -9,7 +9,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   if (req.query._p) {
-    generateImage(req, res);
+    const template = await generateTemplate(req, res);
+    generateImage(req, res, template);
   } else {
     res.statusCode = 400;
     res.setHeader("Content-Type", "text/html");
@@ -17,7 +18,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 }
 
-async function generateImage(req: VercelRequest, res: VercelResponse): Promise<void> {
+async function generateTemplate(req: VercelRequest, res: VercelResponse): Promise<string> {
   const width = queryNumber(req, 'width', 320);
   const height = queryNumber(req, 'height', 800);
 
@@ -29,10 +30,37 @@ async function generateImage(req: VercelRequest, res: VercelResponse): Promise<v
       width,
       height,
     });
+
+    if (req.query.raw) {
+      res.statusCode = 200;
+      res.setHeader("Content-Type", "text/html");
+      res.end(template);
+    }
+
+    return template;
+  } catch (e: any) {
+    res.statusCode = 500;
+    res.setHeader("Content-Type", "text/html");
+    res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);
+
+    console.error(e);
+    console.error(e.message);
+
+    return e.message;
+  }
+
+}
+
+async function generateImage(req: VercelRequest, res: VercelResponse, template: string): Promise<void> {
+  const width = queryNumber(req, 'width', 320);
+  const height = queryNumber(req, 'height', 800);
+  const wait = queryNumber(req, 'wait', 5000);
+
+  try {
     const file = await getImage(
       {
         content: template,
-        wait: queryNumber(req, 'wait', 3000)
+        wait
       },
       {
         defaultViewport: {
