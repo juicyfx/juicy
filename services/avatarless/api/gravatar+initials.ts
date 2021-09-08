@@ -15,11 +15,11 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
     try {
       // Try to fetch original gravatar
       await pipeGravatar(req, res);
-    } catch (e) {
+    } catch (e: unknown) {
       // Fallback to avatarless generator
       pipeAvatarlessEmail(req, res);
     }
-  } catch (e) {
+  } catch (e: unknown) {
     console.error(e);
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");

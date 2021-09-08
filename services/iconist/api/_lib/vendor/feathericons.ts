@@ -8,7 +8,7 @@ export async function generate(req: GenerateRequest): Promise<string> {
   try {
     // Read icon file
     var file = await readFile(path.resolve('node_modules', `@obr/feathericons/dist/${req.icon}.svg`));
-  } catch (e) {
+  } catch (e: unknown) {
     throw new NotFoundError(Vendor.feathericons, req.icon);
   }
 

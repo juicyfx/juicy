@@ -21,7 +21,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     try {
       const subres = await httpGet(<string>req.query.url);
       res.end(JSON.stringify(subres));
-    } catch (e) {
+    } catch (e: any) {
       console.error(e);
       res.statusCode = 500;
       res.end(e.message);

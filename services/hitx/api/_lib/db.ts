@@ -22,7 +22,7 @@ async function getDocument(id: string): Promise<FaunaValues.Document<Hit> | unde
         )
       )
     );
-  } catch (e) {
+  } catch (e: unknown) {
     return undefined;
   }
 }

@@ -35,7 +35,7 @@ async function fromRaw(req: VercelRequest, res: VercelResponse) {
     res.statusCode = 200;
     res.setHeader("Content-Type", `application/pdf`);
     res.end(file, 'binary');
-  } catch (e) {
+  } catch (e: any) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
     res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);

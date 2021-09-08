@@ -10,7 +10,7 @@ export async function generate(req: GenerateRequest): Promise<string> {
   try {
     // Read icon file
     var file = await readFile(path.resolve('node_modules', `@obr/healthicons/dist/${style}/${lowercase(req.spec)}/${req.icon}.svg`));
-  } catch (e) {
+  } catch (e: unknown) {
     throw new NotFoundError(Vendor.healthicons, `${req.spec}/${req.icon}`);
   }
 

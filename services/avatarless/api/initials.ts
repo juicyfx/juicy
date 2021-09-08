@@ -14,7 +14,7 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
 
     // Avatarless generator
     pipeAvatarlessInitials(req, res);
-  } catch (e) {
+  } catch (e: unknown) {
     console.error(e);
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");

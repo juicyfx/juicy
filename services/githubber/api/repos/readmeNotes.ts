@@ -49,7 +49,7 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
         } else {
           ctx.composer = composer;
         }
-      } catch (e) {
+      } catch (e: unknown) {
         app.json(400, { error: `Cannot get composer.json` });
       }
     })
@@ -110,7 +110,7 @@ async function getVersions(owner: string, repo: string): Promise<ReadmeVersion[]
 
   const versions = [];
 
-  for await(const major of majors) {
+  for await (const major of majors) {
     const composer = await getComposer(owner, repo, major);
     if (!composer) continue;
 

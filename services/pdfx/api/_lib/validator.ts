@@ -16,7 +16,7 @@ export function isValidUrl(str: string) {
   try {
     const url = new URL(str);
     return url.hostname.includes(".");
-  } catch (e) {
+  } catch (e: any) {
     console.error(e.message);
     return false;
   }

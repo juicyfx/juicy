@@ -8,7 +8,7 @@ export async function generate(req: GenerateRequest): Promise<string> {
   try {
     // Read icon file
     var file = await readFile(path.resolve('node_modules', `@obr/fontawesome/dist/${lowercase(req.spec)}/${req.icon}.svg`));
-  } catch (e) {
+  } catch (e: unknown) {
     throw new NotFoundError(Vendor.fontawesome, `${req.spec}/${req.icon}`);
   }
 

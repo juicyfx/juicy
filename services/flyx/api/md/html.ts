@@ -1,11 +1,11 @@
-import { NowRequest, NowResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import * as http from "./../_lib/http";
 import { createTemplate } from "./../_lib/template";
 
 const CACHE_BROWSER = 60 * 60 * 24; // 24h
 const CACHE_CDN = 60 * 60 * 1; // 1h
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   if (req.query.github) {
@@ -17,13 +17,13 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   }
 }
 
-async function handleGithub(req: NowRequest, res: NowResponse): Promise<void> {
+async function handleGithub(req: VercelRequest, res: VercelResponse): Promise<void> {
   try {
     res.statusCode = 200;
     res.setHeader("Content-Type", "text/html");
     res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
     res.end(await convertFile(`https://raw.githubusercontent.com/${<string>req.query.github}`));
-  } catch (e) {
+  } catch (e: any) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
     res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);

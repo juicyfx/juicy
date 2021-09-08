@@ -13,7 +13,7 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
     res.statusCode = 302;
     res.setHeader('Location', 'https://avatarless.now.sh/');
     res.end();
-  } catch (e) {
+  } catch (e: unknown) {
     console.error(e);
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");

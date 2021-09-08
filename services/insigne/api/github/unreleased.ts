@@ -17,7 +17,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
     res.end(JSON.stringify(badgen))
-  } catch (e) {
+  } catch (e: any) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
     res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);
@@ -38,7 +38,7 @@ async function generateBadgen(req: NowRequest): Promise<Badgen> {
       'status': String(unreleased.unreleased),
       'color': 'blue',
     };
-  } catch (e) {
+  } catch (e: unknown) {
     return {
       'subject': 'unreleased',
       'status': 'N/A',

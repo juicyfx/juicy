@@ -47,7 +47,7 @@ export class Flow<T extends object> {
 
     try {
       await this._runner(data);
-    } catch (e) {
+    } catch (e: unknown) {
       await this._fallback(data, { exception: e });
     }
   }

@@ -27,7 +27,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       // Set image headers
       res.setHeader('Content-Type', 'image/png')
       res.send(Buffer.from(url.split(",")[1], 'base64'));
-    } catch (e) {
+    } catch (e: any) {
       res.statusCode = 500;
       res.setHeader("Content-Type", "text/html");
       res.end(JSON.stringify({ message: e.message, code: e.code }));

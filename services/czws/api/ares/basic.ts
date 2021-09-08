@@ -23,7 +23,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse): 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(convert.xml2json(text, { compact: true, spaces: 4 }));
-  } catch (e) {
+  } catch (e: any) {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'text/plain');
     res.end(e.message);

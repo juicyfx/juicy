@@ -35,7 +35,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     res.setHeader('Content-Type', 'image/svg+xml');
     res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
     res.end(icon);
-  } catch (e) {
+  } catch (e: unknown) {
     if (e instanceof NotFoundError) {
       await errorNotFound(req, res, e);
     } else {

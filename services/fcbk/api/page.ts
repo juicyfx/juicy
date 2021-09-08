@@ -46,7 +46,7 @@ async function generateImage(req: VercelRequest, res: VercelResponse): Promise<v
     res.setHeader("Content-Type", "image/png");
     res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
     res.end(file);
-  } catch (e) {
+  } catch (e: any) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
     res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);

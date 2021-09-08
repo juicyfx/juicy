@@ -4,6 +4,9 @@ import { createTemplate, createTemplateChristmas } from '../_lib/templates/githu
 import { fetchRepository } from '../_lib/github';
 import { trimEmoji, dayjs } from '../_lib/utils';
 
+const CACHE_BROWSER = 60 * 60 * 24 ;
+const CACHE_CDN = 60 * 60 * 24 * 7;
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
@@ -33,9 +36,9 @@ async function generateImage(req: VercelRequest, res: VercelResponse): Promise<v
 
     res.statusCode = 200;
     res.setHeader("Content-Type", "image/png");
-    res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60 * 24}, stale-while-revalidate, public`);
+    res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, stale-while-revalidate, public`);
     res.end(file);
-  } catch (e) {
+  } catch (e: any) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
     res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);

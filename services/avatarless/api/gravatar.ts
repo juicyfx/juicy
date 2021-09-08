@@ -14,7 +14,7 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
 
     // Try to fetch original gravatar
     await pipeGravatarOnly(req, res);
-  } catch (e) {
+  } catch (e: unknown) {
     console.error(e);
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");

@@ -21,7 +21,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   if (!base) {
     try {
       base = <string>req.query.base || await getLastTag(owner, repo);
-    } catch (e) {
+    } catch (e: unknown) {
       res.statusCode = 404;
       res.json({ error: `Cannot fetch last tak for ${owner}/${repo}` });
       return;
@@ -37,7 +37,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   let resCompared;
   try {
     resCompared = await octokit.repos.compareCommits({ owner, repo, base, head, });
-  } catch (e) {
+  } catch (e: unknown) {
     res.statusCode = 400;
     res.json({ error: `Cannot compare ${base}...HEAD` });
     return;

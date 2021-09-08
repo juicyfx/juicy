@@ -29,7 +29,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
     res.setHeader("Content-Type", "application/json");
     res.setHeader('Cache-Control', `max-age=${60 * 60}, s-maxage=${60 * 60 * 2}, stale-while-revalidate, public`);
     res.end(JSON.stringify(stats))
-  } catch (e) {
+  } catch (e: any) {
     res.statusCode = 500;
     res.setHeader("Content-Type", "text/html");
     res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);

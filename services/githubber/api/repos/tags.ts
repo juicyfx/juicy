@@ -16,7 +16,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   try {
     const tags = await getTags(owner, repo);
     res.json({ tags });
-  } catch (e) {
+  } catch (e: unknown) {
     res.statusCode = 404;
     res.json({ error: `Cannot list tags for ${owner}/${repo}` });
   }

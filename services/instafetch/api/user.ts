@@ -41,7 +41,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       res.setHeader('Content-Type', 'application/json')
       res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
       res.send(JSON.stringify(output));
-    } catch (e) {
+    } catch (e: any) {
       res.statusCode = 500;
       res.setHeader("Content-Type", "text/html");
       res.end(JSON.stringify({ message: e.message, code: e.code }));

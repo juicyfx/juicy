@@ -17,7 +17,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       res.setHeader("Content-Type", "image/svg+xml;charset=utf8");
       res.setHeader("Cache-Control", "max-age=1, s-maxage=1, stale-while-revalidate");
       res.end(svg);
-    } catch (e) {
+    } catch (e: any) {
       res.statusCode = 500;
       res.setHeader("Content-Type", "text/html");
       res.end(`<h1>Server Error</h1><p>Sorry, there was a problem</p><p>${e.message}</p>`);
