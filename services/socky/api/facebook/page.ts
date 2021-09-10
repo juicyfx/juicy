@@ -95,14 +95,20 @@ function createTemplate(ctx: FacebookPageContext): string {
     <title>Socky/Facebook</title>
 </head>
 <body style="margin: 0; padding: 0">
-  <iframe
-    src="https://www.facebook.com/plugins/page.php?href=https://facebook.com/${ctx.page}&tabs=${ctx.tabs}&width=${ctx.width}&height=${ctx.height}&colorscheme=${ctx.theme}&locale=cs_CZ"
-    width="${ctx.width}"
-    height="${ctx.height}"
-    style="border:none;overflow:hidden"
-    scrolling="no"
-    frameborder="0"
-  ></iframe>
+  <div id="fb-root"></div>
+  <script src="https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v11.0&autoLogAppEvents=1"></script>
+  <div
+    class="fb-page"
+    data-href="https://www.facebook.com/${ctx.page}/"
+    data-color-scheme="${ctx.theme}"
+    data-hide-cover="false"
+    data-show-facepile="true"
+    data-show-posts="true"
+    data-width="${ctx.width}"
+    data-height="${ctx.height}"
+    style="overflow:hidden"
+  >
+  </div>
 </body>
 </html>
 `;
