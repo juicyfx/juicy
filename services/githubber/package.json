@@ -20,7 +20,7 @@
     "vue-router": "^3.5.3"
   },
   "devDependencies": {
-    "@types/lodash": "^4.14.177",
+    "@types/lodash": "^4.14.178",
     "@types/node-emoji": "^1.8.1",
     "@types/puppeteer-core": "^5.4.0",
     "@types/semver": "^7.3.9",
