@@ -4,7 +4,7 @@ import { createTemplate, createTemplateChristmas } from '../_lib/templates/githu
 import { fetchRepository } from '../_lib/github';
 import { trimEmoji, dayjs } from '../_lib/utils';
 
-const CACHE_BROWSER = 60 * 60 * 24 ;
+const CACHE_BROWSER = 60 * 60 * 24;
 const CACHE_CDN = 60 * 60 * 24 * 7;
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -31,7 +31,7 @@ async function generateImage(req: VercelRequest, res: VercelResponse): Promise<v
     const today = new Date();
     const christmas = dayjs(today).isBetween(`${today.getFullYear()}-12-20`, `${today.getFullYear() + 1}-01-05`);
 
-    const template = christmas ? createTemplateChristmas(title, description, avatar) : createTemplate(title, description, avatar);
+    const template = christmas ? createTemplateChristmas(title, description, avatar, today.getFullYear() + 1) : createTemplate(title, description, avatar);
     const file = await getImage({ content: template });
 
     res.statusCode = 200;
