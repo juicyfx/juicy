@@ -9,6 +9,6 @@
     "@vercel/node": "^1.12.1",
     "micro": "^9.3.4",
     "micro-dev": "^3.0.0",
-    "typescript": "^4.5.4"
+    "typescript": "^4.5.5"
   }
 }
