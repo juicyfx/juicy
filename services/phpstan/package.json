@@ -14,7 +14,7 @@
     "lodash": "^4.17.20",
     "node-emoji": "^1.11.0",
     "semver": "^7.3.5",
-    "vue": "^2.6.14",
+    "vue": "^3.2.30",
     "vue-router": "^3.5.3"
   },
   "devDependencies": {
