@@ -83,10 +83,6 @@ updates:
   schedule:
     interval: daily
 - package-ecosystem: npm
-  directory: "/services/phpstan"
-  schedule:
-    interval: daily
-- package-ecosystem: npm
   directory: "/services/qrx"
   schedule:
     interval: daily
