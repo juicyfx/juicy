@@ -22,8 +22,13 @@
       "methods": ["GET"]
     },
     {
+      "src": "/proxy/(.*)",
+      "dest": "/api/proxy.ts",
+      "methods": ["GET"]
+    },
+    {
       "src": "/(.*)",
-      "dest": "/api/index.ts",
+      "dest": "/api/loop.ts",
       "methods": ["OPTIONS"]
     },
     {

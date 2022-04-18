@@ -1,23 +1,23 @@
-import http from "http";
+import http, { IncomingMessage } from "http";
 import https from "https";
 import _url from "url";
-import { NowRequest, NowResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   res.setHeader("Access-Control-Allow-Origin", '*');
   res.setHeader("Access-Control-Allow-Methods", '*');
   res.setHeader("Access-Control-Allow-Headers", '*');
 
-  // Validation
-  if (!req.query.url) {
+  const proxyUrl = req.url?.replace("/proxy/", "");
+  if (!proxyUrl) {
     res.statusCode = 400;
     res.end('Invalid URL');
     return;
   }
 
   try {
-    const subres = await httpGet(<string>req.query.url);
-    res.end(JSON.stringify(subres));
+    const subres = await proxy(proxyUrl);
+    subres.pipe(res);
   } catch (e: any) {
     console.error(e);
     res.statusCode = 500;
@@ -25,7 +25,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   }
 }
 
-function httpGet(url: string): Promise<{ statusCode?: number, headers: { [key: string]: string | string[] | undefined } }> {
+function proxy(url: string): Promise<IncomingMessage> {
   return new Promise((resolve, reject) => {
     const parsed = _url.parse(url);
 
@@ -39,10 +39,7 @@ function httpGet(url: string): Promise<{ statusCode?: number, headers: { [key: s
 
     api
       .get(options, res => {
-        resolve({
-          statusCode: res.statusCode,
-          headers: res.headers
-        });
+        resolve(res);
       })
       .on("error", e => {
         console.error(e);
