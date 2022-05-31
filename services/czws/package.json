@@ -12,6 +12,6 @@
   },
   "devDependencies": {
     "@types/node-fetch": "^3.0.3",
-    "@vercel/node": "^1.12.1"
+    "@vercel/node": "^1.15.4"
   }
 }
