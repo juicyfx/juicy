@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf199a6bb50187f24d65b10ff0d9ad25",
+    "content-hash": "8702074e45f7a16a5cb1fa4f0799ba29",
     "packages": [
         {
             "name": "contributte/http",
@@ -84,85 +84,6 @@
                 }
             ],
             "time": "2022-01-29T11:40:42+00:00"
-        },
-        {
-            "name": "contributte/latte",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/contributte/latte.git",
-                "reference": "04060e71302f923a2b6bf5d5f3f61537c41760b2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/contributte/latte/zipball/04060e71302f923a2b6bf5d5f3f61537c41760b2",
-                "reference": "04060e71302f923a2b6bf5d5f3f61537c41760b2",
-                "shasum": ""
-            },
-            "require": {
-                "latte/latte": "^2.5.1",
-                "php": ">=7.2"
-            },
-            "conflict": {
-                "nette/di": "<3.0.0"
-            },
-            "require-dev": {
-                "nette/application": "^3.0",
-                "nette/di": "~3.0.0",
-                "ninjify/nunjuck": "^0.4",
-                "ninjify/qa": "^0.12",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-deprecation-rules": "^1.0",
-                "phpstan/phpstan-nette": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0"
-            },
-            "suggest": {
-                "nette/di": "to use VersionExtension[CompilerExtension]"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.6.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Contributte\\Latte\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Milan Felix Šulc",
-                    "homepage": "https://f3l1x.io"
-                }
-            ],
-            "description": "Extra contrib to nette/latte",
-            "homepage": "https://github.com/contributte/latte",
-            "keywords": [
-                "extra",
-                "latte",
-                "nette"
-            ],
-            "support": {
-                "issues": "https://github.com/contributte/latte/issues",
-                "source": "https://github.com/contributte/latte/tree/master"
-            },
-            "funding": [
-                {
-                    "url": "https://contributte.org/partners.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/f3l1x",
-                    "type": "github"
-                }
-            ],
-            "time": "2022-01-29T11:40:35+00:00"
         },
         {
             "name": "contributte/utils",
@@ -246,22 +167,22 @@
         },
         {
             "name": "latte/latte",
-            "version": "v2.11.4",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/latte.git",
-                "reference": "3a5ed09d92b3bb2c428814bb919c2f8637bc49b1"
+                "reference": "c3eee2e4e2c21cdf9f9c158c4bfa6150625457e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/latte/zipball/3a5ed09d92b3bb2c428814bb919c2f8637bc49b1",
-                "reference": "3a5ed09d92b3bb2c428814bb919c2f8637bc49b1",
+                "url": "https://api.github.com/repos/nette/latte/zipball/c3eee2e4e2c21cdf9f9c158c4bfa6150625457e1",
+                "reference": "c3eee2e4e2c21cdf9f9c158c4bfa6150625457e1",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-tokenizer": "*",
-                "php": ">=7.1 <8.2"
+                "php": ">=8.0 <8.2"
             },
             "conflict": {
                 "nette/application": "<2.4.1"
@@ -286,7 +207,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.11-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -324,9 +245,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/latte/issues",
-                "source": "https://github.com/nette/latte/tree/v2.11.4"
+                "source": "https://github.com/nette/latte/tree/v3.0.2"
             },
-            "time": "2022-05-30T13:34:15+00:00"
+            "time": "2022-06-15T13:42:57+00:00"
         },
         {
             "name": "nette/http",

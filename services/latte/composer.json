@@ -1,7 +1,7 @@
 {
   "require": {
     "php": ">=8.0",
-    "contributte/latte": "^0.6.0",
+    "latte/latte": "^3.0.2",
     "contributte/http": "^0.5.0",
     "contributte/utils": "^0.6.0"
   },

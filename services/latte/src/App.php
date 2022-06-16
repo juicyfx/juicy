@@ -45,12 +45,20 @@ final class App
 		}
 
 		if ($text === null || $text === '') {
-			$this->error(['error' => ['message' => 'No code given']], 400);
+			$this->error([
+				'error' => [
+					'message' => 'No code given',
+				],
+				'version' => Engine::VERSION,
+			], 400);
 		}
 
 		try {
 			$output = $this->latte->renderToString($text);
-			$this->send(['output' => $output]);
+			$this->send([
+				'output' => $output,
+				'version' => Engine::VERSION,
+			]);
 		} catch (CompileException $e) {
 			$this->error([
 				'error' => [
@@ -58,9 +66,15 @@ final class App
 					'line' => $e->position?->line ?? null,
 					'column' => $e->position?->column ?? null,
 				],
+				'version' => Engine::VERSION,
 			], 422);
 		} catch (Throwable $e) {
-			$this->error(['error' => ['message' => $e->getMessage()]], 500);
+			$this->error([
+				'error' => [
+					'message' => $e->getMessage(),
+				],
+				'version' => Engine::VERSION,
+			], 500);
 		}
 	}
 
