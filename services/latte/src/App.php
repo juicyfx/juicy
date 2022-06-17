@@ -44,37 +44,30 @@ final class App
 			$text = $this->request->getRawBody();
 		}
 
+		$res = [
+			'version' => Engine::VERSION,
+		];
+
 		if ($text === null || $text === '') {
-			$this->error([
-				'error' => [
-					'message' => 'No code given',
-				],
-				'version' => Engine::VERSION,
-			], 400);
+			$res['error'] = ['message' => 'No code given'];
+			$this->send($res, 400);
 		}
 
 		try {
-			$output = $this->latte->renderToString($text);
-			$this->send([
-				'output' => $output,
-				'version' => Engine::VERSION,
-			]);
+			$res['output'] = $this->latte->renderToString($text);
+			$this->send($res);
+
 		} catch (CompileException $e) {
-			$this->error([
-				'error' => [
-					'message' => $e->getMessage(),
-					'line' => $e->position?->line ?? null,
-					'column' => $e->position?->column ?? null,
-				],
-				'version' => Engine::VERSION,
-			], 422);
+			$res['error'] = [
+				'message' => $e->getMessage(),
+				'line' => $e->position?->line,
+				'column' => $e->position?->column,
+			];
+			$this->send($res, 422);
+
 		} catch (Throwable $e) {
-			$this->error([
-				'error' => [
-					'message' => $e->getMessage(),
-				],
-				'version' => Engine::VERSION,
-			], 500);
+			$res['error'] = ['message' => $e->getMessage()];
+			$this->send($res, 500);
 		}
 	}
 
@@ -83,17 +76,6 @@ final class App
 		$this->response->addHeader('Access-Control-Allow-Origin', '*');
 		$this->response->addHeader('Access-Control-Allow-Methods', '*');
 		$this->response->addHeader('Access-Control-Allow-Headers', '*');
-	}
-
-	/**
-	 * @return no-return
-	 */
-	private function error(array $error, int $code = 400): void
-	{
-		$this->response->setCode($code);
-		$this->response->addHeader('content-type', 'application/json');
-		echo Json::encode($error);
-		exit();
 	}
 
 	/**
