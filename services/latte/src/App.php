@@ -13,6 +13,7 @@ use Throwable;
 
 final class App
 {
+	private const MAX_LENGTH = 10000;
 
 	private Engine $latte;
 
@@ -48,10 +49,20 @@ final class App
 			'version' => Engine::VERSION,
 		];
 
-		if ($text === null || $text === '') {
+		if ($text === null) {
 			$res['error'] = ['message' => 'No code given'];
 			$this->send($res, 400);
+
+		} elseif (strlen($text) > self::MAX_LENGTH) {
+			$res['error'] = ['message' => 'Code is too long'];
+			$this->send($res, 400);
 		}
+
+		set_error_handler(function (int $severity, string $message) use (& $res) {
+			if (error_reporting() & $severity) {
+				$res['error'] ??= ['message' => $message];
+			}
+		});
 
 		try {
 			$res['output'] = $this->latte->renderToString($text);
