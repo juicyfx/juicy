@@ -38,22 +38,22 @@ final class App
 	{
 		$this->setupCors();
 
-		$text = null;
+		$input = null;
 		if ($this->request->isMethod('GET')) {
-			$text = $this->request->getQuery('code');
+			$input = $this->request->getQuery('code');
 		} else if ($this->request->isMethod('POST')) {
-			$text = $this->request->getRawBody();
+			$input = $this->request->getRawBody();
 		}
 
 		$res = [
 			'version' => Engine::VERSION,
 		];
 
-		if ($text === null) {
+		if ($input === null) {
 			$res['error'] = ['message' => 'No code given'];
 			$this->send($res, 400);
 
-		} elseif (strlen($text) > self::MAX_LENGTH) {
+		} elseif (strlen($input) > self::MAX_LENGTH) {
 			$res['error'] = ['message' => 'Code is too long'];
 			$this->send($res, 400);
 		}
@@ -65,7 +65,7 @@ final class App
 		});
 
 		try {
-			$res['output'] = $this->latte->renderToString($text);
+			$res['output'] = $this->process($input);
 			$this->send($res);
 
 		} catch (CompileException $e) {
@@ -79,6 +79,44 @@ final class App
 		} catch (Throwable $e) {
 			$res['error'] = ['message' => $e->getMessage()];
 			$this->send($res, 500);
+		}
+	}
+
+	private function process(string $input): string
+	{
+		$output = $this->latte->renderToString($input);
+
+		// Save input/output
+		if (Utils::getStorer() !== null) {
+			$this->store($input, $output);
+		}
+
+		return $output;
+	}
+
+	private function store(string $input, string $output): void
+	{
+		try {
+			$data = Json::encode([
+				'input' => $input,
+				'output' => $output,
+				'version' => Engine::VERSION,
+			]);
+
+			$ctx = stream_context_create([
+				'http' => [
+					'method' => 'POST',
+					'timeout' => 1,
+					'header' => implode("\r\n", [
+						"Content-type: application/json",
+						"Content-Length: " . strlen($data),
+					]),
+					'content' => $data,
+				],
+			]);
+			file_get_contents(Utils::getStorer(), false, $ctx);
+		} catch (Throwable $e) {
+			fwrite(fopen('php://stdout', 'w'), $e->getMessage() . PHP_EOL);
 		}
 	}
 
