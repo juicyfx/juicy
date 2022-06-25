@@ -36,6 +36,7 @@ final class App
 
 	public function run(): void
 	{
+		$this->setupEnv();
 		$this->setupCors();
 
 		$input = null;
@@ -118,6 +119,16 @@ final class App
 		} catch (Throwable $e) {
 			fwrite(fopen('php://stdout', 'w'), $e->getMessage() . PHP_EOL);
 		}
+	}
+
+	private function setupEnv(): void
+	{
+		unset($_SERVER['AWS_SESSION_TOKEN']);
+		unset($_SERVER['AWS_SECRET_ACCESS_KEY']);
+		unset($_SERVER['AWS_ACCESS_KEY_ID']);
+		unset($_ENV['AWS_SESSION_TOKEN']);
+		unset($_ENV['AWS_SECRET_ACCESS_KEY']);
+		unset($_ENV['AWS_ACCESS_KEY_ID']);
 	}
 
 	private function setupCors(): void
