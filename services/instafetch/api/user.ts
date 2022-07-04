@@ -32,9 +32,9 @@ export default async function handler(req: NowRequest, res: NowResponse) {
       const output = {
         photos: result.map((row: any) => ({
           permalink: row.link,
-          url: row.imageHighResolutionUrl,
-          preview: row.imageThumbnailUrl,
-          square: row.squareImages.find(() => true)
+          url: row.displaySrc,
+          preview: row.thumbnailSrc,
+          square: row.thumbnails.find(() => true).src
         }))
       };
 
