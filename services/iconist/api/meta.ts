@@ -1,9 +1,9 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { isEmpty, getOrigin } from './_lib/utils';
 import { Vendor, VENDORS } from './_lib/app';
 import { browse } from './_lib/handler/browse-handler';
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url, req.query);
 
   res.setHeader("Content-Type", "application/json");

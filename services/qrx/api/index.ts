@@ -1,7 +1,7 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import QRCode, { QRCodeToDataURLOptions } from 'qrcode';
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   // Apply optimistic CORS
@@ -39,7 +39,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   }
 }
 
-function parseOptions(req: NowRequest): QRCodeToDataURLOptions {
+function parseOptions(req: VercelRequest): QRCodeToDataURLOptions {
   const options: QRCodeToDataURLOptions = { width: 256, margin: 0 };
   const query = req.query as { [key: string]: string };
 

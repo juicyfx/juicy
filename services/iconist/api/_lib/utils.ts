@@ -1,7 +1,7 @@
 import fs from "fs";
 import util from "util";
 import fg from "fast-glob";
-import { NowRequest } from "@now/node";
+import { VercelRequest } from '@vercel/node';
 
 export const readFile = util.promisify(fs.readFile);
 
@@ -31,7 +31,7 @@ export async function readPackage(pattern: string, cwd: string): Promise<string[
   return await fg([pattern], { dot: false, onlyFiles: true, cwd });
 }
 
-export function getOrigin(req: NowRequest): string {
+export function getOrigin(req: VercelRequest): string {
   if (req.headers['x-now-deployment-url']) {
     return <string>req.headers['x-now-deployment-url'];
   }

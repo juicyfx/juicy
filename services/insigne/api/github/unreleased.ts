@@ -1,7 +1,7 @@
-import { NowRequest, NowResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { fetchUnreleased } from '../_lib/githubber';
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   if (!req.query.r) {
@@ -27,7 +27,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
   }
 }
 
-async function generateBadgen(req: NowRequest): Promise<Badgen> {
+async function generateBadgen(req: VercelRequest): Promise<Badgen> {
   const r = <string>req.query.r;
 
   try {

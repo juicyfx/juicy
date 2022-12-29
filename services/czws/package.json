@@ -7,11 +7,10 @@
     "dev": "node dev.js"
   },
   "dependencies": {
-    "node-fetch": "^3.2.10",
-    "xml-js": "^1.6.9"
+    "node-fetch": "^3.3.0",
+    "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "@types/node-fetch": "^3.0.3",
-    "@vercel/node": "^2.5.26"
+    "@vercel/node": "^2.8.2"
   }
 }

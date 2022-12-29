@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { generate } from './_lib/handler/generate-handler';
 import { clamp, isEmpty } from './_lib/utils';
 import { NotFoundError } from './_lib/errors';
@@ -8,7 +8,7 @@ import { Vendor } from './_lib/app';
 const CACHE_BROWSER = 60 * 60 * 24 * 2; // 2 days
 const CACHE_CDN = 60 * 60 * 24 * 7; // 7 days
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url, req.query);
 
   try {

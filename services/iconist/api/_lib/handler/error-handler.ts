@@ -1,8 +1,8 @@
-import { NowRequest, NowResponse } from "@now/node";
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { NotFoundError } from "../errors";
 import { fallback } from "./fallback-handler";
 
-export function errorDefault(_req: NowRequest, res: NowResponse, error: any): void {
+export function errorDefault(_req: VercelRequest, res: VercelResponse, error: any): void {
   console.error(error);
 
   res.statusCode = 500;
@@ -10,7 +10,7 @@ export function errorDefault(_req: NowRequest, res: NowResponse, error: any): vo
   res.end(typeof error === 'string' ? error : error.message);
 }
 
-export async function errorNotFound(req: NowRequest, res: NowResponse, error: NotFoundError): Promise<void> {
+export async function errorNotFound(req: VercelRequest, res: VercelResponse, error: NotFoundError): Promise<void> {
   console.error(error);
 
   if (req.query['strict']) {

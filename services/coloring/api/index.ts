@@ -1,4 +1,4 @@
-import { NowRequest, NowResponse } from '@now/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import tinycolor from 'tinycolor2';
 import htm from 'htm';
 import vhtml from 'vhtml';
@@ -27,7 +27,7 @@ const DEFAULT_COLORS = [
 
 const DEFAULT_CONTRASTS = [-30, -25, -20, -15, -10, -5, 0, 5, 10, 15, 20, 25, 30];
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   const html = htm.bind(vhtml);
