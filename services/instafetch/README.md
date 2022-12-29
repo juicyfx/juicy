@@ -8,3 +8,9 @@ Fetch data from Instagram.
 ## Usage
 
 - `https://instafetch.vercel.app/user/{username}`
+
+## Backend
+
+You have to spin your own instahost backend somewhere.
+
+https://github.com/f00b4r/instahost

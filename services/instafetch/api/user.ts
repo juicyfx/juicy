@@ -1,12 +1,12 @@
-import { NowRequest, NowResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import { IncomingMessage } from "http";
 import https from "https";
 
 const CACHE_BROWSER = 60 * 60 * 24 * 5; // 5 day
 const CACHE_CDN = 60 * 60 * 24 * 5; // 5 days
-const HOST = process.env.INSTAFETCH_HOST || 'http://localhost:8000';
+const INSTAHOST_URL = process.env.INSTAHOST_URL || 'http://localhost:8000';
 
-export default async function handler(req: NowRequest, res: NowResponse) {
+export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url);
 
   // Apply optimistic CORS
@@ -23,7 +23,7 @@ export default async function handler(req: NowRequest, res: NowResponse) {
 
   if (req.query._user) {
     try {
-      const result = await fetch(`${HOST}/?_user=${<string>req.query._user}`);
+      const result = await fetch(`${INSTAHOST_URL}/photos.php?_user=${<string>req.query._user}`);
 
       if (!result) {
         throw `No data from instagram`;

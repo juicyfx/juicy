@@ -1,7 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "instafetch",
-  "regions": ["bru1"],
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/user/([a-z0-9\\.\\_\\-]+)(/?)", "destination": "/api/user.ts?_user=$1" },
