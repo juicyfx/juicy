@@ -28,7 +28,7 @@
     "@now/node": "^1.8.5",
     "@types/cheerio": "^0.22.31",
     "@types/feather-icons": "^4.7.0",
-    "micro": "^9.4.1",
+    "micro": "^10.0.1",
     "micro-dev": "^3.0.0",
     "typescript": "^4.8.2"
   }
