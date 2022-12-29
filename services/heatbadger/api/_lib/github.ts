@@ -8,7 +8,7 @@ export async function fetchRepository(repo: string): Promise<any> {
     throw new Error(`Repository ${repo} not found`);
   }
 
-  const data = JSON.parse(res.data.toString('UTF-8'));
+  const data = JSON.parse(res.data.toString('utf-8'));
 
   return data;
 }
