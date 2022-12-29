@@ -38,7 +38,6 @@ and givin something back to the community. Enjoy it!
 - [**iconist**](services/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
 - [**insigne**](services/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
 - [**instafetch**](services/instafetch) - fetch data from Instagram [[👀🕶](https://instafetch.vercel.app)]
-- [**intex**](services/intex) - testing integration  [WIP]
 - [**juicy**](services/juicy) - juicy functions assets
 - [**macmoji**](services/macmoji) - macOS emojis [[👀🕶](https://macmoji.vercel.app)]
 - [**oggo**](services/oggo) - generates image for OG meta tags [[👀🕶](https://oggo.vercel.app)]
