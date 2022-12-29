@@ -27,6 +27,8 @@ and givin something back to the community. Enjoy it!
 
 ## Services
 
+> Awesome 17 services.
+
 - [**avatarless**](services/avatarless) - gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
 - [**coloring**](services/coloring) - generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
 - [**corsless**](services/corsless) - handy proxy for Github services supporting CORS headers [[👀🕶](https://corsless.vercel.app)]
@@ -43,7 +45,6 @@ and givin something back to the community. Enjoy it!
 - [**oggo**](services/oggo) - generates image for OG meta tags [[👀🕶](https://oggo.vercel.app)]
 - [**pdfx**](services/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.vercel.app)]
 - [**qrx**](services/qrx) - generates QR-codes [[👀🕶](https://qrx.vercel.app)]
-- [**showcase**](services/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
 - [**socky**](services/socky) - generate screenshots from social networks [[👀🕶](https://socky.vercel.app)]
 
 ## 📝 License
