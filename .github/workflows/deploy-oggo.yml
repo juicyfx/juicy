@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/oggo/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:

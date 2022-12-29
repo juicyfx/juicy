@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/pdfx/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:

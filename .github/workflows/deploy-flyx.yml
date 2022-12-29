@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/flyx/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:

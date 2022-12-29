@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/coloring/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:

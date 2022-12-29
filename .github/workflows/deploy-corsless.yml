@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/corsless/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:

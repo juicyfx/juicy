@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/macmoji/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:

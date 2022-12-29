@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/heatbadger/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:

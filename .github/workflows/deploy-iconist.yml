@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/iconist/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:

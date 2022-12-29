@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/socky/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:

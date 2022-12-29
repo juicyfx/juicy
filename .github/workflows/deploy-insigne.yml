@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'services/insigne/**'
+    branches:
+      - "master"
 
 jobs:
   deploy:
