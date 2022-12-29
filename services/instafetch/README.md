@@ -11,6 +11,6 @@ Fetch data from Instagram.
 
 ## Backend
 
-You have to spin your own instahost backend somewhere.
+You have to spin your own **instahost** backend somewhere.
 
 https://github.com/f00b4r/instahost
