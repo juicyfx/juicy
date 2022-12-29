@@ -41,7 +41,6 @@ and givin something back to the community. Enjoy it!
 - [**juicy**](services/juicy) - juicy functions assets
 - [**macmoji**](services/macmoji) - macOS emojis [[👀🕶](https://macmoji.vercel.app)]
 - [**oggo**](services/oggo) - generates image for OG meta tags [[👀🕶](https://oggo.vercel.app)]
-- [**packagist**](services/packagist) - fetch data from packagist with aggregation [[👀🕶](https://packagist.vercel.app)]
 - [**pdfx**](services/pdfx) - generates PDF from many given sources (URL, raw, POST) [[👀🕶](https://pdfx.vercel.app)]
 - [**qrx**](services/qrx) - generates QR-codes [[👀🕶](https://qrx.vercel.app)]
 - [**showcase**](services/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
