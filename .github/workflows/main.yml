@@ -1,10 +1,10 @@
-name: "Main workflow"
+name: "Compile"
 
 on:
   pull_request:
   push:
     branches:
-      - "master"
+      - "*"
 
 jobs:
   run:
@@ -14,16 +14,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Node 12
-        uses: actions/setup-node@v1
+      - name: Use Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 16.x
 
-      - name: Install
+      - name: Cache Node.js
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+
+      - name: NPM install
         run: npm install
 
-      - name: Install Packages
+      - name: Lerna install
         run: npx lerna bootstrap --no-ci
 
-      - name: Compile
+      - name: Lerna compile
         run: npx lerna run compile
