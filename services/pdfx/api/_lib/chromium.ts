@@ -1,4 +1,4 @@
-import { launch, Browser } from "puppeteer-core";
+import Puppeteer, { Browser } from "puppeteer-core";
 import chromeAws from "chrome-aws-lambda";
 
 export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Browser> {
@@ -29,7 +29,7 @@ export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Bro
     };
   }
 
-  return await launch(options);
+  return await Puppeteer.launch(options);
 }
 
 function lookupChrome(): string {

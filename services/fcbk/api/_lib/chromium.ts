@@ -1,4 +1,4 @@
-import { launch, Browser } from "puppeteer-core";
+import Puppeteer, { Browser } from "puppeteer-core";
 import chromeAws from "chrome-aws-lambda";
 
 export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Browser> {
@@ -39,7 +39,7 @@ export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Bro
   await chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-SemiBold.woff2');
   await chromeAws.font('https://rawcdn.githack.com/rsms/inter/378ab05866aab4cb0d71a5f502961d6a54da0770/docs/font-files/Inter-Bold.woff2');
 
-  return await launch(options);
+  return await Puppeteer.launch(options);
 }
 
 function lookupChrome(): string {
