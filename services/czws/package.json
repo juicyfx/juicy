@@ -7,7 +7,7 @@
     "dev": "node dev.js"
   },
   "dependencies": {
-    "node-fetch": "^3.2.10",
+    "node-fetch": "^3.3.0",
     "xml-js": "^1.6.9"
   },
   "devDependencies": {
