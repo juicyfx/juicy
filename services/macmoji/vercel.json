@@ -1,6 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "macmoji",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/", "destination": "https://juicy.vercel.app/readme/macmoji" },

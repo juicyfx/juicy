@@ -1,0 +1,15 @@
+name: Deploy pdfx
+
+on:
+  push:
+    paths:
+      - 'services/pdfx/**'
+
+jobs:
+  deploy:
+    name: Deploy pdfx
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmRBdg5ANsg7dGHEdtUeAMRAasf9Pc5rBs87K3mdTFyoWz"
+      projectPath: "services/pdfx"

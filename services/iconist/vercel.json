@@ -1,6 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "iconist",
   "routes": [
     {
       "src": "/favicon.ico",

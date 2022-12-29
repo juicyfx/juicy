@@ -1,0 +1,15 @@
+name: Deploy insigne
+
+on:
+  push:
+    paths:
+      - 'services/insigne/**'
+
+jobs:
+  deploy:
+    name: Deploy insigne
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmXwqoWbWAXiJtpjLPYoATJRmiQUde9EgfN4QiA3kPy6oZ"
+      projectPath: "services/insigne"

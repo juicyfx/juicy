@@ -1,6 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "heatbadger",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/github/readme/([a-z0-9]+)/([a-z0-9\\-]+)(/?)", "destination": "/api/github/readme.ts?r=$1/$2" },

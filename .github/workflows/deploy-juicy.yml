@@ -1,0 +1,15 @@
+name: Deploy juicy
+
+on:
+  push:
+    paths:
+      - 'services/juicy/**'
+
+jobs:
+  deploy:
+    name: Deploy juicy
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmVHoKbzW9S8tJPuqBnk8RqdgnBNCSqzxZCrpeAwRtXHWc"
+      projectPath: "services/juicy"

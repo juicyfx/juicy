@@ -1,0 +1,15 @@
+name: Deploy hitx
+
+on:
+  push:
+    paths:
+      - 'services/hitx/**'
+
+jobs:
+  deploy:
+    name: Deploy hitx
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmeMQihwt14K76baePkR9qME2t2qDAFN9cYcTwrPDKgzKn"
+      projectPath: "services/hitx"

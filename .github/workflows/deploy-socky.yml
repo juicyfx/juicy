@@ -1,0 +1,15 @@
+name: Deploy instafetch
+
+on:
+  push:
+    paths:
+      - 'services/instafetch/**'
+
+jobs:
+  deploy:
+    name: Deploy instafetch
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmYNx5CwQEkKFEFShmUE63amajh22YYbcPHNyATgjboC1F"
+      projectPath: "services/instafetch"

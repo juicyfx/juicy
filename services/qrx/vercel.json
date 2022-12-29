@@ -1,6 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "qrx",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/gen/(.*)", "destination": "/api/index.ts" },

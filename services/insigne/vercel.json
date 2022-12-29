@@ -1,6 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "insigne",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/github/unreleased/([\\w\\-\\+]+)/([\\w\\-]+)(/?)", "destination": "/api/github/unreleased.ts?r=$1/$2" },

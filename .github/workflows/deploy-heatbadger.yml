@@ -1,0 +1,15 @@
+name: Deploy heatbadger
+
+on:
+  push:
+    paths:
+      - 'services/heatbadger/**'
+
+jobs:
+  deploy:
+    name: Deploy heatbadger
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmYG6tvwjh6KpSqRUGii6kYDL1TMEFEETbP3DpgQgUVoHV"
+      projectPath: "services/heatbadger"

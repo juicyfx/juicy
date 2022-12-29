@@ -1,6 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "juicy",
   "redirects": [
     { "source": "/", "destination": "https://github.com/juicyfx/juicy/" }
   ],

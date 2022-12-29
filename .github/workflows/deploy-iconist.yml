@@ -1,0 +1,15 @@
+name: Deploy iconist
+
+on:
+  push:
+    paths:
+      - 'services/iconist/**'
+
+jobs:
+  deploy:
+    name: Deploy iconist
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmRrdNqGedPRHF5hP2vKPZM7EWYogdtQ6GjvGeeQKm9a7n"
+      projectPath: "services/iconist"

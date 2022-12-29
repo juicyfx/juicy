@@ -1,0 +1,15 @@
+name: Deploy macmoji
+
+on:
+  push:
+    paths:
+      - 'services/macmoji/**'
+
+jobs:
+  deploy:
+    name: Deploy macmoji
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmbrTtj3ZfbLze3swUH4WwAP9mBHmJ4EkDmUKTSxNTyFFP"
+      projectPath: "services/macmoji"

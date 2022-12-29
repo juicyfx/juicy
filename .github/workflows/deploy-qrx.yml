@@ -1,0 +1,15 @@
+name: Deploy socky
+
+on:
+  push:
+    paths:
+      - 'services/socky/**'
+
+jobs:
+  deploy:
+    name: Deploy socky
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "prj_AAqIYRPfVQYshqMIhhYxPlenSL8T"
+      projectPath: "services/socky"

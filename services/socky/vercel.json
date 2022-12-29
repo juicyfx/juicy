@@ -1,7 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "socky",
-  "regions": ["bru1"],
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/facebook/page/(.*)", "destination": "/api/facebook/page.ts?_p=$1" },

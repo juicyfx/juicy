@@ -1,0 +1,15 @@
+name: Deploy oggo
+
+on:
+  push:
+    paths:
+      - 'services/oggo/**'
+
+jobs:
+  deploy:
+    name: Deploy oggo
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmPq4kzh62JNUvFDhq4xkh5gE7CkVviLs7RFZKX6m8n36S"
+      projectPath: "services/oggo"

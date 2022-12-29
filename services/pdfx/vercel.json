@@ -1,6 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "pdfx",
   "builds": [
     {
       "src": "api/*.ts",
