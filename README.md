@@ -1,7 +1,7 @@
 <h1 align=center>Juicy(fx)</h1>
 
 <p align=center>
-Free tools and integrations for <a href="https://vercel.com">Vercel</a> platform.
+Free functions for <a href="https://vercel.com">Vercel</a> platform.
 </p>
 
 <p align=center>
@@ -21,7 +21,7 @@ Free tools and integrations for <a href="https://vercel.com">Vercel</a> platform
 
 ------
 
-The goal of Juicy Functions is to provide free and easy integrations for the [Vercel](https://vercel.com) platform.
+The goal of Juicy Functions is to provide free and easy functions for the [Vercel](https://vercel.com) platform.
 I wanted also trully understand how [Serverless Functions](https://vercel.com/docs/v2/serverless-functions/introduction) works
 and givin something back to the community. Enjoy it!
 
@@ -46,16 +46,6 @@ and givin something back to the community. Enjoy it!
 - [**qrx**](services/qrx) - generates QR-codes [[👀🕶](https://qrx.vercel.app)]
 - [**showcase**](services/showcase) - show all possible UI components for your integratins [[👀🕶](https://vercel.com/integrations/showcase)]
 - [**socky**](services/socky) - generate screenshots from social networks [[👀🕶](https://socky.vercel.app)]
-
-## Runtimes
-
-- [**debug**](services/debug) - debugging runtime [WIP]
-- [**markdown**](services/md) - markdown runtime [WIP]
-- [**plain**](services/plain) - plainn runtime
-
-## Clients
-
-- [**Juicy(fx) PHP**](https://github.com/juicyfx/juicyphp) - PHP client for Juicy(fx)
 
 ## 📝 License
 
