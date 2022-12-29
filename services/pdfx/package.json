@@ -11,7 +11,7 @@
   "dependencies": {
     "chrome-aws-lambda": "^10.0.0",
     "puppeteer-core": "^10.2.0",
-    "vue": "^2.6.14"
+    "vue": "^3.2.45"
   },
   "devDependencies": {
     "@types/puppeteer-core": "^5.4.0",
