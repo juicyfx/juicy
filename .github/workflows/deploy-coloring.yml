@@ -1,0 +1,15 @@
+name: Deploy coloring
+
+on:
+  push:
+    paths:
+      - 'services/coloring/**'
+
+jobs:
+  deploy:
+    name: Deploy coloring
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmdWs8tJ3NWkYvuj4j58hzr2HV6VtHUAC7PXANj2vNu63e"
+      projectPath: "services/coloring"

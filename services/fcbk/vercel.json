@@ -1,7 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "fcbk",
-  "regions": ["bru1"],
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/page/(.*)", "destination": "/api/page.ts?_p=$1" },

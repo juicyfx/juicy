@@ -1,0 +1,15 @@
+name: Deploy corsless
+
+on:
+  push:
+    paths:
+      - 'services/corsless/**'
+
+jobs:
+  deploy:
+    name: Deploy corsless
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmSbZJTzVtH3tn4HGTX2e6ZSzCwkr9PwWcBBi86kAWcxTk"
+      projectPath: "services/corsless"

@@ -1,6 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "flymd",
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/md/html", "destination": "/api/md/html.ts" },

@@ -1,0 +1,15 @@
+name: Deploy avatarless
+
+on:
+  push:
+    paths:
+      - 'services/avatarless/**'
+
+jobs:
+  deploy:
+    name: Deploy avatarless
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmcmfQ7hEEDnxkYnMABAPKo9uo6WUmppQetXSn2jkhtpxQ"
+      projectPath: "services/avatarless"

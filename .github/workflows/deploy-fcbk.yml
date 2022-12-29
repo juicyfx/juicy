@@ -1,0 +1,15 @@
+name: Deploy fcbk
+
+on:
+  push:
+    paths:
+      - 'services/fcbk/**'
+
+jobs:
+  deploy:
+    name: Deploy fcbk
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "prj_YxvMZM1Y4rljydh10dF0yQlfbyyu"
+      projectPath: "services/fcbk"

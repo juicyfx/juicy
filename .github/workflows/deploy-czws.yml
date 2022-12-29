@@ -1,0 +1,15 @@
+name: Deploy czws
+
+on:
+  push:
+    paths:
+      - 'services/czws/**'
+
+jobs:
+  deploy:
+    name: Deploy czws
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmZyz6XqeC59zdwTYPNnXpCfpVLzbeSJqS6F4wdynskcUu"
+      projectPath: "services/czws"

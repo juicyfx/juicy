@@ -1,6 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "corsless",
   "routes": [
     {
       "src": "/favicon.ico",

@@ -1,7 +1,4 @@
 {
-  "scope": "juicyfx",
-  "name": "avatarless",
-  "regions": ["bru"],
   "rewrites": [
     { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
     { "source": "/g/(.+@.+\\..+)", "destination": "/api/gravatar.ts?_email=$1" },

@@ -1,0 +1,15 @@
+name: Deploy flyx
+
+on:
+  push:
+    paths:
+      - 'services/flyx/**'
+
+jobs:
+  deploy:
+    name: Deploy flyx
+    uses: ./.github/workflows/deploy-vercel.yml
+    secrets: inherit
+    with:
+      projectId: "QmemH1FgXJy4zQ7vEtDAV5jnBbtQUb8G5AJofcBafCJ1Yb"
+      projectPath: "services/flyx"
