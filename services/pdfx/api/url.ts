@@ -3,7 +3,6 @@ import { getPdf } from "./_lib/chrome";
 import * as errors from "./_lib/errors";
 import { parsePdfOptions } from "./_lib/request";
 import { isValidUrl } from "./_lib/validator";
-import { installFonts } from './_lib/fonts';
 import { applyCors } from './_lib/http';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -16,9 +15,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   // Apply HTTP Men-in-the-middle
   applyCors(req, res);
-
-  // Install deps
-  await installFonts();
 
   if (req.query.url) {
     fromUrl(req, res);

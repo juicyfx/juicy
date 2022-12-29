@@ -1,27 +1,10 @@
 {
-  "builds": [
-    {
-      "src": "api/*.ts",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "api/_fonts/**"
-        ]
-      }
-    },
-    { "src": "package.json", "use": "@vercel/static-build" }
-  ],
-  "routes": [
-    { "src": "/favicon.ico", "dest": "https://juicy.vercel.app/favicon.ico" },
-    { "src": "/", "dest": "/public/index.html" },
-    { "src": "^/url/(.*)", "dest": "/api/url.ts" },
-    { "src": "^/raw/(.*)", "dest": "/api/raw.ts" },
-    { "src": "^/post/(.*)", "dest": "/api/post.ts" },
-    { "src": "/(.*)", "dest": "/public/$1" }
-  ],
-  "build": {
-    "env": {
-      "PDFX_URL": "https://pdfx.vercel.app"
-    }
-  }
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "https://juicy.vercel.app/favicon.ico" },
+    { "source": "/", "destination": "/public/index.html" },
+    { "source": "^/url/(.*)", "destination": "/api/url.ts" },
+    { "source": "^/raw/(.*)", "destination": "/api/raw.ts" },
+    { "source": "^/post/(.*)", "destination": "/api/post.ts" },
+    { "source": "/(.*)", "destination": "/public/$1" }
+  ]
 }
