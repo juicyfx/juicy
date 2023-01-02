@@ -1,9 +1,9 @@
-name: Deploy socky
+name: Deploy qrx
 
 on:
   push:
     paths:
-      - 'services/socky/**'
+      - 'services/qrx/**'
     branches:
       - "master"
 
@@ -13,5 +13,5 @@ jobs:
     uses: ./.github/workflows/deploy-vercel.yml
     secrets: inherit
     with:
-      projectId: "prj_AAqIYRPfVQYshqMIhhYxPlenSL8T"
-      projectPath: "services/socky"
+      projectId: "QmV2Fw8gtvE7QaqsaYNCT6pTHQsxaUtQNxth5kQqfRBaj1"
+      projectPath: "services/qrx"

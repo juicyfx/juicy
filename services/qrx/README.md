@@ -1,6 +1,6 @@
 # Juicy(fx) | QRx
 
-Generates QR-codes
+Generates QR-codes easily.
 > https://qrx.vercel.app
 
 ------

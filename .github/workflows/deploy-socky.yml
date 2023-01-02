@@ -1,17 +1,17 @@
-name: Deploy instafetch
+name: Deploy socky
 
 on:
   push:
     paths:
-      - 'services/instafetch/**'
+      - 'services/socky/**'
     branches:
       - "master"
 
 jobs:
   deploy:
-    name: Deploy instafetch
+    name: Deploy socky
     uses: ./.github/workflows/deploy-vercel.yml
     secrets: inherit
     with:
-      projectId: "QmYNx5CwQEkKFEFShmUE63amajh22YYbcPHNyATgjboC1F"
-      projectPath: "services/instafetch"
+      projectId: "prj_AAqIYRPfVQYshqMIhhYxPlenSL8T"
+      projectPath: "services/socky"
