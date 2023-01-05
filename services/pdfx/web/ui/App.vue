@@ -6,7 +6,7 @@
           <h1>Juicy(fx) / PDF[x]</h1>
           <span class="time">
             Creates PDF from URL, RAW data or POST data easily. Running on
-            <a href="https://zeit.co">ZEIT Now</a>.
+            <a href="https://vercel.com">Vercel</a>.
           </span>
         </aside>
         <div class="content">
