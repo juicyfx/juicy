@@ -6,7 +6,7 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "markdown-it": "^12.3.2"
+    "markdown-it": "^13.0.1"
   },
   "devDependencies": {
     "@vercel/node": "^2.9.8",
