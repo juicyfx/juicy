@@ -3,6 +3,8 @@
 Generates image for OG meta tags
 > https://oggo.vercel.app
 
+> ⚠️ Oggo needs Node v14.0.
+
 ## Usage
 
 Supported handlers: felix, nuxt
