@@ -11,6 +11,6 @@
   "devDependencies": {
     "@vercel/node": "^2.9.10",
     "@types/qrcode": "^1.4.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.2"
   }
 }
