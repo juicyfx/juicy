@@ -25,7 +25,7 @@
     "fast-glob": "^3.2.12"
   },
   "devDependencies": {
-    "@vercel/node": "^2.9.10",
+    "@vercel/node": "^2.9.13",
     "@types/cheerio": "^0.22.31",
     "@types/feather-icons": "^4.7.0",
     "micro": "^10.0.1",
