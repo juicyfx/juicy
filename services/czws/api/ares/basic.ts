@@ -1,7 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 import { parse } from 'url';
 import convert from 'xml-js';
-import fetch from 'node-fetch';
 
 export default async function handler(req: VercelRequest, res: VercelResponse): Promise<void> {
   res.setHeader("Access-Control-Allow-Origin", "*");
