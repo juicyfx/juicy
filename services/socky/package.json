@@ -12,6 +12,6 @@
   "devDependencies": {
     "@types/puppeteer-core": "^7.0.4",
     "@vercel/node": "^2.9.10",
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.4"
   }
 }
