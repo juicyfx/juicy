@@ -9,7 +9,7 @@
     "faunadb": "^4.8.0"
   },
   "devDependencies": {
-    "@vercel/node": "^2.10.0",
+    "@vercel/node": "^2.12.0",
     "typescript": "^4.9.5"
   }
 }
