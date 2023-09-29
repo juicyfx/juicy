@@ -6,11 +6,11 @@
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "markdown-it": "^13.0.1"
+    "markdown-it": "^13.0.2"
   },
   "devDependencies": {
     "@vercel/node": "^2.15.2",
-    "@types/markdown-it": "^12.2.3",
+    "@types/markdown-it": "^13.0.2",
     "typescript": "^4.9.5"
   }
 }
