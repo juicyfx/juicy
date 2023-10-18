@@ -27,7 +27,7 @@
   "devDependencies": {
     "@vercel/node": "^2.15.2",
     "@types/cheerio": "^0.22.31",
-    "@types/feather-icons": "^4.7.0",
+    "@types/feather-icons": "^4.29.3",
     "micro": "^10.0.1",
     "micro-dev": "^3.0.0",
     "typescript": "^5.0.2"
