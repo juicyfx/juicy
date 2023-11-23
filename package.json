@@ -1,5 +1,5 @@
 {
   "devDependencies": {
-    "lerna": "^6.5.1"
+    "lerna": "^8.0.0"
   }
 }
