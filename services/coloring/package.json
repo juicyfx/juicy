@@ -11,7 +11,7 @@
     "vhtml": "^2.2.0"
   },
   "devDependencies": {
-    "@vercel/node": "^2.15.2",
+    "@vercel/node": "^3.0.14",
     "@types/tinycolor2": "^1.4.5",
     "typescript": "^4.9.5"
   }
