@@ -1,7 +1,8 @@
 {
   "name": "pdfx",
+  "version": "0.0.0",
   "engines": {
-    "node": ">=18.x"
+    "node": "14.x"
   },
   "scripts": {
     "compile": "tsc",
