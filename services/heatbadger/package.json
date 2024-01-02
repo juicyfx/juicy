@@ -1,6 +1,9 @@
 {
   "name": "heatbadger",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
     "compile": "tsc",
     "watch": "tsc --watch"
@@ -11,8 +14,7 @@
     "dayjs": "^1.11.8"
   },
   "devDependencies": {
-    "@types/puppeteer-core": "^7.0.4",
-    "@vercel/node": "^2.15.2",
-    "typescript": "^4.9.5"
+    "@vercel/node": "^3.0.14",
+    "typescript": "^5.3.3"
   }
 }
