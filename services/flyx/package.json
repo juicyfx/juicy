@@ -1,6 +1,9 @@
 {
   "name": "flyx",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
     "compile": "tsc",
     "watch": "tsc --watch"
@@ -9,8 +12,8 @@
     "markdown-it": "^13.0.1"
   },
   "devDependencies": {
-    "@vercel/node": "^2.15.2",
+    "@vercel/node": "^3.0.14",
     "@types/markdown-it": "^12.2.3",
-    "typescript": "^4.9.5"
+    "typescript": "^5.3.3"
   }
 }

@@ -17,7 +17,8 @@
     "noUnusedParameters": true,
     "removeComments": true,
     "preserveConstEnums": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "exclude": [
     "dist",
