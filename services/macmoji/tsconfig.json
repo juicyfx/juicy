@@ -16,7 +16,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,
-    "preserveConstEnums": true
+    "preserveConstEnums": true,
+    "skipLibCheck": true
   },
   "exclude": [
     "dist",
