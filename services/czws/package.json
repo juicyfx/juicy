@@ -1,18 +1,18 @@
 {
   "name": "czws",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
     "compile": "tsc",
     "watch": "tsc --watch",
     "dev": "node dev.js"
   },
-  "engines": {
-    "node": ">=18.0"
-  },
   "dependencies": {
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "@vercel/node": "^2.15.2"
+    "@vercel/node": "^3.0.2"
   }
 }
