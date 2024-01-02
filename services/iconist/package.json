@@ -1,6 +1,9 @@
 {
   "name": "iconist",
   "version": "0.0.0",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
     "compile": "tsc",
     "watch": "tsc --watch",
@@ -25,11 +28,11 @@
     "fast-glob": "^3.2.12"
   },
   "devDependencies": {
-    "@vercel/node": "^2.15.2",
+    "@vercel/node": "^3.0.14",
     "@types/cheerio": "^0.22.31",
     "@types/feather-icons": "^4.29.3",
     "micro": "^10.0.1",
     "micro-dev": "^3.0.0",
-    "typescript": "^5.0.2"
+    "typescript": "^5.3.3"
   }
 }
