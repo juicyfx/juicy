@@ -19,6 +19,7 @@ export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Bro
         args: [],
         executablePath: lookupChrome(),
         headless: true,
+        ignoreHTTPSErrors: true,
       }
     };
   } else {
@@ -29,6 +30,7 @@ export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Bro
         args: chromeAws.args,
         executablePath: await chromeAws.executablePath(),
         headless: chromeAws.headless,
+        ignoreHTTPSErrors: true,
       }
     };
   }
@@ -54,5 +56,5 @@ function lookupChrome(): string {
 }
 
 function isDev(): boolean {
-  return process.env.VERCEL_REGION === undefined || process.env.VERCEL_REGION === 'dev1';
+  return process.env.NOW_REGION === undefined || process.env.NOW_REGION === 'dev1';
 }
