@@ -1,5 +1,8 @@
 {
   "name": "pdfx",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
     "compile": "tsc",
     "watch": "tsc --watch",
@@ -15,14 +18,13 @@
     "vue": "^2.7.14"
   },
   "devDependencies": {
-    "@types/puppeteer-core": "^7.0.4",
-    "@vercel/node": "^2.15.2",
+    "@vercel/node": "^3.0.14",
     "@vue/component-compiler-utils": "^3.3.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "parcel-bundler": "^1.12.5",
     "sass": "^1.69.4",
-    "typescript": "^5.0.2",
+    "typescript": "^5.3.3",
     "vue-hot-reload-api": "^2.3.4",
     "vue-template-compiler": "^2.7.14"
   }
