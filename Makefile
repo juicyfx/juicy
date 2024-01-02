@@ -1,11 +1,7 @@
-.PHONY: bootstrap compile
+.PHONY: install
+install:
+	npx lerna exec npm install
 
-###########################################################
-# PACKAGES ################################################
-###########################################################
-
-bootstrap:
-	npx lerna bootstrap --no-ci
-
+.PHONY: compile
 compile:
 	npx lerna run compile
