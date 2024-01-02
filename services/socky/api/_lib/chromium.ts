@@ -1,5 +1,5 @@
-import Puppeteer, { Browser } from "puppeteer-core";
-import chromeAws from "chrome-aws-lambda";
+import Puppeteer, { Browser, PuppeteerLaunchOptions } from "puppeteer-core";
+import chromeAws from "@sparticuz/chromium";
 
 export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Browser> {
   const defaults: ChromeLaunchOptions = {
@@ -10,7 +10,7 @@ export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Bro
     },
     ignoreHTTPSErrors: true,
   };
-  let options: ChromeLaunchOptions = {};
+  let options: PuppeteerLaunchOptions = {};
 
   if (isDev()) {
     options = {
@@ -28,7 +28,7 @@ export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Bro
       ...args,
       ...{
         args: chromeAws.args,
-        executablePath: await chromeAws.executablePath,
+        executablePath: await chromeAws.executablePath(),
         headless: chromeAws.headless,
       }
     };
@@ -55,5 +55,5 @@ function lookupChrome(): string {
 }
 
 function isDev(): boolean {
-  return process.env.NOW_REGION === undefined || process.env.NOW_REGION === 'dev1';
+  return process.env.VERCEL_REGION === undefined || process.env.VERCEL_REGION === 'dev1';
 }
