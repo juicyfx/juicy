@@ -29,16 +29,16 @@ and givin something back to the community. Enjoy it!
 
 > Awesome 17 services.
 
-- [**avatarless**](services/avatarless) - gravatar-based avatars supporting initials [[👀🕶](https://avatarless.now.sh)]
-- [**coloring**](services/coloring) - generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.now.sh)]
+- [**avatarless**](services/avatarless) - gravatar-based avatars supporting initials [[👀🕶](https://avatarless.vercel.app)]
+- [**coloring**](services/coloring) - generate colors with dark/light background and inversed text color [[👀🕶](https://coloring.vercel.app)]
 - [**corsless**](services/corsless) - handy proxy for Github services supporting CORS headers [[👀🕶](https://corsless.vercel.app)]
 - [**czws**](services/czws) - Czech Republic webservices (e.q. ARES) [[👀🕶](https://czws.vercel.app)]
 - [**fcbk**](services/fcbk) - generate screenshots from facebook [[👀🕶](https://fcbk.vercel.app)]
 - [**flyx**](services/flyx) - on-the-fly file converting (Markdown -> HTML) [[👀🕶](https://flyx.vercel.app)]
-- [**heatbadger**](services/heatbadger) - generate image for github repository [[👀🕶](https://heatbadger.now.sh)]
+- [**heatbadger**](services/heatbadger) - generate image for github repository [[👀🕶](https://heatbadger.vercel.app)]
 - [**hitx**](services/hitx) - hitx and other counting service [[👀🕶](https://hitx.vercel.app)]
-- [**iconist**](services/iconist) - generate SVG icon [[👀🕶](https://obr.now.sh)]
-- [**insigne**](services/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.now.sh)]
+- [**iconist**](services/iconist) - generate SVG icon [[👀🕶](https://obr.vercel.app)]
+- [**insigne**](services/insigne) - generate SVG badge using badgen.net [[👀🕶](https://label.vercel.app)]
 - [**instafetch**](services/instafetch) - fetch data from Instagram [[👀🕶](https://instafetch.vercel.app)]
 - [**juicy**](services/juicy) - juicy functions assets
 - [**macmoji**](services/macmoji) - macOS emojis [[👀🕶](https://macmoji.vercel.app)]

@@ -1,22 +1,22 @@
 # Juicy(fx) | Heatbadger
 
 Generates images based on Github readmes.
-> https://heatbadger.now.sh
+> https://heatbadger.vercel.app
 
 ## Usage
 
-- https://heatbadger.now.sh/github/readme/vercel/vercel/
+- https://heatbadger.vercel.app/github/readme/vercel/vercel/
 
-![](https://heatbadger.now.sh/github/readme/vercel/vercel/)
-
------
-
-- https://heatbadger.now.sh/github/readme/contributte/console/
-
-![](https://heatbadger.now.sh/github/readme/contributte/console/)
+![](https://heatbadger.vercel.app/github/readme/vercel/vercel/)
 
 -----
 
-- https://heatbadger.now.sh/github/readme/juicyfx/juicyfx/
+- https://heatbadger.vercel.app/github/readme/contributte/console/
 
-![](https://heatbadger.now.sh/github/readme/juicyfx/juicy/)
+![](https://heatbadger.vercel.app/github/readme/contributte/console/)
+
+-----
+
+- https://heatbadger.vercel.app/github/readme/juicyfx/juicyfx/
+
+![](https://heatbadger.vercel.app/github/readme/juicyfx/juicy/)

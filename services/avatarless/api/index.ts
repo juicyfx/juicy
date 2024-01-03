@@ -11,7 +11,7 @@ export default async function handler(req: NowRequest, res: NowResponse): Promis
 
     // Send global usage
     res.statusCode = 302;
-    res.setHeader('Location', 'https://avatarless.now.sh/');
+    res.setHeader('Location', 'https://avatarless.vercel.app/');
     res.end();
   } catch (e: unknown) {
     console.error(e);
