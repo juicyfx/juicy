@@ -5,8 +5,8 @@ import { NotFoundError } from './_lib/errors';
 import { errorDefault, errorNotFound } from './_lib/handler/error-handler';
 import { Vendor } from './_lib/app';
 
-const CACHE_BROWSER = 60 * 60 * 24 * 2; // 2 days
-const CACHE_CDN = 60 * 60 * 24 * 7; // 7 days
+const CACHE_BROWSER = 60 * 60 * 24 * 14; // 14 days
+const CACHE_CDN = 60 * 60 * 24 * 20; // 20 days
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   console.log("HTTP", req.url, req.query);
