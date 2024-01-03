@@ -1,18 +1,18 @@
-import { NowRequest, NowResponse } from '@vercel/node';
+import { VercelRequest, VercelResponse } from '@vercel/node';
 import crypto from 'crypto';
 import * as http from './http';
 import { prepareAvatarlessInitialsOptions, prepareAvatarlessEmailOptions, prepareGravatarOptions } from './utils';
 import { SILHOUETTE_PERSON } from './icons';
 
-const CACHE_BROWSER = 60 * 60 * 24 * 2; // 2 days
-const CACHE_CDN = 60 * 60 * 24 * 7; // 7 days
+const CACHE_BROWSER = 60 * 60 * 24 * 14; // 14 days
+const CACHE_CDN = 60 * 60 * 24 * 20; // 20 days
 
-export function pipeLogging(req: NowRequest, _res: NowResponse): void {
+export function pipeLogging(req: VercelRequest, _res: VercelResponse): void {
   console.log("[HTTP]", req.url);
   console.log("[HTTP]", req.query);
 }
 
-export function pipeCORS(req: NowRequest, res: NowResponse): void {
+export function pipeCORS(req: VercelRequest, res: VercelResponse): void {
   // Optimistic CORS
   res.setHeader("Access-Control-Allow-Origin", '*');
   res.setHeader("Access-Control-Allow-Methods", '*');
@@ -25,7 +25,7 @@ export function pipeCORS(req: NowRequest, res: NowResponse): void {
   }
 }
 
-export function pipeRequirements(req: NowRequest, res: NowResponse, keys: string[]): void {
+export function pipeRequirements(req: VercelRequest, res: VercelResponse, keys: string[]): void {
   keys.forEach(k => {
     if (!req.query[k]) {
       res.statusCode = 400;
@@ -34,7 +34,7 @@ export function pipeRequirements(req: NowRequest, res: NowResponse, keys: string
   })
 }
 
-export async function pipeGravatar(req: NowRequest, res: NowResponse): Promise<void> {
+export async function pipeGravatar(req: VercelRequest, res: VercelResponse): Promise<void> {
   const options = prepareGravatarOptions(req);
   options.default = '404';
 
@@ -46,7 +46,7 @@ export async function pipeGravatar(req: NowRequest, res: NowResponse): Promise<v
   res.end();
 }
 
-export async function pipeGravatarOnly(req: NowRequest, res: NowResponse): Promise<void> {
+export async function pipeGravatarOnly(req: VercelRequest, res: VercelResponse): Promise<void> {
   const options = prepareGravatarOptions(req);
   const gravatar = await createGravatar(options);
 
@@ -56,7 +56,7 @@ export async function pipeGravatarOnly(req: NowRequest, res: NowResponse): Promi
   res.end();
 }
 
-export function pipeAvatarlessInitials(req: NowRequest, res: NowResponse): void {
+export function pipeAvatarlessInitials(req: VercelRequest, res: VercelResponse): void {
   const options = prepareAvatarlessInitialsOptions(req);
   const svg = createAvatarless(options);
 
@@ -65,7 +65,7 @@ export function pipeAvatarlessInitials(req: NowRequest, res: NowResponse): void 
   res.end(svg.trim());
 }
 
-export function pipeAvatarlessEmail(req: NowRequest, res: NowResponse): void {
+export function pipeAvatarlessEmail(req: VercelRequest, res: VercelResponse): void {
   const options = prepareAvatarlessEmailOptions(req);
   const svg = createAvatarless(options);
 
