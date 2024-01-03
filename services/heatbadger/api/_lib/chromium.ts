@@ -1,5 +1,5 @@
-import Puppeteer, { Browser } from "puppeteer-core";
-import chromeAws from "chrome-aws-lambda";
+import Puppeteer, { Browser, PuppeteerLaunchOptions } from "puppeteer-core";
+import chromeAws from "@sparticuz/chromium";
 import { isDev } from "./utils";
 
 export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Browser> {
@@ -13,7 +13,7 @@ export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Bro
       isMobile: false,
     }
   };
-  let options: ChromeLaunchOptions = {};
+  let options: PuppeteerLaunchOptions = {};
 
   if (isDev()) {
     options = {
@@ -31,7 +31,7 @@ export async function createBrowser(args: ChromeLaunchOptions = {}): Promise<Bro
       ...args,
       ...{
         args: chromeAws.args,
-        executablePath: await chromeAws.executablePath,
+        executablePath: await chromeAws.executablePath(),
         headless: chromeAws.headless,
       }
     };

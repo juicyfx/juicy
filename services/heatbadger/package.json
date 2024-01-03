@@ -2,15 +2,15 @@
   "name": "heatbadger",
   "version": "0.0.0",
   "engines": {
-    "node": "14.x"
+    "node": "20.x"
   },
   "scripts": {
     "compile": "tsc",
     "watch": "tsc --watch"
   },
   "dependencies": {
-    "chrome-aws-lambda": "10.1.0",
-    "puppeteer-core": "10.1.0",
+    "@sparticuz/chromium": "119.0.2",
+    "puppeteer-core": "21.6.1",
     "dayjs": "^1.11.8"
   },
   "devDependencies": {
