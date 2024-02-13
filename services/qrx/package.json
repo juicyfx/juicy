@@ -12,7 +12,7 @@
     "qrcode": "^1.5.3"
   },
   "devDependencies": {
-    "@vercel/node": "^3.0.14",
+    "@vercel/node": "^3.0.19",
     "@types/qrcode": "^1.4.1",
     "typescript": "^5.3.3"
   }
