@@ -2,8 +2,9 @@ import { VercelRequest, VercelResponse } from '@vercel/node';
 import { IncomingMessage } from "http";
 import https from "https";
 
-const CACHE_BROWSER = 60 * 60 * 24 * 5; // 5 day
+const CACHE_BROWSER = 60 * 60 * 24 * 10; // 10 day
 const CACHE_CDN = 60 * 60 * 24 * 5; // 5 days
+const CACHE_SWR = 60 * 60 * 24 * 2; // 2 days
 const INSTAHOST_URL = process.env.INSTAHOST_URL || 'http://localhost:8000';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -39,7 +40,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       };
 
       res.setHeader('Content-Type', 'application/json')
-      res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, public`);
+      res.setHeader('Cache-Control', `max-age=${CACHE_BROWSER}, s-maxage=${CACHE_CDN}, stale-while-revalidate=${CACHE_SWR}, public`);
       res.send(JSON.stringify(output));
     } catch (e: any) {
       res.statusCode = 500;
