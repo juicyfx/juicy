@@ -49,5 +49,5 @@ and givin something back to the community. Enjoy it!
 
 ## 📝 License
 
-Copyright © 2019 [f3l1x](https://github.com/f3l1x).
+Copyright © 2019-2025 [f3l1x](https://github.com/f3l1x).
 This project is [MIT](LICENSE) licensed.
